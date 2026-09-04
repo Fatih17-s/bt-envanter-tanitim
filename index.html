@@ -4,16 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>BT Envanter — Fabrikalar için BT varlık, destek ve iş takip sistemi</title>
-<<<<<<< HEAD
 <meta name="description" content="Üretim işletmeleri için BT varlık yönetimi: envanter, kişi ve bölüm zimmeti, karekodlu etiket ve sayım, destek talepleri, iş takip panosu, performans raporları, lisans takibi. Çok şubeli yapı, rol bazlı yetki, kendi sunucunuzda kurulum.">
-=======
-<meta name="description" content="Üretim işletmeleri için BT varlık yönetimi, kişi ve bölüm zimmeti, destek talepleri, iş takip panosu ve performans raporlaması. Çok şubeli yapı, rol bazlı yetki, kendi sunucunuzda kurulum.">
->>>>>>> c6beee5dc31088e9c8b92f16094c6d98c8103f4c
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
-<<<<<<< HEAD
 /* ================= TOKENS ================= */
 :root{
   --red:#E11D2E; --red-2:#B4001C; --red-soft:#FEF2F3;
@@ -38,48 +33,10 @@ img{max-width:100%;display:block}
 a{color:inherit;text-decoration:none}
 .wrap{max-width:var(--wrap);margin:0 auto;padding:0 28px}
 .sec{padding:110px 0}
-=======
-/* ============ TOKENS ============ */
-:root{
-  --ink:#1D1D1F;
-  --ink-2:#161618;
-  --slate:#515154;
-  --mute:#86868B;
-  --paper:#F5F5F7;
-  --line:#D2D2D7;
-  --line-d:rgba(255,255,255,.13);
-  --cyan:#0A7E8C;
-  --cyan-lo:#12A3B4;
-  --tag:#FFD24A;
-  --ok:#30C48D;
-  --warn:#F5A623;
-  --crit:#E5484D;
-  --white:#fff;
-
-  /* Apple tipografisi: macOS/iOS'ta gerçek SF Pro, diğer sistemlerde Inter */
-  --sans:-apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Inter", "Helvetica Neue", Arial, sans-serif;
-  --mono:"JetBrains Mono", ui-monospace, "SF Mono", monospace;
-
-  --wrap:1180px;
-  --r:18px;
-}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{
-  background:var(--paper);color:var(--ink);
-  font-family:var(--sans);font-size:17px;line-height:1.6;letter-spacing:-.012em;
-  -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;overflow-x:hidden;
-}
-img{max-width:100%;display:block}
-a{color:inherit;text-decoration:none}
-.wrap{max-width:var(--wrap);margin:0 auto;padding:0 28px}
-.sec{padding:112px 0}
->>>>>>> c6beee5dc31088e9c8b92f16094c6d98c8103f4c
 .sec-dark{background:var(--ink-2);color:#F5F5F7}
 .center{text-align:center;margin-left:auto;margin-right:auto}
 .center p{margin-left:auto;margin-right:auto}
 
-<<<<<<< HEAD
 h1,h2,h3,h4{font-weight:600;line-height:1.06;letter-spacing:-.035em}
 h1{font-size:clamp(2.55rem,5.4vw,4.4rem);font-weight:700;letter-spacing:-.045em}
 h2{font-size:clamp(2rem,3.9vw,3.2rem);letter-spacing:-.04em}
@@ -131,89 +88,10 @@ p{max-width:64ch}
 .hero .lead{margin-top:24px;color:#A1A1A6}
 .hero-cta{display:flex;gap:13px;margin-top:34px;flex-wrap:wrap}
 .hero-note{margin-top:26px;font-family:var(--mono);font-size:.73rem;letter-spacing:.08em;color:#6E6E73;text-transform:uppercase}
-=======
-/* ============ TYPE (Apple ölçeği) ============ */
-h1,h2,h3,h4{font-weight:600;line-height:1.06;letter-spacing:-.035em}
-h1{font-size:clamp(2.6rem,5.6vw,4.5rem);font-weight:700;letter-spacing:-.045em}
-h2{font-size:clamp(2.05rem,4vw,3.3rem);letter-spacing:-.04em}
-h3{font-size:clamp(1.5rem,2.4vw,2rem);letter-spacing:-.03em}
-h4{font-size:1.16rem;letter-spacing:-.022em;line-height:1.3}
-p{max-width:64ch}
-.lead{font-size:1.24rem;line-height:1.5;color:var(--slate);letter-spacing:-.018em}
-.sec-dark .lead{color:#A1A1A6}
-.small{font-size:.95rem;color:var(--mute)}
-
-.eyebrow{
-  font-family:var(--mono);font-size:.71rem;font-weight:700;
-  letter-spacing:.16em;text-transform:uppercase;color:var(--cyan);
-  display:inline-flex;align-items:center;gap:10px;margin-bottom:20px;
-}
-.eyebrow::before{
-  content:"";width:24px;height:10px;flex:none;
-  background:repeating-linear-gradient(90deg,currentColor 0 1.5px,transparent 1.5px 3px,currentColor 3px 4px,transparent 4px 7px);
-  opacity:.75;
-}
-.center .eyebrow::before{display:none}
-.sec-dark .eyebrow{color:var(--tag)}
-
-/* ============ BUTTONS ============ */
-.btn{
-  display:inline-flex;align-items:center;gap:8px;
-  font-weight:500;font-size:1rem;letter-spacing:-.01em;
-  padding:13px 26px;border-radius:980px;border:1px solid transparent;
-  cursor:pointer;transition:.25s cubic-bezier(.2,.7,.2,1);white-space:nowrap;
-}
-.btn-primary{background:var(--tag);color:var(--ink)}
-.btn-primary:hover{background:#FFDE73;transform:translateY(-1px);box-shadow:0 10px 30px -12px rgba(255,210,74,.8)}
-.btn-ghost{border-color:rgba(255,255,255,.28);color:#F5F5F7}
-.btn-ghost:hover{border-color:var(--tag);color:var(--tag)}
-:focus-visible{outline:3px solid var(--cyan-lo);outline-offset:3px;border-radius:6px}
-
-/* ============ NAV ============ */
-.nav{
-  position:sticky;top:0;z-index:60;background:rgba(22,22,24,.78);
-  backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid rgba(255,255,255,.09);
-}
-.nav-in{display:flex;align-items:center;gap:30px;height:62px}
-.logo{display:flex;align-items:center;gap:11px;font-weight:600;color:#fff;font-size:1.02rem;letter-spacing:-.025em}
-.logo-mark{
-  width:30px;height:30px;border-radius:8px;background:var(--tag);color:var(--ink);
-  display:grid;place-items:center;font-family:var(--mono);font-weight:700;font-size:.76rem;flex:none;
-}
-.nav-links{display:flex;gap:28px;margin-left:auto;font-size:.9rem;color:#C6C6CA;font-weight:400}
-.nav-links a{transition:.2s}
-.nav-links a:hover{color:var(--tag)}
-.nav .btn{padding:9px 19px;font-size:.87rem}
-.burger{display:none;margin-left:auto;background:none;border:0;color:#fff;font-size:1.4rem;cursor:pointer}
-
-/* ============ HERO ============ */
-.hero{
-  background:
-    radial-gradient(880px 460px at 80% 6%, rgba(10,126,140,.3), transparent 62%),
-    linear-gradient(180deg,#0E0E10 0%, #17171A 100%);
-  color:#F5F5F7;position:relative;overflow:hidden;padding:100px 0 112px;
-}
-.hero::before{
-  content:"";position:absolute;inset:0;pointer-events:none;opacity:.3;
-  background-image:
-    linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),
-    linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);
-  background-size:58px 58px;
-  mask-image:radial-gradient(ellipse 90% 70% at 50% 28%,#000 30%,transparent 100%);
-}
-.hero-grid{display:grid;grid-template-columns:1.04fr .96fr;gap:60px;align-items:center;position:relative}
-.hero h1{color:#fff}
-.hero h1 em{font-style:normal;color:var(--tag)}
-.hero .lead{margin-top:24px;color:#A1A1A6}
-.hero-cta{display:flex;gap:13px;margin-top:36px;flex-wrap:wrap}
-.hero-note{margin-top:26px;font-family:var(--mono);font-size:.74rem;letter-spacing:.08em;color:#6E6E73;text-transform:uppercase}
-
->>>>>>> c6beee5dc31088e9c8b92f16094c6d98c8103f4c
 .up{opacity:0;transform:translateY(22px);animation:up .9s cubic-bezier(.2,.75,.25,1) forwards}
 @keyframes up{to{opacity:1;transform:none}}
 .d1{animation-delay:.05s}.d2{animation-delay:.15s}.d3{animation-delay:.26s}.d4{animation-delay:.37s}.d5{animation-delay:.48s}
 
-<<<<<<< HEAD
 /* ================= İMZA: KAREKODLU DEMİRBAŞ ETİKETİ ================= */
 .stage{perspective:1200px}
 .label{background:#fff;color:var(--ink);border-radius:14px;padding:18px;width:min(380px,100%);
@@ -239,6 +117,178 @@ p{max-width:64ch}
 .pipe span{flex:1;text-align:center;font-family:var(--mono);font-size:.61rem;letter-spacing:.07em;
   padding:8px 2px;border-radius:8px;color:#8A8A8F;text-transform:uppercase;transition:.35s}
 .pipe span.on{background:var(--red);color:#fff}
+
+/* ================= HERO SAHNE (ürün gösterimi) ================= */
+.hero-head{max-width:900px;position:relative;z-index:2}
+.hero-head .lead{margin:22px auto 0;max-width:640px}
+.hero-head .hero-cta{justify-content:center}
+.hero-stage{position:relative;margin-top:56px;z-index:2}
+.hero-stage::after{content:"";position:absolute;left:8%;right:8%;bottom:-30px;height:70px;
+  background:radial-gradient(ellipse at center,rgba(0,0,0,.6),transparent 70%);filter:blur(18px);z-index:-1}
+
+.browser{border-radius:14px;overflow:hidden;background:var(--m-bg);border:1px solid rgba(255,255,255,.14);
+  box-shadow:0 50px 100px -34px rgba(0,0,0,.9), 0 0 0 1px rgba(255,255,255,.05);
+  transform:translateY(28px) scale(.985);opacity:0;animation:rise 1.1s .34s cubic-bezier(.2,.75,.25,1) forwards}
+@keyframes rise{to{transform:none;opacity:1}}
+.browser .chrome{background:#22242A;border-bottom:1px solid rgba(255,255,255,.08)}
+.browser .chrome .dot{background:#4A4D55}
+.browser .chrome .url{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.08);color:#9AA2AD}
+.hero-app .ui-main{position:relative;min-height:352px}
+.pane{position:absolute;inset:0;opacity:0;visibility:hidden;transform:translateY(8px);
+  transition:opacity .55s cubic-bezier(.2,.7,.2,1),transform .55s cubic-bezier(.2,.7,.2,1);
+  display:flex;flex-direction:column}
+.pane.on{opacity:1;visibility:visible;transform:none}
+
+/* yüzen karekod etiketi */
+.float-label{position:absolute;left:-26px;bottom:-34px;width:236px;z-index:3;
+  opacity:0;transform:translateY(20px) rotate(-4deg);animation:rise2 1s .95s cubic-bezier(.2,.75,.25,1) forwards}
+@keyframes rise2{to{opacity:1;transform:rotate(-4deg)}}
+.float-label .label{width:100%;margin:0;padding:14px;box-shadow:0 30px 56px -18px rgba(0,0,0,.85)}
+.float-label .qr{width:64px;height:64px}
+.float-label .label-code{font-size:.98rem}
+.float-label .label-name{font-size:.76rem;margin-top:3px}
+.float-label .label-meta{font-size:.58rem;margin-top:4px}
+.float-label .label-mid{gap:11px;padding:11px 0 9px}
+.float-label .label-top,.float-label .label-foot{font-size:.52rem}
+
+/* telefon */
+.phone{position:absolute;right:-18px;bottom:-46px;width:172px;z-index:3;
+  border-radius:24px;background:#0B0B0D;padding:7px;border:1px solid rgba(255,255,255,.16);
+  box-shadow:0 34px 66px -20px rgba(0,0,0,.9);
+  opacity:0;transform:translateY(24px);animation:rise2b 1s 1.1s cubic-bezier(.2,.75,.25,1) forwards}
+@keyframes rise2b{to{opacity:1;transform:none}}
+.phone::before{content:"";position:absolute;top:13px;left:50%;transform:translateX(-50%);
+  width:42px;height:4px;border-radius:9px;background:#26262B;z-index:2}
+.phone-scr{background:#fff;border-radius:18px;overflow:hidden;color:var(--m-tx)}
+.phone-top{background:var(--red);color:#fff;padding:18px 12px 10px;text-align:center}
+.phone-top b{display:block;font-size:10px;font-weight:600;letter-spacing:-.02em}
+.phone-top s{text-decoration:none;font-size:7px;opacity:.8}
+.phone-body{padding:9px;background:var(--m-bg)}
+.p-dev{background:#fff;border:1px solid var(--m-line);border-left:2px solid var(--red);
+  border-radius:7px;padding:7px;margin-bottom:6px}
+.p-dev s{text-decoration:none;display:block;font-size:6px;letter-spacing:.1em;color:var(--m-mu);font-weight:700}
+.p-dev b{display:block;font-size:8px;font-weight:600;margin:2px 0 1px}
+.p-dev em{font-style:normal;font-family:var(--mono);font-size:6.5px;color:var(--red)}
+.p-btn{display:block;text-align:center;background:var(--red);color:#fff;border-radius:7px;
+  padding:7px;font-size:7.6px;font-weight:600;margin-top:8px}
+.p-scan{display:flex;align-items:center;gap:7px;background:#fff;border:1px dashed var(--m-line);
+  border-radius:7px;padding:7px;margin-bottom:8px}
+.p-scan .qr{width:26px;height:26px;flex:none}
+.p-scan span{font-size:6.6px;color:var(--m-mu2);line-height:1.35}
+
+/* modül sekmeleri */
+.hero-tabs{display:flex;gap:7px;justify-content:center;flex-wrap:wrap;margin-top:74px;position:relative;z-index:2;
+  opacity:0;animation:up .8s 1.3s cubic-bezier(.2,.75,.25,1) forwards}
+.hero-tab{font-family:var(--mono);font-size:.68rem;letter-spacing:.09em;text-transform:uppercase;
+  padding:9px 17px;border-radius:980px;border:1px solid rgba(255,255,255,.15);color:#8A8A8F;
+  cursor:pointer;background:none;transition:.28s;position:relative;overflow:hidden}
+.hero-tab:hover{color:#fff;border-color:rgba(255,255,255,.4)}
+.hero-tab.on{color:#fff;border-color:var(--red);background:rgba(225,29,46,.14)}
+.hero-tab.on::after{content:"";position:absolute;left:0;bottom:0;height:2px;background:var(--red);
+  width:100%;transform-origin:left;animation:tabbar 5.2s linear}
+@keyframes tabbar{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+
+/* ================= OKUTMA SAHNESİ ================= */
+.scan-wrap{margin-top:56px}
+.scan{position:relative;border-radius:20px;overflow:hidden;border:1px solid rgba(255,255,255,.13);
+  background:#0B0B0D;aspect-ratio:16/9;max-width:940px;margin:0 auto;
+  box-shadow:0 44px 88px -34px rgba(0,0,0,.9)}
+.scan-bg{position:absolute;inset:0;background:#111 center/cover no-repeat;
+  background-image:url('gorseller/etiket-cihaz.jpg');filter:brightness(.5) saturate(.85);
+  transform:scale(1.06)}
+.scan::before{content:"";position:absolute;inset:0;z-index:1;
+  background:radial-gradient(ellipse 60% 70% at 68% 50%,rgba(0,0,0,.55),rgba(0,0,0,.82))}
+
+/* telefon */
+.scan-phone{position:absolute;z-index:3;right:9%;top:50%;transform:translateY(-50%);
+  width:min(30%,208px);aspect-ratio:9/19;border-radius:26px;background:#0A0A0C;padding:6px;
+  border:1px solid rgba(255,255,255,.22);box-shadow:0 30px 60px -14px rgba(0,0,0,.9)}
+.scan-scr{position:relative;width:100%;height:100%;border-radius:21px;overflow:hidden;background:#15161A}
+
+/* kamera görüntüsü */
+.cam{position:absolute;inset:0;background:center/220% no-repeat;
+  background-image:url('gorseller/etiket-cihaz.jpg');background-position:38% 52%}
+.cam::after{content:"";position:absolute;inset:0;background:rgba(0,0,0,.28)}
+.reticle{position:absolute;left:16%;top:26%;width:68%;aspect-ratio:1;z-index:2}
+.reticle i{position:absolute;width:26%;height:26%;border:2.5px solid #fff;border-radius:4px;
+  animation:brk var(--cyc) linear infinite}
+.reticle i:nth-child(1){left:0;top:0;border-right:0;border-bottom:0}
+.reticle i:nth-child(2){right:0;top:0;border-left:0;border-bottom:0}
+.reticle i:nth-child(3){right:0;bottom:0;border-left:0;border-top:0}
+.reticle i:nth-child(4){left:0;bottom:0;border-right:0;border-top:0}
+@keyframes brk{0%,39%{border-color:rgba(255,255,255,.9)}42%,100%{border-color:var(--red)}}
+.scan-line{position:absolute;left:16%;right:16%;height:2px;z-index:2;border-radius:2px;
+  background:linear-gradient(90deg,transparent,var(--red),transparent);
+  box-shadow:0 0 14px 2px rgba(225,29,46,.75);animation:sline var(--cyc) linear infinite}
+@keyframes sline{
+  0%{top:26%;opacity:0} 6%{opacity:1} 39%{top:88%;opacity:1} 42%{opacity:0} 100%{opacity:0}}
+.tick{position:absolute;left:50%;top:52%;z-index:3;width:34px;height:34px;margin:-17px 0 0 -17px;
+  border-radius:50%;background:var(--red);display:grid;place-items:center;color:#fff;
+  font-size:16px;font-weight:700;opacity:0;transform:scale(.5);animation:tick var(--cyc) linear infinite}
+@keyframes tick{0%,39%{opacity:0;transform:scale(.5)}44%{opacity:1;transform:scale(1)}
+  55%{opacity:1;transform:scale(1)}60%,100%{opacity:0;transform:scale(1)}}
+.cam-hint{position:absolute;left:8%;right:8%;bottom:6%;z-index:2;text-align:center;
+  font-family:var(--mono);font-size:.52rem;letter-spacing:.08em;color:#E8E8EA;
+  background:rgba(0,0,0,.55);border-radius:980px;padding:5px 8px;backdrop-filter:blur(4px)}
+.cam-hint span{display:block;animation:hint1 var(--cyc) linear infinite}
+.cam-hint span+span{position:absolute;left:8px;right:8px;top:5px;color:#FF7A88;animation-name:hint2}
+@keyframes hint1{0%,38%{opacity:1}40%,100%{opacity:0}}
+@keyframes hint2{0%,39%{opacity:0}42%,54%{opacity:1}58%,100%{opacity:0}}
+
+/* açılan cihaz kartı */
+.scan-card{position:absolute;inset:0;z-index:4;background:#F8FAFC;color:#1E293B;
+  display:flex;flex-direction:column;transform:translateY(104%);
+  animation:card var(--cyc) cubic-bezier(.2,.8,.25,1) infinite}
+@keyframes card{0%,50%{transform:translateY(104%)}62%,92%{transform:translateY(0)}100%{transform:translateY(104%)}}
+.sc-top{background:var(--red);color:#fff;padding:16px 11px 11px}
+.sc-top b{display:block;font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:-.02em}
+.sc-top s{text-decoration:none;font-size:7.5px;opacity:.85}
+.sc-body{padding:9px;flex:1}
+.sc-row{display:flex;justify-content:space-between;font-size:7.6px;padding:4px 0;border-bottom:1px solid #E9EDF1}
+.sc-row s{text-decoration:none;color:#94A3B8}
+.sc-row b{font-weight:600}
+.sc-pill{display:inline-block;background:#EFF6FF;color:#2563EB;font-size:6.6px;font-weight:700;
+  padding:2px 7px;border-radius:980px;letter-spacing:.06em}
+.sc-btn{display:block;text-align:center;background:var(--red);color:#fff;border-radius:8px;
+  padding:7px;font-size:7.6px;font-weight:600;margin-top:9px}
+.sc-btn.g{background:#fff;color:#475569;border:1px solid #E2E8F0;margin-top:6px}
+
+/* adım göstergesi */
+.scan-steps{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:26px}
+.scan-step{display:flex;align-items:center;gap:9px;font-size:.86rem;color:#8A8A8F;
+  border:1px solid rgba(255,255,255,.13);border-radius:980px;padding:9px 18px;
+  animation:stp var(--cyc) linear infinite;letter-spacing:-.01em}
+.scan-step em{font-style:normal;font-family:var(--mono);font-size:.66rem;opacity:.8}
+.scan-step:nth-child(1){animation-name:stp1}
+.scan-step:nth-child(2){animation-name:stp2}
+.scan-step:nth-child(3){animation-name:stp3}
+@keyframes stp1{0%,37%{border-color:var(--red);color:#fff;background:rgba(225,29,46,.14)}
+  40%,100%{border-color:rgba(255,255,255,.13);color:#8A8A8F;background:none}}
+@keyframes stp2{0%,38%{border-color:rgba(255,255,255,.13);color:#8A8A8F;background:none}
+  41%,57%{border-color:var(--red);color:#fff;background:rgba(225,29,46,.14)}
+  60%,100%{border-color:rgba(255,255,255,.13);color:#8A8A8F;background:none}}
+@keyframes stp3{0%,58%{border-color:rgba(255,255,255,.13);color:#8A8A8F;background:none}
+  62%,92%{border-color:var(--red);color:#fff;background:rgba(225,29,46,.14)}
+  96%,100%{border-color:rgba(255,255,255,.13);color:#8A8A8F;background:none}}
+
+/* ================= GERÇEK FOTOĞRAF ALANLARI ================= */
+.photos{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:48px}
+.photo{position:relative;border-radius:16px;overflow:hidden;background:#101012;
+  border:1px solid rgba(255,255,255,.12);aspect-ratio:4/3}
+.photo img{display:none;width:100%;height:100%;object-fit:cover}
+.photo.has img{display:block}
+.photo.has .photo-ph{display:none}
+.photo-ph{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;
+  justify-content:center;gap:14px;text-align:center;padding:26px;
+  background:repeating-linear-gradient(135deg,rgba(255,255,255,.025) 0 2px,transparent 2px 12px)}
+.photo-ph .qr-demo{width:88px;height:88px;margin:0;opacity:.9}
+.photo-ph .qr-demo svg path{fill:#fff}
+.photo-ph b{font-size:.98rem;font-weight:600;color:#fff;letter-spacing:-.02em}
+.photo-ph s{text-decoration:none;font-family:var(--mono);font-size:.66rem;letter-spacing:.08em;
+  color:#6E6E73;text-transform:uppercase}
+.photo figcaption{position:absolute;left:0;right:0;bottom:0;padding:26px 20px 16px;
+  background:linear-gradient(to top,rgba(0,0,0,.85),transparent);
+  font-size:.88rem;color:#E8E8EA;font-weight:500;letter-spacing:-.015em}
 
 /* ================= EKRAN ÇERÇEVESİ ================= */
 .shotframe{border-radius:var(--r);overflow:hidden;background:var(--m-bg);
@@ -461,239 +511,66 @@ p{max-width:64ch}
 .foot .mono{font-family:var(--mono);font-size:.7rem;letter-spacing:.1em}
 
 /* ================= RESPONSIVE ================= */
+@media(max-width:1080px){
+  .feat-grid{grid-template-columns:repeat(2,1fr)}
+  .show{gap:40px}
+}
 @media(max-width:980px){
   .sec{padding:76px 0}
-  .hero{padding:62px 0 78px}
-  .hero-grid,.split,.show{grid-template-columns:1fr;gap:42px}
-  .show{margin-top:70px}
+  .hero{padding:62px 0 76px}
+  .hero-stage{margin-top:38px}
+  .float-label,.phone{display:none}
+  .hero-app .ui-main{min-height:392px}
+  .hero-tabs{margin-top:30px}
+  .hero-tab{font-size:.6rem;padding:7px 13px;letter-spacing:.06em}
+  .hero-grid,.split,.show{grid-template-columns:1fr;gap:40px}
+  .show{margin-top:64px}
   .show.flip-l .show-txt{order:0}
-  .feat-grid,.steps,.qr-grid{grid-template-columns:1fr}
-  .label,.pipe{margin-left:0}
-=======
-/* ============ İMZA: DEMİRBAŞ ETİKETİ ============ */
-.stage{position:relative;perspective:1200px}
-.tag{
-  background:var(--tag);color:var(--ink);border-radius:16px;padding:22px 24px 18px;
-  width:min(370px,100%);box-shadow:0 34px 64px -24px rgba(0,0,0,.8);margin-left:auto;
-}
-.tag-top{display:flex;justify-content:space-between;font-family:var(--mono);font-size:.65rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;opacity:.6}
-.tag-code{font-family:var(--mono);font-weight:700;font-size:1.42rem;letter-spacing:-.03em;margin:12px 0 4px}
-.tag-name{font-weight:600;font-size:1rem;line-height:1.3;letter-spacing:-.02em}
-.tag-meta{margin-top:12px;font-family:var(--mono);font-size:.69rem;letter-spacing:.04em;opacity:.72}
-.barcode{height:34px;margin-top:16px;border-radius:3px;
-  background:repeating-linear-gradient(90deg,var(--ink) 0 2px,transparent 2px 5px,var(--ink) 5px 6px,transparent 6px 8px,var(--ink) 8px 11px,transparent 11px 13px);}
-.tag.flip{animation:flip .55s ease}
-@keyframes flip{0%{transform:rotateX(0)}45%{transform:rotateX(-70deg);opacity:.35}100%{transform:rotateX(0)}}
-.pipe{
-  display:flex;margin:24px 0 0 auto;width:min(370px,100%);
-  background:rgba(255,255,255,.05);border:1px solid var(--line-d);border-radius:12px;padding:6px;
-}
-.pipe span{flex:1;text-align:center;font-family:var(--mono);font-size:.62rem;letter-spacing:.08em;
-  padding:8px 2px;border-radius:8px;color:#8A8A8F;text-transform:uppercase;transition:.35s}
-.pipe span.on{background:var(--cyan);color:#fff}
-
-/* ============ EKRAN ÇERÇEVESİ ============ */
-.shotframe{
-  border-radius:var(--r);overflow:hidden;background:#1B1B1F;
-  border:1px solid var(--line-d);box-shadow:0 36px 72px -32px rgba(0,0,0,.55);
-}
-.sec:not(.sec-dark) .shotframe{border-color:var(--line);box-shadow:0 30px 64px -34px rgba(0,0,0,.34)}
-.chrome{display:flex;align-items:center;gap:7px;padding:11px 14px;background:#111114;border-bottom:1px solid rgba(255,255,255,.07)}
-.dot{width:10px;height:10px;border-radius:50%;background:#3A3A3E}
-.chrome .url{margin-left:12px;font-family:var(--mono);font-size:.67rem;color:#77777C;background:rgba(255,255,255,.06);padding:4px 13px;border-radius:980px}
-.shot-img{display:none;width:100%}
-.shotframe.has-img .mock{display:none}
-.shotframe.has-img .shot-img{display:block}
-
-/* ============ MOCK UI ============ */
-.mock{background:#1B1B1F}
-.mock-row{display:grid;grid-template-columns:136px 1fr}
-.mock-side{background:#141417;padding:16px 12px;border-right:1px solid rgba(255,255,255,.06)}
-.mock-side i{display:block;height:9px;border-radius:4px;background:rgba(255,255,255,.1);margin-bottom:13px}
-.mock-side i.on{background:var(--cyan);width:82%}
-.mock-side i:nth-child(2){width:64%}.mock-side i:nth-child(3){width:76%}
-.mock-side i:nth-child(4){width:56%}.mock-side i:nth-child(5){width:70%}.mock-side i:nth-child(6){width:48%}
-.mock-body{padding:18px}
-.stat-row{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:16px}
-.stat{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.07);border-radius:11px;padding:12px}
-.stat b{display:block;font-size:1.16rem;color:#fff;font-weight:600;letter-spacing:-.03em}
-.stat span{font-family:var(--mono);font-size:.55rem;color:#77777C;letter-spacing:.11em;text-transform:uppercase}
-.tbl{border:1px solid rgba(255,255,255,.07);border-radius:11px;overflow:hidden}
-.tr{display:grid;grid-template-columns:1.5fr 1.1fr .8fr .85fr;gap:10px;padding:10px 14px;border-bottom:1px solid rgba(255,255,255,.05);align-items:center}
-.tr:last-child{border-bottom:0}
-.tr.head{background:rgba(255,255,255,.045)}
-.tr.head u{font-family:var(--mono);font-size:.55rem;letter-spacing:.12em;color:#77777C;text-decoration:none;text-transform:uppercase}
-.tr em{font-style:normal;font-size:.74rem;color:#C0C0C5;letter-spacing:-.01em}
-.tr .mono{font-family:var(--mono);font-size:.69rem;color:#88888D}
-.pill{font-family:var(--mono);font-size:.57rem;letter-spacing:.07em;padding:3px 9px;border-radius:980px;justify-self:start;text-transform:uppercase}
-.pill.g{background:rgba(48,196,141,.17);color:var(--ok)}
-.pill.y{background:rgba(245,166,35,.17);color:var(--warn)}
-.pill.b{background:rgba(18,163,180,.2);color:#3FCADB}
-.pill.r{background:rgba(229,72,77,.17);color:#FF6B6F}
-.pill.m{background:rgba(255,255,255,.09);color:#A1A1A6}
-
-/* kanban */
-.kb{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;padding:16px}
-.kb-col{background:rgba(255,255,255,.04);border-radius:12px;padding:10px}
-.kb-col > u{display:flex;justify-content:space-between;font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;color:#77777C;text-decoration:none;margin-bottom:10px;text-transform:uppercase}
-.kb-card{background:#25252A;border:1px solid rgba(255,255,255,.07);border-radius:10px;padding:10px;margin-bottom:8px;transition:.3s;border-left:2px solid transparent}
-.kb-card:hover{transform:translateY(-3px);border-color:rgba(255,255,255,.18)}
-.kb-card.p-h{border-left-color:var(--crit)}
-.kb-card.p-m{border-left-color:var(--warn)}
-.kb-card.p-l{border-left-color:var(--ok)}
-.kb-card b{display:block;font-size:.71rem;color:#D0D0D5;font-weight:500;margin-bottom:7px;line-height:1.35;letter-spacing:-.01em}
-.kb-foot{display:flex;justify-content:space-between;align-items:center}
-.kb-foot i{font-family:var(--mono);font-style:normal;font-size:.55rem;color:#77777C;letter-spacing:.06em}
-.av{width:17px;height:17px;border-radius:50%;background:var(--cyan);color:#fff;font-size:.5rem;display:grid;place-items:center;font-family:var(--mono);font-weight:700}
-
-/* performans paneli */
-.perf{padding:18px}
-.perf-head{display:flex;gap:7px;margin-bottom:14px;flex-wrap:wrap}
-.chip{font-family:var(--mono);font-size:.57rem;letter-spacing:.08em;padding:5px 11px;border-radius:980px;border:1px solid rgba(255,255,255,.12);color:#88888D;text-transform:uppercase}
-.chip.on{background:var(--cyan);border-color:var(--cyan);color:#fff}
-.perf-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:12px}
-.panel{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:14px}
-.panel > u{display:block;font-family:var(--mono);font-size:.55rem;letter-spacing:.12em;color:#77777C;text-decoration:none;margin-bottom:13px;text-transform:uppercase}
-.prow{display:grid;grid-template-columns:64px 1fr 30px;gap:9px;align-items:center;margin-bottom:9px}
-.prow em{font-style:normal;font-size:.66rem;color:#B4B4B9}
-.prow s{text-decoration:none;font-family:var(--mono);font-size:.63rem;color:#88888D;text-align:right}
-.bar{height:7px;border-radius:980px;background:rgba(255,255,255,.08);overflow:hidden}
-.bar i{display:block;height:100%;border-radius:980px;background:linear-gradient(90deg,var(--cyan),var(--cyan-lo));width:0;transition:width 1.1s cubic-bezier(.2,.7,.2,1)}
-.perf.in .bar i{width:var(--w)}
-.cols{display:flex;align-items:flex-end;gap:6px;height:96px;margin-bottom:9px}
-.cols div{flex:1;border-radius:5px 5px 2px 2px;background:linear-gradient(180deg,var(--tag),rgba(255,210,74,.35));height:6%;transition:height 1.1s cubic-bezier(.2,.7,.2,1)}
-.perf.in .cols div{height:var(--h)}
-.cols-x{display:flex;gap:6px;font-family:var(--mono);font-size:.5rem;color:#6E6E73;letter-spacing:.05em}
-.cols-x span{flex:1;text-align:center}
-.donut{display:flex;gap:14px;align-items:center}
-.donut-c{width:78px;height:78px;border-radius:50%;flex:none;
-  background:conic-gradient(var(--cyan) 0 42%, var(--tag) 42% 70%, var(--ok) 70% 87%, #4A4A50 87% 100%);
-  -webkit-mask:radial-gradient(circle, transparent 54%, #000 55%);mask:radial-gradient(circle, transparent 54%, #000 55%)}
-.leg{display:grid;gap:6px;font-size:.63rem;color:#B4B4B9}
-.leg span{display:flex;align-items:center;gap:7px}
-.leg b{width:8px;height:8px;border-radius:2px;flex:none}
-
-/* ============ REVEAL ============ */
-.rv{opacity:0;transform:translateY(26px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0s)}
-.rv.in{opacity:1;transform:none}
-
-/* ============ STRIP ============ */
-.strip{background:#101012;border-top:1px solid rgba(255,255,255,.07);padding:19px 0;overflow:hidden}
-.strip-in{display:flex;gap:42px;white-space:nowrap;font-family:var(--mono);font-size:.73rem;letter-spacing:.16em;color:#66666B;text-transform:uppercase;animation:slide 36s linear infinite}
-.strip-in span{display:flex;align-items:center;gap:42px}
-.strip-in span::after{content:"◆";color:var(--tag);opacity:.5}
-@keyframes slide{to{transform:translateX(-50%)}}
-
-/* ============ PROBLEM ============ */
-.split{display:grid;grid-template-columns:1fr 1fr;gap:58px;align-items:start}
-.pain{list-style:none;border-top:1px solid var(--line)}
-.pain li{display:grid;grid-template-columns:auto 1fr;gap:15px;padding:17px 4px;border-bottom:1px solid var(--line)}
-.pain b{font-family:var(--mono);font-size:.71rem;color:var(--crit);letter-spacing:.06em;padding-top:4px}
-.pain span{font-size:.99rem;color:var(--slate)}
-.pain strong{color:var(--ink);font-weight:600}
-
-/* ============ ÖZELLİK KARTLARI ============ */
-.feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:56px}
-.feat{
-  background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.09);border-radius:var(--r);
-  padding:26px 24px 28px;position:relative;overflow:hidden;
-  transition:.32s cubic-bezier(.2,.7,.2,1);
-}
-.feat::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--tag);transform:scaleY(0);transform-origin:top;transition:.42s cubic-bezier(.2,.7,.2,1)}
-.feat:hover{transform:translateY(-5px);background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.16)}
-.feat:hover::before{transform:scaleY(1)}
-.feat .code{font-family:var(--mono);font-size:.66rem;font-weight:700;letter-spacing:.13em;color:var(--tag);display:block;margin-bottom:14px}
-.feat h4{margin-bottom:9px;color:#fff}
-.feat p{font-size:.93rem;color:#A1A1A6;max-width:none;letter-spacing:-.008em}
-
-/* ============ SHOWCASE ============ */
-.show{display:grid;grid-template-columns:.9fr 1.1fr;gap:58px;align-items:center;margin-top:104px}
-.show.flip-l .show-txt{order:2}
-.show ul{list-style:none;margin-top:24px;display:grid;gap:11px}
-.show li{display:flex;gap:12px;align-items:flex-start;font-size:.97rem;color:var(--slate);letter-spacing:-.01em}
-.show li::before{content:"";width:7px;height:7px;border-radius:2px;background:var(--cyan);flex:none;margin-top:9px}
-.show li strong{color:var(--ink);font-weight:600}
-.sec-dark .show li{color:#A1A1A6}
-.sec-dark .show li::before{background:var(--tag)}
-.sec-dark .show li strong{color:#fff}
-.tagline{margin-top:26px;padding-left:16px;border-left:2px solid var(--tag);font-size:1.05rem;font-weight:500;letter-spacing:-.02em;color:var(--ink)}
-.sec-dark .tagline{color:#fff}
-
-/* ============ ŞUBE / YETKİ ============ */
-.branch{display:flex;flex-wrap:wrap;gap:9px;margin-top:28px}
-.branch b{font-family:var(--mono);font-size:.74rem;letter-spacing:.09em;font-weight:500;
-  padding:9px 16px;border:1px solid var(--line-d);border-radius:980px;color:#B4B4B9;transition:.25s}
-.branch b:hover{border-color:var(--tag);color:var(--tag);transform:translateY(-2px)}
-.perm{display:grid;gap:10px;margin-top:32px}
-.perm-row{display:grid;grid-template-columns:160px 1fr;gap:18px;align-items:center;
-  background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.09);border-radius:14px;padding:15px 19px}
-.perm-row u{font-family:var(--mono);font-size:.72rem;letter-spacing:.07em;color:var(--tag);text-decoration:none}
-.perm-row span{font-size:.92rem;color:#A1A1A6}
-
-/* ============ STEPS ============ */
-.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:52px;counter-reset:s}
-.step{border-top:2px solid var(--ink);padding-top:20px;counter-increment:s}
-.step::before{content:"0" counter(s);font-family:var(--mono);font-weight:700;font-size:.76rem;color:var(--cyan);letter-spacing:.1em;display:block;margin-bottom:12px}
-.step h4{margin-bottom:8px}
-.step p{font-size:.94rem;color:var(--slate)}
-
-/* ============ CTA ============ */
-.cta{background:#0E0E10;color:#F5F5F7;text-align:center;padding:116px 0;position:relative;overflow:hidden}
-.cta::before{content:"";position:absolute;inset:0;opacity:.28;background:repeating-linear-gradient(135deg,rgba(255,210,74,.06) 0 2px,transparent 2px 16px)}
-.cta-in{position:relative}
-.cta h2{color:#fff;margin-bottom:18px}
-.cta .lead{margin:0 auto;color:#A1A1A6}
-.cta-btns{display:flex;gap:13px;justify-content:center;margin-top:36px;flex-wrap:wrap}
-.contact{display:flex;gap:32px;justify-content:center;margin-top:44px;flex-wrap:wrap;
-  font-family:var(--mono);font-size:.79rem;letter-spacing:.05em;color:#77777C}
-.contact a:hover{color:var(--tag)}
-.foot{background:#08080A;color:#66666B;padding:32px 0;font-size:.84rem}
-.foot-in{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
-.foot .mono{font-family:var(--mono);font-size:.71rem;letter-spacing:.1em}
-
-/* ============ RESPONSIVE ============ */
-@media(max-width:980px){
-  .sec{padding:78px 0}
-  .hero{padding:64px 0 80px}
-  .hero-grid,.split,.show{grid-template-columns:1fr;gap:44px}
-  .show{margin-top:72px}
-  .show.flip-l .show-txt{order:0}
-  .feat-grid,.steps,.perf-grid{grid-template-columns:1fr}
-  .tag,.pipe{margin-left:0}
->>>>>>> c6beee5dc31088e9c8b92f16094c6d98c8103f4c
+  .steps,.qr-grid,.photos{grid-template-columns:1fr}
   .nav-links{display:none}
   .nav-links.open{display:flex;position:absolute;top:62px;left:0;right:0;background:#161618;
     flex-direction:column;padding:22px 28px;gap:18px;border-bottom:1px solid rgba(255,255,255,.1)}
   .burger{display:block}
   .nav .btn{display:none}
-<<<<<<< HEAD
+  .perm-row{grid-template-columns:1fr;gap:5px}
+
+  /* mockup'lar: düzeni bozmak yerine yatay kaydır */
+  .shotframe,.browser{position:relative}
+  .shotframe .ui,.browser .ui{overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+  .shotframe .ui::-webkit-scrollbar,.browser .ui::-webkit-scrollbar{display:none}
   .ui-row{grid-template-columns:1fr}
   .ui-side{display:none}
-  .ui-stats{grid-template-columns:repeat(2,1fr)}
-  .ui-cats{grid-template-columns:repeat(3,1fr)}
-  .ui-kb,.ui-panels,.ui-dev{grid-template-columns:1fr}
-  .perm-row{grid-template-columns:1fr;gap:5px}
-  .ui-top{flex-direction:column;align-items:flex-start}
+  .ui-main{min-width:600px}
+  .shotframe::after,.browser::after{content:"";position:absolute;top:38px;right:0;bottom:0;width:34px;
+    background:linear-gradient(to left,rgba(248,250,252,.92),transparent);pointer-events:none;z-index:2}
+}
+@media(max-width:640px){
+  .sec{padding:62px 0}
+  .wrap{padding:0 20px}
+  .feat-grid{grid-template-columns:1fr}
+  .show{margin-top:52px;gap:32px}
+  .hero-tabs{gap:6px}
+  .hero-tab{font-size:.56rem;padding:6px 11px}
+  .btn{width:100%;justify-content:center}
+  .hero-cta,.cta-btns{width:100%}
+  .contact{gap:14px;flex-direction:column;font-size:.74rem}
+  .photo{aspect-ratio:3/2}
+  .foot-in{justify-content:center;text-align:center}
+  .scan{aspect-ratio:4/3}
+  .scan-phone{width:38%;right:7%}
+  .scan-steps{flex-direction:column;align-items:stretch}
+  .scan-step{justify-content:flex-start;font-size:.8rem;padding:8px 15px}
+}
+@media(prefers-reduced-motion:reduce){
+  .scan-line,.tick,.cam-hint{display:none}
+  .scan-card{transform:none!important}
+  .reticle i{border-color:var(--red)!important}
+  .scan-step:nth-child(3){border-color:var(--red);color:#fff;background:rgba(225,29,46,.14)}
 }
 @media(prefers-reduced-motion:reduce){
   *{animation:none!important;transition:none!important}
   .rv,.up{opacity:1;transform:none}
   .ui-bar i,.ui-cat u i,.ui-prog i{width:var(--w)}
-=======
-  .mock-row{grid-template-columns:1fr}
-  .mock-side{display:none}
-  .stat-row{grid-template-columns:repeat(2,1fr)!important}
-  .tr{grid-template-columns:1.3fr .9fr}
-  .tr .mono,.tr .pill{display:none}
-  .kb{grid-template-columns:repeat(2,1fr)}
-  .perm-row{grid-template-columns:1fr;gap:5px}
-}
-@media(max-width:560px){ .kb{grid-template-columns:1fr} }
-@media(prefers-reduced-motion:reduce){
-  *{animation:none!important;transition:none!important}
-  .rv,.up{opacity:1;transform:none}
-  .bar i{width:var(--w)} .cols div{height:var(--h)}
->>>>>>> c6beee5dc31088e9c8b92f16094c6d98c8103f4c
 }
 </style>
 </head>
@@ -705,14 +582,9 @@ p{max-width:64ch}
     <a href="#" class="logo"><span class="logo-mark">BT</span> BT Envanter</a>
     <button class="burger" aria-label="Menü" onclick="document.getElementById('nl').classList.toggle('open')">☰</button>
     <div class="nav-links" id="nl">
-<<<<<<< HEAD
       <a href="#moduller">Modüller</a>
       <a href="#ekranlar">Ekranlar</a>
       <a href="#karekod">Karekod</a>
-=======
-      <a href="#ozellikler">Özellikler</a>
-      <a href="#ekranlar">Ekranlar</a>
->>>>>>> c6beee5dc31088e9c8b92f16094c6d98c8103f4c
       <a href="#destek">Destek</a>
       <a href="#performans">Performans</a>
       <a href="#kurulum">Kurulum</a>
@@ -723,74 +595,194 @@ p{max-width:64ch}
 
 <!-- ================= HERO ================= -->
 <header class="hero">
-  <div class="wrap hero-grid">
+  <div class="wrap hero-head center">
     <div>
       <span class="eyebrow up d1">Üretim işletmeleri için BT yönetim sistemi</span>
       <h1 class="up d2">Fabrikadaki her cihazın <em>kimde, nerede</em> ve ne durumda olduğunu bilin.</h1>
-<<<<<<< HEAD
       <p class="lead up d3">Envanter, zimmet, karekodlu etiket ve sayım, destek talepleri, iş takibi, lisans yönetimi ve performans raporları — tek sistemde. Yüzlerce cihaz, birden fazla şube, tek panel.</p>
       <div class="hero-cta up d4">
         <a href="#iletisim" class="btn btn-primary">Canlı demo talep et →</a>
         <a href="#moduller" class="btn btn-ghost">Modülleri incele</a>
-=======
-      <p class="lead up d3">Envanter, zimmet, destek talepleri, iş takibi ve performans raporları tek sistemde. Yüzlerce cihaz, birden fazla şube, tek panel — Excel dosyalarına dağılmadan.</p>
-      <div class="hero-cta up d4">
-        <a href="#iletisim" class="btn btn-primary">Canlı demo talep et →</a>
-        <a href="#ozellikler" class="btn btn-ghost">Özellikleri incele</a>
->>>>>>> c6beee5dc31088e9c8b92f16094c6d98c8103f4c
       </div>
       <div class="hero-note up d5">Kendi sunucunuzda kurulum · Veriler şirket dışına çıkmaz</div>
     </div>
 
-    <div class="stage up d3">
-<<<<<<< HEAD
+  </div>
+
+  <!-- ---------- ÜRÜN SAHNESİ ---------- -->
+  <div class="wrap hero-stage">
+    <div class="browser">
+      <div class="chrome"><i class="dot"></i><i class="dot"></i><i class="dot"></i>
+        <span class="url" id="h-url">btenvanter.local / dashboard</span></div>
+      <div class="ui hero-app in">
+        <div class="ui-row">
+          <aside class="ui-side">
+            <div class="ui-logo"><em>BT</em><div><b>BT Envanter</b><s>IT Asset Management</s></div></div>
+            <div class="ui-sec">ANA MENÜ</div>
+            <div class="ui-nav" data-n="0"><i></i>Dashboard</div>
+            <div class="ui-nav" data-n="1"><i></i>Cihazlar</div>
+            <div class="ui-nav"><i></i>Ağ Topolojisi</div>
+            <div class="ui-nav"><i></i>Personel</div>
+            <div class="ui-nav"><i></i>Zimmetler</div>
+            <div class="ui-nav"><i></i>Destek Talepleri</div>
+            <div class="ui-nav" data-n="2"><i></i>İş Takibi</div>
+            <div class="ui-nav"><i></i>İş Takip Paneli</div>
+            <div class="ui-nav"><i></i>Lisanslar</div>
+            <div class="ui-nav" data-n="3"><i></i>Sayım</div>
+            <div class="ui-nav"><i></i>Raporlar</div>
+            <div class="ui-user"><span class="ui-av">AY</span><div><b>Ayşe Yıldız</b><s>Sistem Yöneticisi</s></div></div>
+          </aside>
+
+          <div class="ui-main">
+            <!-- PANE 0 · DASHBOARD -->
+            <div class="pane on" data-pane="0">
+              <div class="ui-top"><div><h5>Dashboard</h5><p>Tümü — BT Envanter genel durumu</p></div>
+                <div class="ui-acts"><span class="ui-btn">+ Yeni Zimmet</span></div></div>
+              <div class="ui-body">
+                <div class="ui-chips"><span class="ui-chip on">TÜMÜ</span><span class="ui-chip">ŞUBE 1</span><span class="ui-chip">ŞUBE 2</span><span class="ui-chip">ŞUBE 3</span><span class="ui-chip">ŞUBE 4</span><span class="ui-chip">ŞUBE 5</span></div>
+                <div class="ui-stats" style="grid-template-columns:repeat(6,1fr)">
+                  <div class="ui-stat"><i class="bg-blue"></i><b class="c-blue">687</b><span>Toplam Cihaz</span></div>
+                  <div class="ui-stat"><i class="bg-green"></i><b class="c-green">367</b><span>Kullanımda</span></div>
+                  <div class="ui-stat"><i class="bg-violet"></i><b class="c-violet">315</b><span>Depoda</span></div>
+                  <div class="ui-stat"><i class="bg-red"></i><b class="c-red">3</b><span>Arızalı</span></div>
+                  <div class="ui-stat"><i class="bg-orange"></i><b class="c-orange">1</b><span>Serviste</span></div>
+                  <div class="ui-stat"><i class="bg-blue"></i><b class="ui-mu">1</b><span>Hurda</span></div>
+                </div>
+                <div class="ui-alert y"><div><b>71 zimmet için imzalı form bekleniyor</b><s>Taranmış zimmet belgesi henüz yüklenmemiş — detay için tıklayın</s></div></div>
+                <div class="ui-panel" style="margin-top:9px">
+                  <h6>Kategori Özeti <u>detay için tıklayın</u></h6>
+                  <div class="ui-cats">
+                    <div class="ui-cat"><b>123</b><span>CEP TELEFONU</span><u><i style="--w:74%"></i></u></div>
+                    <div class="ui-cat"><b>69</b><span>KAMERA</span><u><i style="--w:88%"></i></u></div>
+                    <div class="ui-cat"><b>67</b><span>NOTEBOOK</span><u><i style="--w:62%"></i></u></div>
+                    <div class="ui-cat"><b>48</b><span>MONİTÖR</span><u><i style="--w:55%"></i></u></div>
+                    <div class="ui-cat"><b>47</b><span>SIM KART</span><u><i style="--w:70%"></i></u></div>
+                    <div class="ui-cat"><b>36</b><span>MOUSE</span><u><i style="--w:44%"></i></u></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- PANE 1 · CİHAZLAR -->
+            <div class="pane" data-pane="1">
+              <div class="ui-top"><div><h5>Cihazlar</h5><p>Tümü — 686 cihaz kayıtlı</p></div>
+                <div class="ui-acts"><span class="ui-btn g">Etiket Yazdır</span><span class="ui-btn g">Excel İndir</span><span class="ui-btn">+ Cihaz Ekle</span></div></div>
+              <div class="ui-body">
+                <div class="ui-chips"><span class="ui-chip on">TÜMÜ</span><span class="ui-chip">ŞUBE 1</span><span class="ui-chip">ŞUBE 2</span><span class="ui-chip">ŞUBE 3</span><span class="ui-chip">ŞUBE 4</span><span class="ui-chip">ŞUBE 5</span></div>
+                <div class="ui-chips"><span class="ui-chip b">🔍 Demirbaş no, seri no, telefon…</span><span class="ui-chip b">Tüm Kategoriler ⌄</span><span class="ui-chip b">Marka ⌄</span><span class="ui-chip b">Tüm Durumlar ⌄</span></div>
+                <div class="ui-tbl">
+                  <div class="ui-tr h" style="grid-template-columns:.75fr 1fr 1.25fr 1fr .6fr .95fr .7fr"><span>Demirbaş</span><span>Kategori</span><span>Marka / Model</span><span>Seri No</span><span>Şube</span><span>Kimde</span><span>Durum</span></div>
+                  <div class="ui-tr" style="grid-template-columns:.75fr 1fr 1.25fr 1fr .6fr .95fr .7fr"><span class="ui-code">S1-00713</span><span class="ui-mu">MONİTÖR</span><span>Marka A · MP271</span><span class="ui-code ui-mu">PA2T8649014</span><span class="ui-mu">ŞUBE 1</span><span class="ui-mu">—</span><span class="ui-pill p-red">Depoda</span></div>
+                  <div class="ui-tr" style="grid-template-columns:.75fr 1fr 1.25fr 1fr .6fr .95fr .7fr"><span class="ui-code">S1-00711</span><span class="ui-mu">CEP TELEFONU</span><span>Marka B · A56 5G</span><span class="ui-code ui-mu">RFCY7231PZN</span><span class="ui-mu">ŞUBE 1</span><span class="ui-mu">—</span><span class="ui-pill p-red">Depoda</span></div>
+                  <div class="ui-tr" style="grid-template-columns:.75fr 1fr 1.25fr 1fr .6fr .95fr .7fr"><span class="ui-code">S1-00702</span><span class="ui-mu">SIM KART</span><span>Operatör · 4.5G Hat</span><span class="ui-code c-blue">05XX XXX 1172</span><span class="ui-mu">ŞUBE 1</span><span>Burak Demir</span><span class="ui-pill p-blue">Kullanımda</span></div>
+                  <div class="ui-tr" style="grid-template-columns:.75fr 1fr 1.25fr 1fr .6fr .95fr .7fr"><span class="ui-code">S2-00584</span><span class="ui-mu">YAZICI</span><span>Marka C · MFP135A</span><span class="ui-code ui-mu">CN1B4K0092</span><span class="ui-mu">ŞUBE 2</span><span>Bölüm · Kalite</span><span class="ui-pill p-blue">Kullanımda</span></div>
+                  <div class="ui-tr" style="grid-template-columns:.75fr 1fr 1.25fr 1fr .6fr .95fr .7fr"><span class="ui-code">S3-00311</span><span class="ui-mu">EL TERMİNALİ</span><span>Marka D · EDA51</span><span class="ui-code ui-mu">18234K7710</span><span class="ui-mu">ŞUBE 3</span><span>Bölüm · Sevkiyat</span><span class="ui-pill p-orange">Serviste</span></div>
+                  <div class="ui-tr" style="grid-template-columns:.75fr 1fr 1.25fr 1fr .6fr .95fr .7fr"><span class="ui-code">S2-00281</span><span class="ui-mu">NOTEBOOK</span><span>Marka E · E16 Gen 3</span><span class="ui-code ui-mu">PF5R0ELB</span><span class="ui-mu">ŞUBE 2</span><span>Ceren Aksoy</span><span class="ui-pill p-blue">Kullanımda</span></div>
+                  <div class="ui-tr" style="grid-template-columns:.75fr 1fr 1.25fr 1fr .6fr .95fr .7fr"><span class="ui-code">S4-00087</span><span class="ui-mu">ETİKET YAZICI</span><span>Marka F · ZT230</span><span class="ui-code ui-mu">D4J1730052</span><span class="ui-mu">ŞUBE 4</span><span>Bölüm · Üretim</span><span class="ui-pill p-blue">Kullanımda</span></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- PANE 2 · İŞ TAKİBİ -->
+            <div class="pane" data-pane="2">
+              <div class="ui-top"><div><h5>İş Takibi</h5><p>69 iş kaydı · güncel 08:39</p></div>
+                <div class="ui-acts"><span class="ui-btn">+ İş Ekle</span></div></div>
+              <div class="ui-body">
+                <div class="ui-chips"><span class="ui-chip b">🔍 İş ara…</span><span class="ui-chip b">Tüm hatlar ⌄</span><span class="ui-chip b">Tüm personel ⌄</span><span class="ui-chip on">Bu hafta</span><span class="ui-chip">Bu ay</span><span class="ui-chip">Son 3 ay</span></div>
+                <div class="ui-kb">
+                  <div class="ui-kbc"><div class="ui-kbh"><em class="ui-mu">Yapılacak</em><span class="ui-kbn">18</span></div>
+                    <div class="ui-card"><b>Etiket yazdırma ekranı yetki düzenlemesi</b><div class="ui-tags"><span class="ui-tg bt">BT</span>Yazılım · 22.08</div></div>
+                    <div class="ui-card"><b>Cihaz arızaları için ayrı ekran</b><div class="ui-tags"><span class="ui-tg bt">BT</span>Yazılım · 21.08</div></div>
+                    <div class="ui-card o"><b>Şube 3 sevkiyat yazıcı arızası</b><div class="ui-tags"><span class="ui-tg bt">BT</span>Bakım · 19.08</div></div>
+                  </div>
+                  <div class="ui-kbc"><div class="ui-kbh"><em class="c-orange">Yapılıyor</em><span class="ui-kbn">4</span></div>
+                    <div class="ui-card o"><b>Palet etiketi hatası</b><div class="ui-tags"><span class="ui-tg sap">ERP</span>Hata Giderme · 25.08</div></div>
+                    <div class="ui-card o"><b>Şeffaf fire kalemine çevirme</b><div class="ui-tags"><span class="ui-tg sap">ERP</span>Veri Düzeltme</div></div>
+                    <div class="ui-card"><b>Sistem kurulumları</b><div class="ui-tags"><span class="ui-tg bt">BT</span>Kullanıcı Desteği</div></div>
+                  </div>
+                  <div class="ui-kbc"><div class="ui-kbh"><em class="c-orange">Tamamlandı</em><span class="ui-kbn">2</span></div>
+                    <div class="ui-card g"><b>Toplantı odası ekran kablosu</b><div class="ui-tags"><span class="ui-tg bt">BT</span>Bakım · 26.08</div></div>
+                  </div>
+                  <div class="ui-kbc"><div class="ui-kbh"><em class="c-green">Onaylandı</em><span class="ui-kbn">47</span></div>
+                    <div class="ui-card g"><b>Şube 3 cihaz silme</b><div class="ui-tags"><span class="ui-tg bt">BT</span>Kullanıcı Desteği</div><span class="ui-ok">✓ Gökhan Aslan onayladı</span></div>
+                    <div class="ui-card g"><b>Palet etiketi düzeltmesi</b><div class="ui-tags"><span class="ui-tg sap">ERP</span>Eğitim · 27.08</div><span class="ui-ok">✓ Gökhan Aslan onayladı</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- PANE 3 · SAYIM -->
+            <div class="pane" data-pane="3">
+              <div class="ui-top"><div><h5>SAY-2026-002</h5><p>ŞUBE 1 · MONİTÖR sayımı — karekod okutularak</p></div>
+                <div class="ui-acts"><span class="ui-btn g">Tutanağı İndir</span><span class="ui-btn">Sayımı Bitir</span></div></div>
+              <div class="ui-body">
+                <div class="ui-stats"><div class="ui-stat"><b>6</b><span>Beklenen</span></div>
+                  <div class="ui-stat"><b class="c-green">6</b><span>Sayılan</span></div>
+                  <div class="ui-stat"><b class="c-red">0</b><span>Eksik</span></div>
+                  <div class="ui-stat"><b class="c-blue">%100</b><span>İlerleme</span></div></div>
+                <div class="ui-prog"><i style="--w:100%"></i></div>
+                <div class="ui-chips"><span class="ui-chip on">Sayılanlar (6)</span><span class="ui-chip">Eksikler (0)</span></div>
+                <div class="ui-tbl">
+                  <div class="ui-tr h" style="grid-template-columns:.8fr 1.4fr .7fr 1fr .5fr"><span>Demirbaş</span><span>Cihaz</span><span>Sonuç</span><span>Okutan</span><span>Saat</span></div>
+                  <div class="ui-tr" style="grid-template-columns:.8fr 1.4fr .7fr 1fr .5fr"><span class="ui-code">S1-00026</span><span>MONİTÖR · Marka A 27"</span><span class="ui-pill p-green">Bulundu</span><span class="ui-mu">Burak Demir</span><span class="ui-mu">16:02</span></div>
+                  <div class="ui-tr" style="grid-template-columns:.8fr 1.4fr .7fr 1fr .5fr"><span class="ui-code">S1-00025</span><span>MONİTÖR · Marka A 27"</span><span class="ui-pill p-green">Bulundu</span><span class="ui-mu">Burak Demir</span><span class="ui-mu">16:02</span></div>
+                  <div class="ui-tr" style="grid-template-columns:.8fr 1.4fr .7fr 1fr .5fr"><span class="ui-code">S1-00024</span><span>MONİTÖR · Marka A 27"</span><span class="ui-pill p-green">Bulundu</span><span class="ui-mu">Burak Demir</span><span class="ui-mu">16:02</span></div>
+                  <div class="ui-tr" style="grid-template-columns:.8fr 1.4fr .7fr 1fr .5fr"><span class="ui-code">S1-00022</span><span>MONİTÖR · Marka G 24"</span><span class="ui-pill p-green">Bulundu</span><span class="ui-mu">Burak Demir</span><span class="ui-mu">16:03</span></div>
+                  <div class="ui-tr" style="grid-template-columns:.8fr 1.4fr .7fr 1fr .5fr"><span class="ui-code">S1-00020</span><span>MONİTÖR · Marka G 24"</span><span class="ui-pill p-green">Bulundu</span><span class="ui-mu">Burak Demir</span><span class="ui-mu">16:03</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- yüzen karekod etiketi -->
+    <div class="float-label">
       <div class="label" id="label">
-        <div class="label-top"><span>Demirbaş Etiketi</span><span id="l-branch">ŞUBE 1</span></div>
+        <div class="label-top"><span>Demirbaş</span><span id="l-branch">ŞUBE 1</span></div>
         <div class="label-mid">
           <div class="qr" data-qr="hero"><div class="qr-logo"><span>BT</span></div></div>
           <div class="label-info">
             <div class="label-code" id="l-code">S1-00713</div>
-            <div class="label-name" id="l-name">Dizüstü Bilgisayar · 16 GB / 512 GB</div>
+            <div class="label-name" id="l-name">Dizüstü Bilgisayar</div>
             <div class="label-meta" id="l-user">Kişi zimmeti · Muhasebe</div>
           </div>
         </div>
-        <div class="label-foot"><span>Karekodu okutun</span><span>Cihaz kartı açılır</span></div>
-      </div>
-      <div class="pipe" aria-hidden="true">
-        <span class="on" data-p="0">Depoda</span>
-        <span data-p="1">Kullanımda</span>
-=======
-      <div class="tag" id="tag">
-        <div class="tag-top"><span>Demirbaş Etiketi</span><span id="t-branch">ŞUBE 1</span></div>
-        <div class="tag-code" id="t-code">ENV-S1-0142</div>
-        <div class="tag-name" id="t-name">Dizüstü Bilgisayar · i5 / 16 GB</div>
-        <div class="tag-meta" id="t-user">Kişi zimmeti · Muhasebe</div>
-        <div class="barcode"></div>
-      </div>
-      <div class="pipe" aria-hidden="true">
-        <span class="on" data-p="0">Depoda</span>
-        <span data-p="1">Zimmetli</span>
->>>>>>> c6beee5dc31088e9c8b92f16094c6d98c8103f4c
-        <span data-p="2">Serviste</span>
-        <span data-p="3">Hurda</span>
+        <div class="label-foot"><span>Okut</span><span>Kart açılsın</span></div>
       </div>
     </div>
+
+    <!-- telefon: personel portalı -->
+    <div class="phone">
+      <div class="phone-scr">
+        <div class="phone-top"><b>Cihazlarım</b><s>Zimmetinizdeki 10 cihaz</s></div>
+        <div class="phone-body">
+          <div class="p-scan"><div class="qr" data-qr="phone"></div><span>Cihazdaki karekodu okutun, kartı açılsın</span></div>
+          <div class="p-dev"><s>NOTEBOOK</s><b>Marka E · E16 Gen 3</b><em>S1-00009</em></div>
+          <div class="p-dev"><s>CEP TELEFONU</s><b>Marka B · A56 5G</b><em>S1-00711</em></div>
+          <div class="p-dev"><s>MONİTÖR</s><b>Marka A · 27"</b><em>S1-00025</em></div>
+          <span class="p-btn">Sorun bildir</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- modül sekmeleri -->
+  <div class="wrap hero-tabs">
+    <button class="hero-tab on" data-t="0">Envanter</button>
+    <button class="hero-tab" data-t="1">Cihazlar</button>
+    <button class="hero-tab" data-t="2">İş Takibi</button>
+    <button class="hero-tab" data-t="3">Karekodla Sayım</button>
   </div>
 </header>
 
 <div class="strip">
   <div class="strip-in">
-<<<<<<< HEAD
     <span>Notebook &amp; Desktop</span><span>Monitör</span><span>Cep Telefonu &amp; SIM Kart</span><span>Yazıcı &amp; Barkod Yazıcı</span>
     <span>El Terminali</span><span>Switch &amp; Access Point</span><span>Kamera &amp; NVR</span><span>Sunucu &amp; NAS</span><span>Lisans &amp; Abonelik</span>
     <span>Notebook &amp; Desktop</span><span>Monitör</span><span>Cep Telefonu &amp; SIM Kart</span><span>Yazıcı &amp; Barkod Yazıcı</span>
     <span>El Terminali</span><span>Switch &amp; Access Point</span><span>Kamera &amp; NVR</span><span>Sunucu &amp; NAS</span><span>Lisans &amp; Abonelik</span>
-=======
-    <span>Dizüstü &amp; Masaüstü</span><span>Yazıcı &amp; Etiket Yazıcı</span><span>El Terminali</span><span>Ağ Cihazları</span>
-    <span>Kamera Sistemleri</span><span>Telefon Hatları</span><span>Lisans &amp; Yazılım</span><span>Sunucu &amp; Depolama</span>
-    <span>Dizüstü &amp; Masaüstü</span><span>Yazıcı &amp; Etiket Yazıcı</span><span>El Terminali</span><span>Ağ Cihazları</span>
-    <span>Kamera Sistemleri</span><span>Telefon Hatları</span><span>Lisans &amp; Yazılım</span><span>Sunucu &amp; Depolama</span>
->>>>>>> c6beee5dc31088e9c8b92f16094c6d98c8103f4c
   </div>
 </div>
 
@@ -800,7 +792,6 @@ p{max-width:64ch}
     <div class="rv">
       <span class="eyebrow">Tanıdık geldi mi?</span>
       <h2>BT envanteri Excel'de tutulduğunda, envanter aslında hiç tutulmuyordur.</h2>
-<<<<<<< HEAD
       <p class="lead" style="margin-top:22px">İşten ayrılan personelin bilgisayarı kimde? Hangi lisans ne zaman yenilenecek? Bu ay ekip kaç talep kapattı? Bu sorular her sorulduğunda saatler harcanıyorsa, sorun sizde değil; araçta.</p>
     </div>
     <ul class="pain rv" style="--d:.12s">
@@ -809,21 +800,10 @@ p{max-width:64ch}
       <li><b>03</b><span><strong>Sayım günlerce sürüyor.</strong> Liste elde, cihaz sahada; eşleştirme göz kararı yapılıyor.</span></li>
       <li><b>04</b><span><strong>Lisans ve garanti tarihleri kaçıyor.</strong> Yenileme, süresi geçtikten sonra fark ediliyor.</span></li>
       <li><b>05</b><span><strong>Ekibin yükü ölçülemiyor.</strong> Kimin üzerinde kaç iş var, hangi iş neden gecikti belli değil.</span></li>
-=======
-      <p class="lead" style="margin-top:22px">İşten ayrılan personelin bilgisayarı kimde? Geçen ay hangi yazıcıya kaç kez servis çağrıldı? Bu ay ekip kaç talep kapattı? Bu sorular her sorulduğunda saatler harcanıyorsa, sorun sizde değil; araçta.</p>
-    </div>
-    <ul class="pain rv" style="--d:.12s">
-      <li><b>01</b><span><strong>Zimmet kâğıt üstünde kalıyor.</strong> İmzalı form dosyada, gerçek durum kimsede yok.</span></li>
-      <li><b>02</b><span><strong>Arıza talepleri mesajlaşma gruplarında kayboluyor.</strong> Kim baktı, ne yapıldı, ne kadar sürdü — kayıt yok.</span></li>
-      <li><b>03</b><span><strong>Her şube kendi listesini tutuyor.</strong> Dosyalar birbirini tutmuyor, konsolide rapor çıkmıyor.</span></li>
-      <li><b>04</b><span><strong>Ekibin yükü ölçülemiyor.</strong> Kimin üzerinde kaç iş var, hangi iş neden gecikti belli değil.</span></li>
-      <li><b>05</b><span><strong>Yatırım kararı tahminle veriliyor.</strong> Geçmiş servis ve yenileme verisi elde olmuyor.</span></li>
->>>>>>> c6beee5dc31088e9c8b92f16094c6d98c8103f4c
     </ul>
   </div>
 </section>
 
-<<<<<<< HEAD
 <!-- ================= MODÜLLER ================= -->
 <section class="sec sec-dark" id="moduller">
   <div class="wrap">
@@ -875,54 +855,11 @@ p{max-width:64ch}
         <p>Garanti raporu, lokasyon envanteri, servis maliyeti, lisans yenileme. Hepsi tek tıkla Excel'e aktarılır.</p></div>
       <div class="feat rv" style="--d:.09s"><span class="code">YTK-18</span><h4>Şube ve rol bazlı yetki</h4>
         <p>Şube sorumlusu yalnızca kendi şubesini görür, yönetim tümünü. Sistemde kayıtsız işlem kalmaz.</p></div>
-=======
-<!-- ================= ÖZELLİKLER ================= -->
-<section class="sec sec-dark" id="ozellikler">
-  <div class="wrap">
-    <div class="rv center" style="max-width:800px">
-      <span class="eyebrow">Modüller</span>
-      <h2 style="color:#fff">Satın alımdan hurdaya, talep açılışından raporuna.</h2>
-      <p class="lead" style="margin-top:20px">Genel amaçlı bir yazılımın fabrikaya uyarlanmış hali değil. Sahada çalışan bir BT ekibinin gündelik işine göre yazıldı.</p>
-    </div>
-
-    <div class="feat-grid">
-      <div class="feat rv" style="--d:.04s"><span class="code">ENV-01</span><h4>Varlık envanteri</h4>
-        <p>Kategori, marka, model, seri no, MAC adresi, garanti bitişi, alış tarihi ve fiziksel konum. Her cihaz için tek kayıt, tam geçmiş.</p></div>
-      <div class="feat rv" style="--d:.08s"><span class="code">ZMT-02</span><h4>Kişi zimmeti</h4>
-        <p>Cihazı personele zimmetleyin, imzalı teslim belgesini kayda ekleyin, iadede tek tıkla depoya döndürün.</p></div>
-      <div class="feat rv" style="--d:.12s"><span class="code">ZMT-03</span><h4>Bölüm zimmeti</h4>
-        <p>Ortak kullanılan yazıcı, terminal ve ekranlar kişiye değil bölüme zimmetlenir. Sorumluluk departmanda kalır, personel değişse de kayıt bozulmaz.</p></div>
-
-      <div class="feat rv" style="--d:.04s"><span class="code">DST-04</span><h4>Destek talepleri</h4>
-        <p>Kullanıcı kendi ekranından talep açar, talep otomatik numara alır, kategori ve önceliğine göre ilgili tekniciye düşer.</p></div>
-      <div class="feat rv" style="--d:.08s"><span class="code">DST-05</span><h4>Öncelik ve süre takibi</h4>
-        <p>Kritik, yüksek, normal, düşük. Her talebin açılış ve çözüm süresi ölçülür; geciken talepler panoda işaretlenir.</p></div>
-      <div class="feat rv" style="--d:.12s"><span class="code">DST-06</span><h4>Talep içi mesajlaşma</h4>
-        <p>Talebi açan kullanıcı ile tekniker aynı kayıt üzerinden yazışır. Ekran görüntüsü ve dosya eklenir, konuşma kayıtta saklanır.</p></div>
-
-      <div class="feat rv" style="--d:.04s"><span class="code">İŞP-07</span><h4>İş takip panosu</h4>
-        <p>Açık işler Kanban panosunda. Sürükleyerek ilerletin, sorumlu atayın, termin verin. Pano tüm ekipte aynı anda güncel.</p></div>
-      <div class="feat rv" style="--d:.08s"><span class="code">İŞP-08</span><h4>Onay ve revizyon akışı</h4>
-        <p>Tekniker işi bitirir, sorumlu kontrol eder. Eksikse revizyona döner. Kontrol edilmeden hiçbir iş kapanmaz.</p></div>
-      <div class="feat rv" style="--d:.12s"><span class="code">İŞP-09</span><h4>Bana atananlar</h4>
-        <p>Her kullanıcı tek tıkla yalnızca kendi işlerini görür. Sahaya çıkan tekniker günü açar, listesini alır.</p></div>
-
-      <div class="feat rv" style="--d:.04s"><span class="code">PRF-10</span><h4>Performans paneli</h4>
-        <p>Kişi, şube, hat ve iş türü kırılımında yük dağılımı. Kim kaç iş kapattı, ortalama çözüm süresi ne kadar.</p></div>
-      <div class="feat rv" style="--d:.08s"><span class="code">YTK-11</span><h4>Şube ve rol bazlı yetki</h4>
-        <p>Şube sorumlusu yalnızca kendi şubesini görür, yönetim tümünü. Yetkiler rol seviyesinde tanımlanır, kayıtsız işlem kalmaz.</p></div>
-      <div class="feat rv" style="--d:.12s"><span class="code">ETK-12</span><h4>Barkodlu demirbaş etiketi</h4>
-        <p>Etiket yazıcı entegrasyonuyla her cihaza barkodlu envanter etiketi. Sayımda okutun, kaydı anında açın.</p></div>
->>>>>>> c6beee5dc31088e9c8b92f16094c6d98c8103f4c
     </div>
   </div>
 </section>
 
-<<<<<<< HEAD
 <!-- ================= EKRANLAR: DASHBOARD + ENVANTER ================= -->
-=======
-<!-- ================= EKRANLAR ================= -->
->>>>>>> c6beee5dc31088e9c8b92f16094c6d98c8103f4c
 <section class="sec" id="ekranlar">
   <div class="wrap">
     <div class="rv center" style="max-width:720px">
@@ -931,7 +868,6 @@ p{max-width:64ch}
       <p class="lead" style="margin-top:20px">Sahadaki tekniker de, üretim müdürü de aynı sistemi kullanır. Eğitim dokümanı okumaya gerek kalmadan.</p>
     </div>
 
-<<<<<<< HEAD
     <!-- 01 DASHBOARD -->
     <div class="show">
       <div class="show-txt rv">
@@ -1036,48 +972,12 @@ p{max-width:64ch}
                   <div class="ui-tr" style="grid-template-columns:.75fr 1fr 1.25fr 1fr .6fr .95fr .7fr"><span class="ui-code">S3-00311</span><span class="ui-mu">EL TERMİNALİ</span><span>Marka D · EDA51</span><span class="ui-code ui-mu">18234K7710</span><span class="ui-mu">ŞUBE 3</span><span>Bölüm · Sevkiyat</span><span class="ui-pill p-orange">Serviste</span></div>
                   <div class="ui-tr" style="grid-template-columns:.75fr 1fr 1.25fr 1fr .6fr .95fr .7fr"><span class="ui-code">S2-00281</span><span class="ui-mu">NOTEBOOK</span><span>Marka E · E16 Gen 3</span><span class="ui-code ui-mu">PF5R0ELB</span><span class="ui-mu">ŞUBE 2</span><span>Ceren Aksoy</span><span class="ui-pill p-blue">Kullanımda</span></div>
                 </div>
-=======
-    <!-- 01 ENVANTER -->
-    <div class="show">
-      <div class="show-txt rv">
-        <span class="eyebrow">01 — Envanter listesi</span>
-        <h3>Tüm cihazlar, tek listede.</h3>
-        <ul>
-          <li>Kategori, şube, durum ve kullanıcıya göre anlık filtreleme</li>
-          <li>Seri no veya demirbaş kodundan saniyeler içinde arama</li>
-          <li>Excel'e aktarım — sayım ve denetim için hazır tablo</li>
-          <li>Cihaza tıklayın: zimmet geçmişi, servis kayıtları, belgeler</li>
-        </ul>
-        <p class="tagline">Sayım günü listeyi hazırlamak değil, listeye bakmak.</p>
-      </div>
-      <div class="shotframe rv" style="--d:.12s">
-        <div class="chrome"><i class="dot"></i><i class="dot"></i><i class="dot"></i><span class="url">btenvanter.local / envanter</span></div>
-        <img class="shot-img" src="gorseller/01-envanter.png" alt="Envanter listesi ekranı" onload="this.closest('.shotframe').classList.add('has-img')">
-        <div class="mock">
-          <div class="mock-row">
-            <div class="mock-side"><i class="on"></i><i></i><i></i><i></i><i></i><i></i></div>
-            <div class="mock-body">
-              <div class="stat-row">
-                <div class="stat"><b>486</b><span>Toplam</span></div>
-                <div class="stat"><b>391</b><span>Zimmetli</span></div>
-                <div class="stat"><b>72</b><span>Depoda</span></div>
-                <div class="stat"><b>23</b><span>Serviste</span></div>
-              </div>
-              <div class="tbl">
-                <div class="tr head"><u>Cihaz</u><u>Zimmet</u><u>Şube</u><u>Durum</u></div>
-                <div class="tr"><em>Dizüstü Bilgisayar</em><em>Kişi · Muhasebe</em><span class="mono">ŞUBE-1</span><span class="pill g">Zimmetli</span></div>
-                <div class="tr"><em>Etiket Yazıcı</em><em>Bölüm · Üretim</em><span class="mono">ŞUBE-4</span><span class="pill g">Zimmetli</span></div>
-                <div class="tr"><em>Dizüstü Bilgisayar</em><em>—</em><span class="mono">ŞUBE-2</span><span class="pill y">Depoda</span></div>
-                <div class="tr"><em>El Terminali</em><em>Bölüm · Sevkiyat</em><span class="mono">ŞUBE-3</span><span class="pill b">Serviste</span></div>
-                <div class="tr"><em>Çok Fonksiyonlu Yazıcı</em><em>Bölüm · Kalite</em><span class="mono">ŞUBE-5</span><span class="pill g">Zimmetli</span></div>
->>>>>>> c6beee5dc31088e9c8b92f16094c6d98c8103f4c
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-<<<<<<< HEAD
   </div>
 </section>
 
@@ -1088,6 +988,62 @@ p{max-width:64ch}
       <span class="eyebrow">Karekod</span>
       <h2 style="color:#fff">Karekodu şirketinizin logosunun içine gömüyoruz.</h2>
       <p class="lead" style="margin-top:20px">Her cihaza yapıştırılan demirbaş etiketi, kurumsal kimliğinizin bir parçası olur. Telefonla okutulduğunda cihazın kartı açılır — arıza bildirmek, zimmet görmek, sayım yapmak için tek hareket yeter.</p>
+    </div>
+
+    <div class="photos">
+      <figure class="photo rv" style="--d:.04s">
+        <img src="gorseller/etiket-cihaz.jpg" alt="Cihaza yapıştırılmış karekodlu demirbaş etiketi"
+             onload="this.closest('.photo').classList.add('has')">
+        <div class="photo-ph">
+          <div class="qr-demo" data-qr="ph1"></div>
+          <div><b>Etiket cihazın üstünde</b><br><s>gorseller/etiket-cihaz.jpg</s></div>
+        </div>
+        <figcaption>Her cihazda, kurumsal kimliğinize uygun kalıcı demirbaş etiketi.</figcaption>
+      </figure>
+      <figure class="photo rv" style="--d:.1s">
+        <img src="gorseller/etiket-sade.jpg" alt="Logosuz sade karekod etiketi"
+             onload="this.closest('.photo').classList.add('has')">
+        <div class="photo-ph">
+          <div class="qr-demo" data-qr="ph2"></div>
+          <div><b>Logosuz sade etiket</b><br><s>gorseller/etiket-sade.jpg</s></div>
+        </div>
+        <figcaption>Ya da logosuz sade sürüm — kurumsal kimlik istemeyen tesisler için.</figcaption>
+      </figure>
+    </div>
+
+    <div class="scan-wrap rv">
+      <div class="scan" style="--cyc:8s">
+        <div class="scan-bg"></div>
+        <div class="scan-phone">
+          <div class="scan-scr">
+            <div class="cam"></div>
+            <div class="reticle"><i></i><i></i><i></i><i></i></div>
+            <div class="scan-line"></div>
+            <div class="tick">✓</div>
+            <div class="cam-hint"><span>Karekod aranıyor…</span><span>S1-00004 bulundu</span></div>
+            <div class="scan-card">
+              <div class="sc-top"><b>S1-00004</b><s>Dizüstü Bilgisayar · ŞUBE 1</s></div>
+              <div class="sc-body">
+                <div class="sc-row"><s>Durum</s><span class="sc-pill">Kullanımda</span></div>
+                <div class="sc-row"><s>Zimmetli</s><b>Ceren Aksoy</b></div>
+                <div class="sc-row"><s>Departman</s><b>Muhasebe</b></div>
+                <div class="sc-row"><s>Seri No</s><b>PF5R0ELB</b></div>
+                <div class="sc-row"><s>Garanti</s><b>14.02.2027</b></div>
+                <span class="sc-btn">Sorun bildir</span>
+                <span class="sc-btn g">Cihaz geçmişi</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="scan-steps">
+        <div class="scan-step"><em>01</em> Telefonu etikete tut</div>
+        <div class="scan-step"><em>02</em> Karekod tanınır</div>
+        <div class="scan-step"><em>03</em> Cihaz kartı açılır</div>
+      </div>
+      <p class="small center" style="margin-top:20px;color:#77777C;max-width:560px">
+        Uygulama kurmaya gerek yok, giriş yapmaya gerek yok. Sahadaki personel kendi telefonunun
+        kamerasıyla okutur, arızayı iki dokunuşta bildirir.</p>
     </div>
 
     <div class="qr-grid">
@@ -1103,8 +1059,8 @@ p{max-width:64ch}
       </div>
       <div class="qr-card rv" style="--d:.14s">
         <div class="qr-demo" data-qr="scan"><div class="qr-hole"><span>QR</span></div></div>
-        <h4>Okut, kart açılsın</h4>
-        <p>Personel kendi telefonuyla okutur; giriş yapmadan cihaz kartına ve "sorun bildir" ekranına ulaşır.</p>
+        <h4>Sayımda okut</h4>
+        <p>Aynı karekod sayım oturumunda da çalışır. Cihazı okutun, listede anında yeşile dönsün.</p>
       </div>
     </div>
 
@@ -1227,41 +1183,6 @@ p{max-width:64ch}
                   </div>
                   <p style="font-size:6.6px;color:var(--m-mu);margin-top:8px;max-width:none">Kullanım taahhütnamesi formun ikinci sayfasında yer alır.</p>
                 </div>
-=======
-
-    <!-- 02 ZİMMET -->
-    <div class="show flip-l">
-      <div class="show-txt rv">
-        <span class="eyebrow">02 — Zimmet kartı</span>
-        <h3>Kişiye de zimmetleyin, bölüme de.</h3>
-        <ul>
-          <li><strong>Kişi zimmeti:</strong> dizüstü, telefon, kulaklık gibi bireysel cihazlar personel üstüne kaydedilir</li>
-          <li><strong>Bölüm zimmeti:</strong> ortak yazıcı, terminal ve ekranlar departmana kaydedilir — personel değişse de kayıt bozulmaz</li>
-          <li>İmzalı teslim belgesi kayda eklenir, tarayıcıdan indirmeden önizlenir</li>
-          <li>Personel ayrılırken üstündeki tüm cihazlar tek ekranda listelenir</li>
-          <li>Zimmet ve servis geçmişi aynı kartın altında, tarih sırasıyla</li>
-        </ul>
-        <p class="tagline">Cihaz devrederken kayıp yaşanmaz; kart devreder.</p>
-      </div>
-      <div class="shotframe rv" style="--d:.12s">
-        <div class="chrome"><i class="dot"></i><i class="dot"></i><i class="dot"></i><span class="url">btenvanter.local / zimmet / ENV-S1-0142</span></div>
-        <img class="shot-img" src="gorseller/02-zimmet.png" alt="Zimmet kartı ekranı" onload="this.closest('.shotframe').classList.add('has-img')">
-        <div class="mock">
-          <div class="mock-row">
-            <div class="mock-side"><i></i><i class="on"></i><i></i><i></i><i></i><i></i></div>
-            <div class="mock-body">
-              <div class="stat-row" style="grid-template-columns:repeat(3,1fr)">
-                <div class="stat"><b>ENV-S1-0142</b><span>Demirbaş kodu</span></div>
-                <div class="stat"><b>Kişi</b><span>Zimmet tipi</span></div>
-                <div class="stat"><b>Muhasebe</b><span>Bölüm</span></div>
-              </div>
-              <div class="tbl">
-                <div class="tr head"><u>Tarih</u><u>İşlem</u><u>Zimmet</u><u>Durum</u></div>
-                <div class="tr"><em>12.03.2026</em><em>Kişiye teslim</em><span class="mono">KİŞİ</span><span class="pill g">Aktif</span></div>
-                <div class="tr"><em>04.11.2025</em><em>Disk değişimi</em><span class="mono">SERVİS</span><span class="pill b">Kapandı</span></div>
-                <div class="tr"><em>21.06.2025</em><em>Bölümden iade</em><span class="mono">BÖLÜM</span><span class="pill m">Kapandı</span></div>
-                <div class="tr"><em>03.02.2025</em><em>Bölüme teslim</em><span class="mono">BÖLÜM</span><span class="pill m">Kapandı</span></div>
->>>>>>> c6beee5dc31088e9c8b92f16094c6d98c8103f4c
               </div>
             </div>
           </div>
@@ -1274,17 +1195,12 @@ p{max-width:64ch}
 <!-- ================= DESTEK & İŞ TAKİP ================= -->
 <section class="sec sec-dark" id="destek">
   <div class="wrap">
-<<<<<<< HEAD
     <div class="rv center" style="max-width:790px">
-=======
-    <div class="rv center" style="max-width:780px">
->>>>>>> c6beee5dc31088e9c8b92f16094c6d98c8103f4c
       <span class="eyebrow">Destek ve iş takibi</span>
       <h2 style="color:#fff">Talep açıldığı anda kayda girer. Kapanana kadar orada kalır.</h2>
       <p class="lead" style="margin-top:20px">Üretim durduğunda kimin kimi aradığı değil, sistemde ne yazdığı önemlidir.</p>
     </div>
 
-<<<<<<< HEAD
     <!-- 05 DESTEK -->
     <div class="show">
       <div class="show-txt rv">
@@ -1328,44 +1244,6 @@ p{max-width:64ch}
                   <div class="ui-input"><div>Personele mesaj yaz…</div><span class="ui-send"></span></div>
                   <p style="font-size:7.4px;color:var(--m-mu);margin-top:6px;max-width:none">☐ Sadece BT ekibi görsün (iç not)</p>
                 </div>
-=======
-    <!-- 03 DESTEK -->
-    <div class="show">
-      <div class="show-txt rv">
-        <span class="eyebrow">03 — Destek talepleri</span>
-        <h3>Sahadan gelen her talep, numaralı bir kayıt.</h3>
-        <ul>
-          <li>Kullanıcı kendi ekranından talep açar; kategori, öncelik ve açıklama girer</li>
-          <li>Ekran görüntüsü veya arıza fotoğrafı doğrudan talebe eklenir</li>
-          <li>Talep, ilgili cihazın envanter kaydına bağlanır — geçmiş tek yerde birikir</li>
-          <li>Öncelik seviyeleri: kritik, yüksek, normal, düşük</li>
-          <li>Durum akışı: açık → inceleniyor → beklemede → çözüldü → kapandı</li>
-          <li>Talep içi mesajlaşmayla kullanıcı ve tekniker aynı kayıtta yazışır</li>
-          <li>Çözüm süresi ölçülür; geciken talepler panoda işaretlenir</li>
-        </ul>
-        <p class="tagline">"Söylemiştim ama" cümlesi biter.</p>
-      </div>
-      <div class="shotframe rv" style="--d:.12s">
-        <div class="chrome"><i class="dot"></i><i class="dot"></i><i class="dot"></i><span class="url">btenvanter.local / destek-talepleri</span></div>
-        <img class="shot-img" src="gorseller/03-destek.png" alt="Destek talepleri ekranı" onload="this.closest('.shotframe').classList.add('has-img')">
-        <div class="mock">
-          <div class="mock-row">
-            <div class="mock-side"><i></i><i></i><i class="on"></i><i></i><i></i><i></i></div>
-            <div class="mock-body">
-              <div class="stat-row">
-                <div class="stat"><b>18</b><span>Açık talep</span></div>
-                <div class="stat"><b>4</b><span>Kritik</span></div>
-                <div class="stat"><b>2s 14dk</b><span>Ort. çözüm</span></div>
-                <div class="stat"><b>%96</b><span>Süresinde</span></div>
-              </div>
-              <div class="tbl">
-                <div class="tr head"><u>Talep</u><u>Konu</u><u>Öncelik</u><u>Durum</u></div>
-                <div class="tr"><em>#2418</em><em>Hat 2 etiket yazıcı basmıyor</em><span class="mono">KRİTİK</span><span class="pill r">İnceleniyor</span></div>
-                <div class="tr"><em>#2417</em><em>Sevkiyat terminali ağa bağlanmıyor</em><span class="mono">YÜKSEK</span><span class="pill y">Açık</span></div>
-                <div class="tr"><em>#2415</em><em>Yeni kullanıcı hesap açılışı</em><span class="mono">NORMAL</span><span class="pill b">Beklemede</span></div>
-                <div class="tr"><em>#2412</em><em>Toplantı odası ekran kablosu</em><span class="mono">DÜŞÜK</span><span class="pill g">Çözüldü</span></div>
-                <div class="tr"><em>#2409</em><em>Kamera kayıt diski dolu</em><span class="mono">YÜKSEK</span><span class="pill g">Çözüldü</span></div>
->>>>>>> c6beee5dc31088e9c8b92f16094c6d98c8103f4c
               </div>
             </div>
           </div>
@@ -1373,7 +1251,6 @@ p{max-width:64ch}
       </div>
     </div>
 
-<<<<<<< HEAD
     <!-- 06 İŞ TAKİP -->
     <div class="show flip-l">
       <div class="show-txt rv">
@@ -1416,43 +1293,6 @@ p{max-width:64ch}
                   <div class="ui-card g"><b>Palet etiketi düzeltmesi</b><div class="ui-tags"><span class="ui-tg sap">ERP</span>Eğitim · 27.08</div><span class="ui-ok">✓ Gökhan Aslan onayladı</span></div>
                 </div>
               </div>
-=======
-    <!-- 04 İŞ TAKİP -->
-    <div class="show flip-l">
-      <div class="show-txt rv">
-        <span class="eyebrow">04 — İş takip panosu</span>
-        <h3>Açık işler görünür olduğunda, iş unutulmaz.</h3>
-        <ul>
-          <li>Talepler ve planlı işler aynı panoda; sürükleyerek kolon değiştirir</li>
-          <li>Her karta sorumlu, öncelik, termin tarihi ve iş türü atanır</li>
-          <li>İş türleri: arıza, kurulum, bakım, proje, satın alma</li>
-          <li>Onay ve revizyon adımı — kontrol edilmeden iş kapanmaz</li>
-          <li>Kart üzerinde yorum, dosya eki ve geçen süre görünür</li>
-          <li>"Bana atananlar" filtresiyle tekniker yalnızca kendi işini görür</li>
-          <li>Pano tüm ekipte eş zamanlı güncellenir</li>
-        </ul>
-        <p class="tagline">Pano açık kaldığı sürece iş açık kalmaz.</p>
-      </div>
-      <div class="shotframe rv" style="--d:.12s">
-        <div class="chrome"><i class="dot"></i><i class="dot"></i><i class="dot"></i><span class="url">btenvanter.local / is-takip</span></div>
-        <img class="shot-img" src="gorseller/04-is-takip.png" alt="İş takip panosu ekranı" onload="this.closest('.shotframe').classList.add('has-img')">
-        <div class="mock">
-          <div class="kb">
-            <div class="kb-col"><u><span>Açık</span><span>6</span></u>
-              <div class="kb-card p-h"><b>Hat 2 etiket yazıcı basmıyor</b><div class="kb-foot"><i>ARIZA · BUGÜN</i><span class="av">T1</span></div></div>
-              <div class="kb-card p-m"><b>Yeni kullanıcı kurulumu</b><div class="kb-foot"><i>KURULUM</i><span class="av">T2</span></div></div>
-            </div>
-            <div class="kb-col"><u><span>Devam eden</span><span>3</span></u>
-              <div class="kb-card p-h"><b>Terminal ağa bağlanmıyor</b><div class="kb-foot"><i>ARIZA · 2 SA</i><span class="av">T1</span></div></div>
-              <div class="kb-card p-l"><b>Kamera disk değişimi</b><div class="kb-foot"><i>BAKIM</i><span class="av">T3</span></div></div>
-            </div>
-            <div class="kb-col"><u><span>Onayda</span><span>2</span></u>
-              <div class="kb-card p-m"><b>Şube 2 switch değişimi</b><div class="kb-foot"><i>PROJE</i><span class="av">T2</span></div></div>
-            </div>
-            <div class="kb-col"><u><span>Tamamlanan</span><span>27</span></u>
-              <div class="kb-card p-l"><b>Ofis yazıcı toner değişimi</b><div class="kb-foot"><i>BAKIM · 18DK</i><span class="av">T3</span></div></div>
-              <div class="kb-card p-l"><b>Ekran kablosu değişimi</b><div class="kb-foot"><i>ARIZA · 25DK</i><span class="av">T1</span></div></div>
->>>>>>> c6beee5dc31088e9c8b92f16094c6d98c8103f4c
             </div>
           </div>
         </div>
@@ -1466,7 +1306,6 @@ p{max-width:64ch}
   <div class="wrap">
     <div class="show" style="margin-top:0">
       <div class="show-txt rv">
-<<<<<<< HEAD
         <span class="eyebrow">07 — İş takip paneli</span>
         <h3>Ekibin yükü tahminle değil, veriyle konuşulur.</h3>
         <ul>
@@ -1524,63 +1363,6 @@ p{max-width:64ch}
                   <div class="ui-tr" style="grid-template-columns:1.1fr .8fr .8fr .7fr .9fr"><span class="c-red">Serkan Öz</span><span class="ui-pill p-red">26</span><span class="ui-pill p-blue">18</span><b>44</b><span class="ui-mu">9.2 saat</span></div>
                 </div>
               </div>
-=======
-        <span class="eyebrow">05 — Performans paneli</span>
-        <h3>Ekibin yükü tahminle değil, veriyle konuşulur.</h3>
-        <ul>
-          <li>Kişi bazlı iş sayısı; tamamlanan, açık ve geciken kırılımı</li>
-          <li>Ortalama çözüm süresi — kişi, şube ve iş türü bazında</li>
-          <li>Aylık talep trendi: yük hangi dönemde artıyor</li>
-          <li>İş türü dağılımı: arıza mı, kurulum mu, bakım mı ağır basıyor</li>
-          <li>Şube ve üretim hattı kırılımı — hangi hat daha çok destek çağırıyor</li>
-          <li>Kişi satırına tıklayın: o kişinin tüm işleri detay penceresinde açılır</li>
-          <li>Tarih aralığı filtresi ve rapor dışa aktarımı</li>
-        </ul>
-        <p class="tagline">Ekibe kişi mi lazım, ekipman mı — raporu açın.</p>
-      </div>
-      <div class="shotframe rv" style="--d:.12s">
-        <div class="chrome"><i class="dot"></i><i class="dot"></i><i class="dot"></i><span class="url">btenvanter.local / performans</span></div>
-        <img class="shot-img" src="gorseller/05-performans.png" alt="Performans paneli ekranı" onload="this.closest('.shotframe').classList.add('has-img')">
-        <div class="mock">
-          <div class="perf">
-            <div class="perf-head">
-              <span class="chip on">Son 30 gün</span><span class="chip">Şube: Tümü</span>
-              <span class="chip">İş türü: Tümü</span><span class="chip">Dışa aktar</span>
-            </div>
-            <div class="stat-row">
-              <div class="stat"><b>214</b><span>Kapanan iş</span></div>
-              <div class="stat"><b>2s 14dk</b><span>Ort. çözüm</span></div>
-              <div class="stat"><b>18</b><span>Açık</span></div>
-              <div class="stat"><b>5</b><span>Geciken</span></div>
-            </div>
-            <div class="perf-grid">
-              <div class="panel"><u>Kişi bazlı iş dağılımı</u>
-                <div class="prow"><em>Tekniker 1</em><div class="bar"><i style="--w:92%"></i></div><s>68</s></div>
-                <div class="prow"><em>Tekniker 2</em><div class="bar"><i style="--w:74%"></i></div><s>55</s></div>
-                <div class="prow"><em>Tekniker 3</em><div class="bar"><i style="--w:58%"></i></div><s>43</s></div>
-                <div class="prow"><em>Tekniker 4</em><div class="bar"><i style="--w:41%"></i></div><s>30</s></div>
-                <div class="prow"><em>Tekniker 5</em><div class="bar"><i style="--w:24%"></i></div><s>18</s></div>
-              </div>
-              <div class="panel"><u>İş türü dağılımı</u>
-                <div class="donut">
-                  <div class="donut-c"></div>
-                  <div class="leg">
-                    <span><b style="background:var(--cyan)"></b>Arıza · %42</span>
-                    <span><b style="background:var(--tag)"></b>Kurulum · %28</span>
-                    <span><b style="background:var(--ok)"></b>Bakım · %17</span>
-                    <span><b style="background:#4A4A50"></b>Proje · %13</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="panel" style="margin-top:12px"><u>Aylık talep trendi</u>
-              <div class="cols">
-                <div style="--h:44%"></div><div style="--h:58%"></div><div style="--h:39%"></div><div style="--h:71%"></div>
-                <div style="--h:52%"></div><div style="--h:83%"></div><div style="--h:64%"></div><div style="--h:96%"></div>
-                <div style="--h:57%"></div><div style="--h:74%"></div><div style="--h:48%"></div><div style="--h:66%"></div>
-              </div>
-              <div class="cols-x"><span>Oca</span><span>Şub</span><span>Mar</span><span>Nis</span><span>May</span><span>Haz</span><span>Tem</span><span>Ağu</span><span>Eyl</span><span>Eki</span><span>Kas</span><span>Ara</span></div>
->>>>>>> c6beee5dc31088e9c8b92f16094c6d98c8103f4c
             </div>
           </div>
         </div>
@@ -1589,7 +1371,6 @@ p{max-width:64ch}
   </div>
 </section>
 
-<<<<<<< HEAD
 <!-- ================= SAYIM & LİSANS ================= -->
 <section class="sec sec-dark">
   <div class="wrap">
@@ -1752,9 +1533,6 @@ p{max-width:64ch}
 </section>
 
 <!-- ================= YETKİ ================= -->
-=======
-<!-- ================= ŞUBE / YETKİ ================= -->
->>>>>>> c6beee5dc31088e9c8b92f16094c6d98c8103f4c
 <section class="sec sec-dark">
   <div class="wrap split">
     <div class="rv">
@@ -1769,11 +1547,7 @@ p{max-width:64ch}
       <div class="perm-row"><u>BT Sorumlusu</u><span>Kendi şubesinin envanteri, zimmeti, talepleri ve raporları</span></div>
       <div class="perm-row"><u>Tekniker</u><span>Kendisine atanan işler, servis kaydı girişi, cihaz durumu güncelleme</span></div>
       <div class="perm-row"><u>Bölüm Sorumlusu</u><span>Bölüm zimmetindeki cihazlar, bölüm adına talep açma</span></div>
-<<<<<<< HEAD
       <div class="perm-row"><u>Personel</u><span>Kendi cihazları, destek talebi açma, talep takibi</span></div>
-=======
-      <div class="perm-row"><u>Kullanıcı</u><span>Destek talebi açma, kendi zimmetindeki cihazları görüntüleme</span></div>
->>>>>>> c6beee5dc31088e9c8b92f16094c6d98c8103f4c
       <div class="perm-row"><u>İzleyici</u><span>Salt okunur raporlar — yönetim ve denetim için</span></div>
     </div>
   </div>
@@ -1789,15 +1563,9 @@ p{max-width:64ch}
     </div>
     <div class="steps">
       <div class="step rv" style="--d:.05s"><h4>Kurulum ve veri aktarımı</h4>
-<<<<<<< HEAD
         <p>Mevcut Excel listeleriniz sisteme aktarılır. Şubeler, bölümler, kategoriler ve kullanıcılar tanımlanır; etiketler basılır.</p></div>
       <div class="step rv" style="--d:.12s"><h4>Ekip eğitimi</h4>
         <p>BT ekibi için uygulamalı eğitim. Personel tarafı karekodu okutup talep açmaktan ibaret; eğitim gerektirmez.</p></div>
-=======
-        <p>Mevcut Excel listeleriniz sisteme aktarılır. Şubeler, bölümler, kategoriler ve kullanıcılar tanımlanır.</p></div>
-      <div class="step rv" style="--d:.12s"><h4>Ekip eğitimi</h4>
-        <p>BT ekibi için uygulamalı eğitim. Son kullanıcı tarafı talep açmaktan ibaret; eğitim gerektirmez.</p></div>
->>>>>>> c6beee5dc31088e9c8b92f16094c6d98c8103f4c
       <div class="step rv" style="--d:.19s"><h4>Destek ve güncelleme</h4>
         <p>Kullanımda karşılaştığınız her durumda destek. Yeni sürümler ve size özel geliştirmeler sisteme eklenir.</p></div>
     </div>
@@ -1812,12 +1580,12 @@ p{max-width:64ch}
       <h2>Bir sonraki sayım gelmeden görün.</h2>
       <p class="lead">30 dakikalık canlı demoda sistemi kendi cihaz listenizle gösteriyoruz. Sunum değil — gerçek ekran, gerçek veri.</p>
       <div class="cta-btns">
-        <a href="mailto:info@ornekdomain.com?subject=BT%20Envanter%20demo%20talebi" class="btn btn-primary">Demo talep et →</a>
-        <a href="tel:+900000000000" class="btn btn-ghost">Telefonla görüşelim</a>
+        <a href="mailto:fatihsuna5663@gmail.com?subject=BT%20Envanter%20demo%20talebi" class="btn btn-primary">Demo talep et →</a>
+        <a href="tel:+905442501642" class="btn btn-ghost">Telefonla görüşelim</a>
       </div>
       <div class="contact">
-        <a href="mailto:info@ornekdomain.com">info@ornekdomain.com</a>
-        <a href="tel:+900000000000">+90 000 000 00 00</a>
+        <a href="mailto:fatihsuna5663@gmail.com">fatihsuna5663@gmail.com</a>
+        <a href="tel:+905442501642">+90 544 250 16 42</a>
         <span>Türkiye</span>
       </div>
     </div>
@@ -1827,16 +1595,11 @@ p{max-width:64ch}
 <footer class="foot">
   <div class="wrap foot-in">
     <span>© 2026 BT Envanter — Tüm hakları saklıdır.</span>
-<<<<<<< HEAD
     <span class="mono">v3.1.4</span>
-=======
-    <span class="mono">v3.0.3</span>
->>>>>>> c6beee5dc31088e9c8b92f16094c6d98c8103f4c
   </div>
 </footer>
 
 <script>
-<<<<<<< HEAD
 /* ---------- karekod çizimi ---------- */
 function buildQR(el, seed, N){
   N = N || 25;
@@ -1875,31 +1638,50 @@ function buildQR(el, seed, N){
 document.querySelectorAll('[data-qr]').forEach((el,i)=> buildQR(el, 90210 + i*7717, 25));
 
 /* ---------- scroll reveal ---------- */
-=======
->>>>>>> c6beee5dc31088e9c8b92f16094c6d98c8103f4c
 const io = new IntersectionObserver((es)=>{
   es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
 },{threshold:.1, rootMargin:'0px 0px -50px 0px'});
 document.querySelectorAll('.rv').forEach(el=>io.observe(el));
 
-<<<<<<< HEAD
 const io2 = new IntersectionObserver((es)=>{
   es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io2.unobserve(e.target); } });
 },{threshold:.2});
 document.querySelectorAll('.ui').forEach(el=>io2.observe(el));
 
+/* ---------- hero modül döngüsü ---------- */
+const panes = document.querySelectorAll('.pane');
+const tabs  = document.querySelectorAll('.hero-tab');
+const navs  = document.querySelectorAll('.hero-app .ui-nav');
+const urls  = ['dashboard','cihazlar','is-takibi','sayim/SAY-2026-002'];
+let cur = 0, timer = null;
+const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+function show(n){
+  cur = n;
+  panes.forEach(p => p.classList.toggle('on', +p.dataset.pane === n));
+  navs.forEach(v => v.classList.toggle('on', +v.dataset.n === n));
+  tabs.forEach(t => {
+    const on = +t.dataset.t === n;
+    if(on && t.classList.contains('on')){ t.classList.remove('on'); void t.offsetWidth; }
+    t.classList.toggle('on', on);
+  });
+  document.getElementById('h-url').textContent = 'btenvanter.local / ' + urls[n];
+}
+function play(){ if(reduced) return; clearInterval(timer); timer = setInterval(()=> show((cur+1) % panes.length), 5200); }
+tabs.forEach(t => t.addEventListener('click', ()=>{ show(+t.dataset.t); play(); }));
+show(0); play();
+
 /* ---------- etiket döngüsü ---------- */
 const assets = [
-  {code:'S1-00713', name:'Dizüstü Bilgisayar · 16 GB / 512 GB', user:'Kişi zimmeti · Muhasebe',        br:'ŞUBE 1', p:1},
-  {code:'S4-00087', name:'Etiket Yazıcı · Termal transfer',      user:'Bölüm zimmeti · Üretim',        br:'ŞUBE 4', p:1},
-  {code:'S3-00311', name:'El Terminali · Karekod okuyucu',       user:'Serviste · ekran değişimi',     br:'ŞUBE 3', p:2},
-  {code:'S2-00056', name:'Dizüstü Bilgisayar · 16 GB / 1 TB',    user:'Depoda · zimmet bekliyor',      br:'ŞUBE 2', p:0},
-  {code:'S5-00204', name:'Yönetilebilir Switch · 24 port',       user:'Bölüm zimmeti · Sistem odası',  br:'ŞUBE 5', p:1}
+  {code:'S1-00713', name:'Dizüstü Bilgisayar', user:'Kişi zimmeti · Muhasebe',    br:'ŞUBE 1'},
+  {code:'S4-00087', name:'Etiket Yazıcı',      user:'Bölüm zimmeti · Üretim',     br:'ŞUBE 4'},
+  {code:'S3-00311', name:'El Terminali',       user:'Serviste · ekran değişimi',  br:'ŞUBE 3'},
+  {code:'S2-00056', name:'Notebook',           user:'Depoda · zimmet bekliyor',   br:'ŞUBE 2'},
+  {code:'S5-00204', name:'Switch · 24 port',   user:'Bölüm zimmeti · Sistem odası', br:'ŞUBE 5'}
 ];
 let i = 0;
 const label = document.getElementById('label');
-const pipes = document.querySelectorAll('.pipe span');
-if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+if(label && !reduced){
   setInterval(()=>{
     i = (i+1) % assets.length;
     const a = assets[i];
@@ -1909,39 +1691,8 @@ if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
       document.getElementById('l-name').textContent   = a.name;
       document.getElementById('l-user').textContent   = a.user;
       document.getElementById('l-branch').textContent = a.br;
-=======
-/* grafikler ekrana girince dolsun */
-const io2 = new IntersectionObserver((es)=>{
-  es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io2.unobserve(e.target); } });
-},{threshold:.25});
-document.querySelectorAll('.perf').forEach(el=>io2.observe(el));
-
-const assets = [
-  {code:'ENV-S1-0142', name:'Dizüstü Bilgisayar · i5 / 16 GB', user:'Kişi zimmeti · Muhasebe',       br:'ŞUBE 1', p:1},
-  {code:'ENV-S4-0087', name:'Etiket Yazıcı · Termal transfer',  user:'Bölüm zimmeti · Üretim',       br:'ŞUBE 4', p:1},
-  {code:'ENV-S3-0311', name:'El Terminali · Barkod okuyucu',    user:'Serviste · Ekran değişimi',    br:'ŞUBE 3', p:2},
-  {code:'ENV-S2-0056', name:'Dizüstü Bilgisayar · i7 / 16 GB',  user:'Depoda · zimmet bekliyor',     br:'ŞUBE 2', p:0},
-  {code:'ENV-S5-0204', name:'Yönetilebilir Switch · 24 port',   user:'Bölüm zimmeti · Sistem odası', br:'ŞUBE 5', p:1}
-];
-let i = 0;
-const tag = document.getElementById('tag');
-const pipes = document.querySelectorAll('.pipe span');
-const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-if(!reduce){
-  setInterval(()=>{
-    i = (i+1) % assets.length;
-    const a = assets[i];
-    tag.classList.remove('flip'); void tag.offsetWidth; tag.classList.add('flip');
-    setTimeout(()=>{
-      document.getElementById('t-code').textContent   = a.code;
-      document.getElementById('t-name').textContent   = a.name;
-      document.getElementById('t-user').textContent   = a.user;
-      document.getElementById('t-branch').textContent = a.br;
->>>>>>> c6beee5dc31088e9c8b92f16094c6d98c8103f4c
-      pipes.forEach(s=>s.classList.toggle('on', +s.dataset.p === a.p));
     }, 250);
-  }, 3600);
+  }, 4200);
 }
 
 document.querySelectorAll('#nl a').forEach(a=>a.addEventListener('click',()=>{
