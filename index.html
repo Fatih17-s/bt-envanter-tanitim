@@ -188,14 +188,102 @@ p{max-width:64ch}
   width:100%;transform-origin:left;animation:tabbar 5.2s linear}
 @keyframes tabbar{from{transform:scaleX(0)}to{transform:scaleX(1)}}
 
+/* ================= ÜRÜN GÖRSELİ (SVG) ================= */
+.scan-art{position:absolute;inset:0;width:100%;height:100%;display:block}
+.beam{animation:beam var(--cyc) ease-in-out infinite}
+@keyframes beam{0%,38%{opacity:.35}42%,58%{opacity:1}62%,100%{opacity:.35}}
+.beam-line{animation:bline var(--cyc) linear infinite}
+@keyframes bline{0%{opacity:0}8%,38%{opacity:.9}42%,100%{opacity:0}}
+
+/* ================= EK MODÜLLER ================= */
+.new-mod{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center;margin-top:52px;
+  background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.1);border-radius:20px;padding:36px}
+.new-badge{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:.66rem;
+  font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#fff;background:var(--red);
+  padding:6px 13px;border-radius:980px;margin-bottom:18px}
+.new-mod h3{color:#fff;margin-bottom:14px}
+.new-mod p{color:#A1A1A6;font-size:.98rem;max-width:none}
+.new-mod ul{list-style:none;margin-top:18px;display:grid;gap:9px}
+.new-mod li{display:flex;gap:11px;font-size:.94rem;color:#A1A1A6}
+.new-mod li::before{content:"";width:6px;height:6px;border-radius:2px;background:var(--red);flex:none;margin-top:8px}
+.soon{margin-top:20px;font-size:.86rem;color:#77777C;border-left:2px solid rgba(255,255,255,.18);padding-left:14px}
+
+/* toplantı takvimi mockup */
+.cal{background:#fff;border-radius:12px;overflow:hidden;border:1px solid var(--m-line);color:var(--m-tx)}
+.cal-top{display:flex;justify-content:space-between;align-items:center;padding:11px 13px;border-bottom:1px solid var(--m-line)}
+.cal-top b{font-size:12px;font-weight:600;letter-spacing:-.02em}
+.cal-top s{text-decoration:none;font-size:8.5px;color:var(--m-mu)}
+.cal-grid{display:grid;grid-template-columns:38px repeat(3,1fr);font-size:8px}
+.cal-h{background:#F8FAFC;padding:7px 4px;text-align:center;font-size:7.4px;font-weight:700;
+  letter-spacing:.08em;color:var(--m-mu);text-transform:uppercase;border-bottom:1px solid var(--m-line)}
+.cal-t{padding:6px 4px;text-align:right;font-family:var(--mono);font-size:7px;color:var(--m-mu);
+  border-right:1px solid var(--m-line2)}
+.cal-c{border-right:1px solid var(--m-line2);border-bottom:1px solid var(--m-line2);
+  min-height:26px;padding:2px;position:relative}
+.cal-ev{border-radius:5px;padding:4px 6px;font-size:7.4px;font-weight:600;line-height:1.25;height:100%}
+.cal-ev.b{background:#EFF6FF;color:#1D4ED8;border-left:2px solid var(--blue)}
+.cal-ev.r{background:var(--red-soft);color:var(--red-2);border-left:2px solid var(--red)}
+.cal-ev.g{background:#F0FDF4;color:#15803D;border-left:2px solid var(--green)}
+.cal-ev s{display:block;text-decoration:none;font-weight:400;opacity:.75;font-size:6.8px}
+.cal-note{padding:9px 13px;font-size:8px;color:var(--m-mu2);background:#F8FAFC;border-top:1px solid var(--m-line)}
+
+/* modül fikirleri */
+.idea-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:44px}
+.idea{background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.09);border-radius:14px;
+  padding:20px 18px;transition:.3s cubic-bezier(.2,.7,.2,1)}
+.idea:hover{transform:translateY(-4px);border-color:rgba(255,255,255,.2);background:rgba(255,255,255,.06)}
+.idea b{display:block;color:#fff;font-size:1rem;font-weight:600;letter-spacing:-.02em;margin-bottom:7px}
+.idea span{font-size:.86rem;color:#8A8A8F;line-height:1.5}
+
+/* ================= İLETİŞİM FORMU ================= */
+.contact-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:56px;align-items:start;text-align:left}
+.contact-info h2{color:#fff}
+.contact-list{display:grid;gap:14px;margin-top:30px}
+.contact-item{display:flex;gap:14px;align-items:center;background:rgba(255,255,255,.045);
+  border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:15px 18px;transition:.25s}
+.contact-item:hover{border-color:rgba(255,255,255,.28)}
+.contact-item i{width:34px;height:34px;border-radius:10px;background:rgba(225,29,46,.16);flex:none;
+  display:grid;place-items:center;font-style:normal;font-size:1rem}
+.contact-item b{display:block;font-size:.94rem;color:#fff;font-weight:500;letter-spacing:-.01em}
+.contact-item s{text-decoration:none;font-family:var(--mono);font-size:.68rem;letter-spacing:.08em;color:#77777C;text-transform:uppercase}
+.trust{margin-top:26px;display:flex;flex-wrap:wrap;gap:8px}
+.trust span{font-family:var(--mono);font-size:.64rem;letter-spacing:.09em;text-transform:uppercase;
+  color:#8A8A8F;border:1px solid rgba(255,255,255,.13);border-radius:980px;padding:7px 13px}
+
+.form-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);
+  border-radius:20px;padding:32px;position:relative}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.field{margin-bottom:14px}
+.field label{display:block;font-size:.78rem;font-weight:500;color:#A1A1A6;margin-bottom:7px;letter-spacing:-.01em}
+.field input,.field select,.field textarea{
+  width:100%;background:rgba(0,0,0,.28);border:1px solid rgba(255,255,255,.15);border-radius:11px;
+  padding:12px 14px;color:#F5F5F7;font-family:var(--sans);font-size:.95rem;letter-spacing:-.01em;
+  transition:.2s;appearance:none}
+.field textarea{resize:vertical;min-height:96px}
+.field input::placeholder,.field textarea::placeholder{color:#5E5E63}
+.field input:focus,.field select:focus,.field textarea:focus{
+  outline:none;border-color:var(--red);background:rgba(0,0,0,.42);box-shadow:0 0 0 3px rgba(225,29,46,.16)}
+.field select{background-image:linear-gradient(45deg,transparent 50%,#8A8A8F 50%),
+  linear-gradient(135deg,#8A8A8F 50%,transparent 50%);
+  background-position:calc(100% - 19px) 21px,calc(100% - 13px) 21px;
+  background-size:6px 6px,6px 6px;background-repeat:no-repeat}
+.field select option{background:#1A1A1D;color:#F5F5F7}
+.hp{position:absolute;left:-9999px;opacity:0;height:0}
+.form-card .btn{width:100%;justify-content:center;margin-top:6px}
+.form-note{font-size:.78rem;color:#6E6E73;margin-top:14px;text-align:center;max-width:none}
+.form-msg{display:none;text-align:center;padding:40px 20px}
+.form-msg.on{display:block}
+.form-msg .ok{width:56px;height:56px;border-radius:50%;background:var(--red);color:#fff;
+  display:grid;place-items:center;font-size:26px;margin:0 auto 20px}
+.form-msg h4{color:#fff;margin-bottom:10px}
+.form-msg p{color:#A1A1A6;font-size:.95rem;max-width:none}
+.form-card.sent .form-body{display:none}
+
 /* ================= OKUTMA SAHNESİ ================= */
 .scan-wrap{margin-top:56px}
 .scan{position:relative;border-radius:20px;overflow:hidden;border:1px solid rgba(255,255,255,.13);
   background:#0B0B0D;aspect-ratio:16/9;max-width:940px;margin:0 auto;
   box-shadow:0 44px 88px -34px rgba(0,0,0,.9)}
-.scan-bg{position:absolute;inset:0;background:#111 center/cover no-repeat;
-  background-image:url('gorseller/etiket-cihaz.jpg');filter:brightness(.5) saturate(.85);
-  transform:scale(1.06)}
 .scan::before{content:"";position:absolute;inset:0;z-index:1;
   background:radial-gradient(ellipse 60% 70% at 68% 50%,rgba(0,0,0,.55),rgba(0,0,0,.82))}
 
@@ -206,8 +294,8 @@ p{max-width:64ch}
 .scan-scr{position:relative;width:100%;height:100%;border-radius:21px;overflow:hidden;background:#15161A}
 
 /* kamera görüntüsü */
-.cam{position:absolute;inset:0;background:center/220% no-repeat;
-  background-image:url('gorseller/etiket-cihaz.jpg');background-position:38% 52%}
+.cam{position:absolute;inset:0;background:#101216;overflow:hidden}
+.cam svg{width:100%;height:100%;display:block}
 .cam::after{content:"";position:absolute;inset:0;background:rgba(0,0,0,.28)}
 .reticle{position:absolute;left:16%;top:26%;width:68%;aspect-ratio:1;z-index:2}
 .reticle i{position:absolute;width:26%;height:26%;border:2.5px solid #fff;border-radius:4px;
@@ -527,6 +615,10 @@ p{max-width:64ch}
   .show{margin-top:64px}
   .show.flip-l .show-txt{order:0}
   .steps,.qr-grid,.photos{grid-template-columns:1fr}
+  .idea-grid{grid-template-columns:repeat(2,1fr)}
+  .new-mod,.contact-grid{grid-template-columns:1fr;gap:32px}
+  .new-mod{padding:26px}
+  .form-card{padding:24px}
   .nav-links{display:none}
   .nav-links.open{display:flex;position:absolute;top:62px;left:0;right:0;background:#161618;
     flex-direction:column;padding:22px 28px;gap:18px;border-bottom:1px solid rgba(255,255,255,.1)}
@@ -560,6 +652,10 @@ p{max-width:64ch}
   .scan-phone{width:38%;right:7%}
   .scan-steps{flex-direction:column;align-items:stretch}
   .scan-step{justify-content:flex-start;font-size:.8rem;padding:8px 15px}
+  .idea-grid{grid-template-columns:1fr}
+  .form-row{grid-template-columns:1fr;gap:0}
+  .form-card{padding:20px}
+  .contact-item i{width:30px;height:30px}
 }
 @media(prefers-reduced-motion:reduce){
   .scan-line,.tick,.cam-hint{display:none}
@@ -576,6 +672,20 @@ p{max-width:64ch}
 </head>
 <body>
 
+<!-- ===== yeniden kullanılabilir karekod etiketi ===== -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <symbol id="lbl" viewBox="0 0 220 260">
+    <rect x="0" y="0" width="220" height="260" rx="16" fill="#E11D2E"/>
+    <rect x="3" y="3" width="214" height="254" rx="14" fill="none" stroke="rgba(255,255,255,.28)" stroke-width="1.5"/>
+    <text x="110" y="32" text-anchor="middle" fill="#fff" font-family="Inter,Arial,sans-serif"
+          font-size="19" font-weight="700" letter-spacing="1.6">X FABRİKASI</text>
+    <rect x="16" y="46" width="188" height="198" rx="9" fill="#fff"/>
+    <g transform="translate(34,58) scale(6.08)"><path id="qrp" d="" fill="#14181F"/></g>
+    <text x="110" y="232" text-anchor="middle" fill="#14181F" font-family="Inter,Arial,sans-serif"
+          font-size="23" font-weight="700" letter-spacing=".5">S1-00004</text>
+  </symbol>
+</defs></svg>
+
 <!-- ================= NAV ================= -->
 <nav class="nav">
   <div class="wrap nav-in">
@@ -585,8 +695,8 @@ p{max-width:64ch}
       <a href="#moduller">Modüller</a>
       <a href="#ekranlar">Ekranlar</a>
       <a href="#karekod">Karekod</a>
-      <a href="#destek">Destek</a>
       <a href="#performans">Performans</a>
+      <a href="#ek-moduller">Ek Modüller</a>
       <a href="#kurulum">Kurulum</a>
     </div>
     <a href="#iletisim" class="btn btn-primary">Demo iste</a>
@@ -597,7 +707,7 @@ p{max-width:64ch}
 <header class="hero">
   <div class="wrap hero-head center">
     <div>
-      <span class="eyebrow up d1">Üretim işletmeleri için BT yönetim sistemi</span>
+      <span class="eyebrow up d1">Üretim İşletmeleri İçin BT Yönetim Sistemi</span>
       <h1 class="up d2">Fabrikadaki her cihazın <em>kimde, nerede</em> ve ne durumda olduğunu bilin.</h1>
       <p class="lead up d3">Envanter, zimmet, karekodlu etiket ve sayım, destek talepleri, iş takibi, lisans yönetimi ve performans raporları — tek sistemde. Yüzlerce cihaz, birden fazla şube, tek panel.</p>
       <div class="hero-cta up d4">
@@ -762,7 +872,7 @@ p{max-width:64ch}
           <div class="p-dev"><s>NOTEBOOK</s><b>Marka E · E16 Gen 3</b><em>S1-00009</em></div>
           <div class="p-dev"><s>CEP TELEFONU</s><b>Marka B · A56 5G</b><em>S1-00711</em></div>
           <div class="p-dev"><s>MONİTÖR</s><b>Marka A · 27"</b><em>S1-00025</em></div>
-          <span class="p-btn">Sorun bildir</span>
+          <span class="p-btn">Sorun Bildir</span>
         </div>
       </div>
     </div>
@@ -790,7 +900,7 @@ p{max-width:64ch}
 <section class="sec">
   <div class="wrap split">
     <div class="rv">
-      <span class="eyebrow">Tanıdık geldi mi?</span>
+      <span class="eyebrow">Tanıdık Geldi mi?</span>
       <h2>BT envanteri Excel'de tutulduğunda, envanter aslında hiç tutulmuyordur.</h2>
       <p class="lead" style="margin-top:22px">İşten ayrılan personelin bilgisayarı kimde? Hangi lisans ne zaman yenilenecek? Bu ay ekip kaç talep kapattı? Bu sorular her sorulduğunda saatler harcanıyorsa, sorun sizde değil; araçta.</p>
     </div>
@@ -814,46 +924,46 @@ p{max-width:64ch}
     </div>
 
     <div class="feat-grid">
-      <div class="feat rv" style="--d:.03s"><span class="code">ENV-01</span><h4>Varlık envanteri</h4>
+      <div class="feat rv" style="--d:.03s"><span class="code">ENV-01</span><h4>Varlık Envanteri</h4>
         <p>Kategori, marka, model, seri no, MAC ve IP adresi, işletim sistemi, teknik özellikler, lokasyon. Her cihaz için tek kayıt, tam geçmiş.</p></div>
-      <div class="feat rv" style="--d:.06s"><span class="code">ENV-02</span><h4>Aksesuar bağlama</h4>
+      <div class="feat rv" style="--d:.06s"><span class="code">ENV-02</span><h4>Aksesuar Bağlama</h4>
         <p>Şarj aleti, kablo, SIM kart, klavye — ana cihaza bağlanır. Zimmet devrederken aksesuar da birlikte gider.</p></div>
-      <div class="feat rv" style="--d:.09s"><span class="code">ENV-03</span><h4>Durum geçmişi</h4>
+      <div class="feat rv" style="--d:.09s"><span class="code">ENV-03</span><h4>Durum Geçmişi</h4>
         <p>Depoda → kullanımda → serviste → hurda. Her durum değişimi kim, ne zaman, neden bilgisiyle kayda geçer.</p></div>
 
-      <div class="feat rv" style="--d:.03s"><span class="code">ZMT-04</span><h4>Kişi zimmeti</h4>
+      <div class="feat rv" style="--d:.03s"><span class="code">ZMT-04</span><h4>Kişi Zimmeti</h4>
         <p>Cihazı personele zimmetleyin. Personel kartında üzerindeki tüm cihazlar tek listede; ayrılırken toplu geri teslim.</p></div>
-      <div class="feat rv" style="--d:.06s"><span class="code">ZMT-05</span><h4>Bölüm zimmeti</h4>
+      <div class="feat rv" style="--d:.06s"><span class="code">ZMT-05</span><h4>Bölüm Zimmeti</h4>
         <p>Ortak yazıcı, terminal ve ekranlar kişiye değil bölüme zimmetlenir. Personel değişse de sorumluluk departmanda kalır.</p></div>
-      <div class="feat rv" style="--d:.09s"><span class="code">ZMT-06</span><h4>Zimmet formu</h4>
+      <div class="feat rv" style="--d:.09s"><span class="code">ZMT-06</span><h4>Zimmet Formu</h4>
         <p>Sistem, teslim alan / teslim eden / onaylayan imza alanlarıyla PDF formu üretir. İmzalı hali taranıp kayda geri yüklenir.</p></div>
 
-      <div class="feat rv" style="--d:.03s"><span class="code">QR-07</span><h4>Karekodlu etiket</h4>
+      <div class="feat rv" style="--d:.03s"><span class="code">QR-07</span><h4>Karekodlu Etiket</h4>
         <p>Her cihaza karekodlu demirbaş etiketi basılır. Karekod kurumsal logonuzun içine gömülebilir.</p></div>
-      <div class="feat rv" style="--d:.06s"><span class="code">SAY-08</span><h4>Karekodla sayım</h4>
+      <div class="feat rv" style="--d:.06s"><span class="code">SAY-08</span><h4>Karekodla Sayım</h4>
         <p>Telefonla okutun, sistem sayılanı ve eksiği anlık gösterir. Şube veya kategori bazında sayım oturumu açılır.</p></div>
-      <div class="feat rv" style="--d:.09s"><span class="code">AĞ-09</span><h4>Ağ topolojisi</h4>
+      <div class="feat rv" style="--d:.09s"><span class="code">AĞ-09</span><h4>Ağ Topolojisi</h4>
         <p>Switch, access point ve sunucular arasındaki bağlantı şeması. Bir cihaz düştüğünde neyin etkilendiği görülür.</p></div>
 
-      <div class="feat rv" style="--d:.03s"><span class="code">DST-10</span><h4>Destek talepleri</h4>
+      <div class="feat rv" style="--d:.03s"><span class="code">DST-10</span><h4>Destek Talepleri</h4>
         <p>Personel kendi portalından talep açar; talep numara alır, kategori ve aciliyetine göre ilgili kişiye atanır.</p></div>
-      <div class="feat rv" style="--d:.06s"><span class="code">DST-11</span><h4>Ayrı destek hatları</h4>
+      <div class="feat rv" style="--d:.06s"><span class="code">DST-11</span><h4>Ayrı Destek Hatları</h4>
         <p>BT / cihaz talepleri ile ERP talepleri farklı hatlara düşer, farklı ekiplerde toplanır, ayrı raporlanır.</p></div>
-      <div class="feat rv" style="--d:.09s"><span class="code">DST-12</span><h4>Talep içi mesajlaşma</h4>
+      <div class="feat rv" style="--d:.09s"><span class="code">DST-12</span><h4>Talep İçi Mesajlaşma</h4>
         <p>Kullanıcı ve tekniker aynı kayıtta yazışır. Ekran görüntüsü yapıştırılır; "sadece BT ekibi görsün" iç notu ayrı tutulur.</p></div>
 
-      <div class="feat rv" style="--d:.03s"><span class="code">İŞP-13</span><h4>İş takip panosu</h4>
+      <div class="feat rv" style="--d:.03s"><span class="code">İŞP-13</span><h4>İş Takip Panosu</h4>
         <p>Yapılacak, yapılıyor, tamamlandı, onaylandı. Sürükleyerek ilerletin; hat, personel ve tarih aralığına göre süzün.</p></div>
-      <div class="feat rv" style="--d:.06s"><span class="code">İŞP-14</span><h4>Onay ve revizyon</h4>
+      <div class="feat rv" style="--d:.06s"><span class="code">İŞP-14</span><h4>Onay ve Revizyon</h4>
         <p>Tekniker işi bitirir, sorumlu onaylar. Eksikse revizyona döner. Kontrol edilmeden hiçbir iş kapanmaz.</p></div>
-      <div class="feat rv" style="--d:.09s"><span class="code">PRF-15</span><h4>Performans paneli</h4>
+      <div class="feat rv" style="--d:.09s"><span class="code">PRF-15</span><h4>Performans Paneli</h4>
         <p>Kişi bazlı kapatılan talep, toplam üretim, ortalama çözüm süresi, günlük üretim grafiği. Satıra tıklayın, kişi detayı açılır.</p></div>
 
-      <div class="feat rv" style="--d:.03s"><span class="code">LSN-16</span><h4>Lisans ve abonelik</h4>
+      <div class="feat rv" style="--d:.03s"><span class="code">LSN-16</span><h4>Lisans ve Abonelik</h4>
         <p>Koltuk sayısı, kullanılan / boş dağılımı, tedarikçi, yenileme tarihi ve yıllık maliyet. Yaklaşan yenilemeler öne çıkar.</p></div>
       <div class="feat rv" style="--d:.06s"><span class="code">RPR-17</span><h4>Raporlar</h4>
         <p>Garanti raporu, lokasyon envanteri, servis maliyeti, lisans yenileme. Hepsi tek tıkla Excel'e aktarılır.</p></div>
-      <div class="feat rv" style="--d:.09s"><span class="code">YTK-18</span><h4>Şube ve rol bazlı yetki</h4>
+      <div class="feat rv" style="--d:.09s"><span class="code">YTK-18</span><h4>Şube ve Rol Bazlı Yetki</h4>
         <p>Şube sorumlusu yalnızca kendi şubesini görür, yönetim tümünü. Sistemde kayıtsız işlem kalmaz.</p></div>
     </div>
   </div>
@@ -883,7 +993,6 @@ p{max-width:64ch}
       </div>
       <div class="shotframe rv" style="--d:.1s">
         <div class="chrome"><i class="dot"></i><i class="dot"></i><i class="dot"></i><span class="url">btenvanter.local / dashboard</span></div>
-        <img class="shot-img" src="gorseller/01-dashboard.png" alt="Dashboard ekranı" onload="this.closest('.shotframe').classList.add('has-img')">
         <div class="ui">
           <div class="ui-row">
             <aside class="ui-side">
@@ -932,7 +1041,7 @@ p{max-width:64ch}
     <!-- 02 CİHAZLAR -->
     <div class="show flip-l">
       <div class="show-txt rv">
-        <span class="eyebrow">02 — Cihaz envanteri</span>
+        <span class="eyebrow">02 — Cihaz Envanteri</span>
         <h3>Tüm cihazlar, tek listede.</h3>
         <ul>
           <li>Demirbaş no, seri no veya telefon numarasından saniyeler içinde arama</li>
@@ -945,7 +1054,6 @@ p{max-width:64ch}
       </div>
       <div class="shotframe rv" style="--d:.1s">
         <div class="chrome"><i class="dot"></i><i class="dot"></i><i class="dot"></i><span class="url">btenvanter.local / cihazlar</span></div>
-        <img class="shot-img" src="gorseller/02-cihazlar.png" alt="Cihazlar ekranı" onload="this.closest('.shotframe').classList.add('has-img')">
         <div class="ui">
           <div class="ui-row">
             <aside class="ui-side">
@@ -990,33 +1098,78 @@ p{max-width:64ch}
       <p class="lead" style="margin-top:20px">Her cihaza yapıştırılan demirbaş etiketi, kurumsal kimliğinizin bir parçası olur. Telefonla okutulduğunda cihazın kartı açılır — arıza bildirmek, zimmet görmek, sayım yapmak için tek hareket yeter.</p>
     </div>
 
-    <div class="photos">
-      <figure class="photo rv" style="--d:.04s">
-        <img src="gorseller/etiket-cihaz.jpg" alt="Cihaza yapıştırılmış karekodlu demirbaş etiketi"
-             onload="this.closest('.photo').classList.add('has')">
-        <div class="photo-ph">
-          <div class="qr-demo" data-qr="ph1"></div>
-          <div><b>Etiket cihazın üstünde</b><br><s>gorseller/etiket-cihaz.jpg</s></div>
-        </div>
-        <figcaption>Her cihazda, kurumsal kimliğinize uygun kalıcı demirbaş etiketi.</figcaption>
-      </figure>
-      <figure class="photo rv" style="--d:.1s">
-        <img src="gorseller/etiket-sade.jpg" alt="Logosuz sade karekod etiketi"
-             onload="this.closest('.photo').classList.add('has')">
-        <div class="photo-ph">
-          <div class="qr-demo" data-qr="ph2"></div>
-          <div><b>Logosuz sade etiket</b><br><s>gorseller/etiket-sade.jpg</s></div>
-        </div>
-        <figcaption>Ya da logosuz sade sürüm — kurumsal kimlik istemeyen tesisler için.</figcaption>
-      </figure>
-    </div>
-
     <div class="scan-wrap rv">
       <div class="scan" style="--cyc:8s">
-        <div class="scan-bg"></div>
+        <svg class="scan-art" viewBox="0 0 1200 675" preserveAspectRatio="xMidYMid slice" aria-label="Karekodlu demirbaş etiketi yapıştırılmış dizüstü bilgisayar">
+          <defs>
+            <linearGradient id="lidG" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#2A2E36"/><stop offset=".5" stop-color="#1B1E24"/>
+              <stop offset="1" stop-color="#111318"/>
+            </linearGradient>
+            <linearGradient id="sheen" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#fff" stop-opacity=".1"/>
+              <stop offset=".45" stop-color="#fff" stop-opacity="0"/>
+            </linearGradient>
+            <linearGradient id="plate" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#D8DCE2"/><stop offset=".5" stop-color="#8E949E"/>
+              <stop offset="1" stop-color="#C3C8CF"/>
+            </linearGradient>
+            <radialGradient id="amb" cx=".5" cy=".5">
+              <stop offset="0" stop-color="#E11D2E" stop-opacity=".24"/>
+              <stop offset="1" stop-color="#E11D2E" stop-opacity="0"/>
+            </radialGradient>
+            <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+              <feGaussianBlur stdDeviation="26"/></filter>
+          </defs>
+
+          <ellipse cx="470" cy="330" rx="430" ry="300" fill="url(#amb)"/>
+          <ellipse cx="470" cy="580" rx="330" ry="60" fill="#000" opacity=".7" filter="url(#soft)"/>
+
+          <!-- gövde kalınlığı -->
+          <path d="M150 240 L620 186 L740 516 L270 570 Z" fill="#08090B"/>
+          <path d="M150 232 L620 178 L740 508 L270 562 Z" fill="#15171C"/>
+
+          <!-- kapak yüzeyi -->
+          <g transform="matrix(4.7,-0.54,1.2,3.3,150,220)">
+            <rect x="1" y="1" width="98" height="98" rx="3.4" fill="url(#lidG)"/>
+            <rect x="1" y="1" width="98" height="98" rx="3.4" fill="url(#sheen)"/>
+            <rect x="1" y="1" width="98" height="98" rx="3.4" fill="none"
+                  stroke="rgba(255,255,255,.16)" stroke-width=".4"/>
+            <!-- marka plakası -->
+            <rect x="71" y="46" width="6.5" height="22" rx="1" fill="url(#plate)" opacity=".92"/>
+            <!-- etiket -->
+            <use href="#lbl" x="39" y="41" width="27" height="31.9"/>
+            <!-- tarama çerçevesi -->
+            <g class="beam" fill="none" stroke="#E11D2E" stroke-width=".8" stroke-linecap="round">
+              <path d="M36 38 h6 M36 38 v6"/>
+              <path d="M69 38 h-6 M69 38 v6"/>
+              <path d="M36 76 h6 M36 76 v-6"/>
+              <path d="M69 76 h-6 M69 76 v-6"/>
+            </g>
+          </g>
+
+          <!-- telefondan etikete uzanan ışın -->
+          <path class="beam-line" d="M840 330 L545 376" stroke="#E11D2E" stroke-width="2"
+                stroke-dasharray="5 7" opacity=".9"/>
+        </svg>
+
         <div class="scan-phone">
           <div class="scan-scr">
-            <div class="cam"></div>
+            <div class="cam">
+              <svg viewBox="0 0 180 380" preserveAspectRatio="xMidYMid slice">
+                <defs>
+                  <linearGradient id="camS" x1="0" y1="0" x2=".4" y2="1">
+                    <stop offset="0" stop-color="#2B2F37"/><stop offset=".55" stop-color="#1A1D23"/>
+                    <stop offset="1" stop-color="#0E1014"/>
+                  </linearGradient>
+                </defs>
+                <rect width="180" height="380" fill="#0A0B0D"/>
+                <path d="M-30 60 L215 26 L245 330 L-5 366 Z" fill="url(#camS)"/>
+                <path d="M-30 60 L215 26" stroke="rgba(255,255,255,.14)" stroke-width="1.4"/>
+                <rect x="146" y="132" width="17" height="62" rx="3" fill="#8E949E" opacity=".55"/>
+                <use href="#lbl" x="42" y="101" width="96" height="113"/>
+              </svg>
+            </div>
             <div class="reticle"><i></i><i></i><i></i><i></i></div>
             <div class="scan-line"></div>
             <div class="tick">✓</div>
@@ -1029,17 +1182,17 @@ p{max-width:64ch}
                 <div class="sc-row"><s>Departman</s><b>Muhasebe</b></div>
                 <div class="sc-row"><s>Seri No</s><b>PF5R0ELB</b></div>
                 <div class="sc-row"><s>Garanti</s><b>14.02.2027</b></div>
-                <span class="sc-btn">Sorun bildir</span>
-                <span class="sc-btn g">Cihaz geçmişi</span>
+                <span class="sc-btn">Sorun Bildir</span>
+                <span class="sc-btn g">Cihaz Geçmişi</span>
               </div>
             </div>
           </div>
         </div>
       </div>
       <div class="scan-steps">
-        <div class="scan-step"><em>01</em> Telefonu etikete tut</div>
-        <div class="scan-step"><em>02</em> Karekod tanınır</div>
-        <div class="scan-step"><em>03</em> Cihaz kartı açılır</div>
+        <div class="scan-step"><em>01</em> Telefonu Etikete Tut</div>
+        <div class="scan-step"><em>02</em> Karekod Tanınır</div>
+        <div class="scan-step"><em>03</em> Cihaz Kartı Açılır</div>
       </div>
       <p class="small center" style="margin-top:20px;color:#77777C;max-width:560px">
         Uygulama kurmaya gerek yok, giriş yapmaya gerek yok. Sahadaki personel kendi telefonunun
@@ -1049,24 +1202,24 @@ p{max-width:64ch}
     <div class="qr-grid">
       <div class="qr-card rv" style="--d:.04s">
         <div class="qr-demo" data-qr="brand"><div class="qr-hole"><span>LOGO</span></div></div>
-        <h4>Logolu karekod</h4>
+        <h4>Logolu Karekod</h4>
         <p>Karekodun ortasındaki alan logonuza ayrılır. Etiket hem kurumsal görünür hem okunabilirliğini korur.</p>
       </div>
       <div class="qr-card rv" style="--d:.09s">
         <div class="qr-demo" data-qr="plain"><div class="qr-hole alt"><span>S1</span></div></div>
-        <h4>Sade demirbaş etiketi</h4>
+        <h4>Sade Demirbaş Etiketi</h4>
         <p>Küçük cihazlar için yalnızca karekod ve demirbaş numarası. Termal etiket yazıcıdan seri hâlde basılır.</p>
       </div>
       <div class="qr-card rv" style="--d:.14s">
         <div class="qr-demo" data-qr="scan"><div class="qr-hole"><span>QR</span></div></div>
-        <h4>Sayımda okut</h4>
+        <h4>Sayımda Okut</h4>
         <p>Aynı karekod sayım oturumunda da çalışır. Cihazı okutun, listede anında yeşile dönsün.</p>
       </div>
     </div>
 
     <div class="show" style="margin-top:88px">
       <div class="show-txt rv">
-        <span class="eyebrow">03 — Cihaz kartı</span>
+        <span class="eyebrow">03 — Cihaz Kartı</span>
         <h3>Etiketi okutun, cihazın tüm ömrü karşınızda.</h3>
         <ul>
           <li>Cihaz bilgileri: demirbaş no, kategori, marka, model, seri no, MAC ve IP adresi, işletim sistemi</li>
@@ -1079,7 +1232,6 @@ p{max-width:64ch}
       </div>
       <div class="shotframe rv" style="--d:.1s">
         <div class="chrome"><i class="dot"></i><i class="dot"></i><i class="dot"></i><span class="url">btenvanter.local / cihaz / S1-00693</span></div>
-        <img class="shot-img" src="gorseller/03-cihaz-karti.png" alt="Cihaz kartı ekranı" onload="this.closest('.shotframe').classList.add('has-img')">
         <div class="ui">
           <div class="ui-main">
             <div class="ui-top"><div><h5>S1-00693</h5><p>Marka B · Model X — CEP TELEFONU</p></div>
@@ -1131,7 +1283,7 @@ p{max-width:64ch}
   <div class="wrap">
     <div class="show" style="margin-top:0">
       <div class="show-txt rv">
-        <span class="eyebrow">04 — Zimmet ve teslim formu</span>
+        <span class="eyebrow">04 — Zimmet ve Teslim Formu</span>
         <h3>Kişiye de zimmetleyin, bölüme de.</h3>
         <ul>
           <li><strong>Kişi zimmeti:</strong> notebook, telefon, SIM kart gibi bireysel cihazlar personel üstüne kaydedilir</li>
@@ -1145,7 +1297,6 @@ p{max-width:64ch}
       </div>
       <div class="shotframe rv" style="--d:.1s">
         <div class="chrome"><i class="dot"></i><i class="dot"></i><i class="dot"></i><span class="url">btenvanter.local / zimmetler / ZMT-2026-00117</span></div>
-        <img class="shot-img" src="gorseller/04-zimmet.png" alt="Zimmet ekranı" onload="this.closest('.shotframe').classList.add('has-img')">
         <div class="ui">
           <div class="ui-main">
             <div class="ui-top"><div><h5>ZMT-2026-00117</h5><p>Deniz Korkmaz · İnsan Kaynakları · ŞUBE 1</p></div>
@@ -1196,7 +1347,7 @@ p{max-width:64ch}
 <section class="sec sec-dark" id="destek">
   <div class="wrap">
     <div class="rv center" style="max-width:790px">
-      <span class="eyebrow">Destek ve iş takibi</span>
+      <span class="eyebrow">Destek ve İş Takibi</span>
       <h2 style="color:#fff">Talep açıldığı anda kayda girer. Kapanana kadar orada kalır.</h2>
       <p class="lead" style="margin-top:20px">Üretim durduğunda kimin kimi aradığı değil, sistemde ne yazdığı önemlidir.</p>
     </div>
@@ -1204,7 +1355,7 @@ p{max-width:64ch}
     <!-- 05 DESTEK -->
     <div class="show">
       <div class="show-txt rv">
-        <span class="eyebrow">05 — Destek talepleri</span>
+        <span class="eyebrow">05 — Destek Talepleri</span>
         <h3>Sahadan gelen her talep, numaralı bir kayıt.</h3>
         <ul>
           <li>Personel kendi portalından açar; talep otomatik numara alır ve ilgili kişiye atanır</li>
@@ -1219,7 +1370,6 @@ p{max-width:64ch}
       </div>
       <div class="shotframe rv" style="--d:.1s">
         <div class="chrome"><i class="dot"></i><i class="dot"></i><i class="dot"></i><span class="url">btenvanter.local / destek-talepleri</span></div>
-        <img class="shot-img" src="gorseller/05-destek.png" alt="Destek talepleri ekranı" onload="this.closest('.shotframe').classList.add('has-img')">
         <div class="ui">
           <div class="ui-main">
             <div class="ui-top"><div><h5>Destek Talepleri</h5><p>15 kayıt — 0 karar bekleyen, 15 aktif</p></div>
@@ -1254,7 +1404,7 @@ p{max-width:64ch}
     <!-- 06 İŞ TAKİP -->
     <div class="show flip-l">
       <div class="show-txt rv">
-        <span class="eyebrow">06 — İş takip panosu</span>
+        <span class="eyebrow">06 — İş Takip Panosu</span>
         <h3>Açık işler görünür olduğunda, iş unutulmaz.</h3>
         <ul>
           <li>Yapılacak → yapılıyor → tamamlandı → onaylandı; kartlar sürüklenerek ilerler</li>
@@ -1267,7 +1417,6 @@ p{max-width:64ch}
       </div>
       <div class="shotframe rv" style="--d:.1s">
         <div class="chrome"><i class="dot"></i><i class="dot"></i><i class="dot"></i><span class="url">btenvanter.local / is-takibi</span></div>
-        <img class="shot-img" src="gorseller/06-is-takibi.png" alt="İş takibi ekranı" onload="this.closest('.shotframe').classList.add('has-img')">
         <div class="ui">
           <div class="ui-main">
             <div class="ui-top"><div><h5>İş Takibi</h5><p>69 iş kaydı · güncel 08:39</p></div>
@@ -1306,7 +1455,7 @@ p{max-width:64ch}
   <div class="wrap">
     <div class="show" style="margin-top:0">
       <div class="show-txt rv">
-        <span class="eyebrow">07 — İş takip paneli</span>
+        <span class="eyebrow">07 — İş Takip Paneli</span>
         <h3>Ekibin yükü tahminle değil, veriyle konuşulur.</h3>
         <ul>
           <li>Açık, işlemde, tamamlanan ve <strong>atanmamış</strong> talep sayıları — sahipsiz iş görünür olur</li>
@@ -1320,7 +1469,6 @@ p{max-width:64ch}
       </div>
       <div class="shotframe rv" style="--d:.1s">
         <div class="chrome"><i class="dot"></i><i class="dot"></i><i class="dot"></i><span class="url">btenvanter.local / is-takip-paneli</span></div>
-        <img class="shot-img" src="gorseller/07-performans.png" alt="İş takip paneli ekranı" onload="this.closest('.shotframe').classList.add('has-img')">
         <div class="ui">
           <div class="ui-main">
             <div class="ui-body">
@@ -1375,7 +1523,7 @@ p{max-width:64ch}
 <section class="sec sec-dark">
   <div class="wrap">
     <div class="rv center" style="max-width:790px">
-      <span class="eyebrow">Sayım, lisans ve raporlar</span>
+      <span class="eyebrow">Sayım, Lisans ve Raporlar</span>
       <h2 style="color:#fff">Yılda bir yaşanan kâbus, bir öğleden sonraya iner.</h2>
     </div>
 
@@ -1395,7 +1543,6 @@ p{max-width:64ch}
       </div>
       <div class="shotframe rv" style="--d:.1s">
         <div class="chrome"><i class="dot"></i><i class="dot"></i><i class="dot"></i><span class="url">btenvanter.local / sayim / SAY-2026-002</span></div>
-        <img class="shot-img" src="gorseller/08-sayim.png" alt="Sayım ekranı" onload="this.closest('.shotframe').classList.add('has-img')">
         <div class="ui">
           <div class="ui-main">
             <div class="ui-top"><div><h5>SAY-2026-002</h5><p>ŞUBE 1 · MONİTÖR sayımı — Tamamlandı</p></div>
@@ -1424,7 +1571,7 @@ p{max-width:64ch}
     <!-- 09 LİSANS + RAPOR -->
     <div class="show flip-l">
       <div class="show-txt rv">
-        <span class="eyebrow">09 — Lisans ve raporlar</span>
+        <span class="eyebrow">09 — Lisans ve Raporlar</span>
         <h3>Yenileme tarihini sistem hatırlasın.</h3>
         <ul>
           <li>Lisans ve abonelikler: koltuk sayısı, kullanılan / boş dağılımı, tedarikçi, yıllık maliyet</li>
@@ -1438,7 +1585,6 @@ p{max-width:64ch}
       </div>
       <div class="shotframe rv" style="--d:.1s">
         <div class="chrome"><i class="dot"></i><i class="dot"></i><i class="dot"></i><span class="url">btenvanter.local / lisanslar</span></div>
-        <img class="shot-img" src="gorseller/09-lisans.png" alt="Lisans ve raporlar ekranı" onload="this.closest('.shotframe').classList.add('has-img')">
         <div class="ui">
           <div class="ui-main">
             <div class="ui-top"><div><h5>Lisans &amp; Abonelik</h5><p>10 lisans kaydı</p></div>
@@ -1489,7 +1635,7 @@ p{max-width:64ch}
   <div class="wrap">
     <div class="show" style="margin-top:0">
       <div class="show-txt rv">
-        <span class="eyebrow">10 — Personel portalı</span>
+        <span class="eyebrow">10 — Personel Portalı</span>
         <h3>Her personel kendi cihazlarını görür.</h3>
         <ul>
           <li><strong>Cihazlarım:</strong> üstündeki tüm cihazlar, seri no ve ne zamandan beri zimmetli olduğu</li>
@@ -1502,7 +1648,6 @@ p{max-width:64ch}
       </div>
       <div class="shotframe rv" style="--d:.1s">
         <div class="chrome"><i class="dot"></i><i class="dot"></i><i class="dot"></i><span class="url">btenvanter.local / cihazlarim</span></div>
-        <img class="shot-img" src="gorseller/10-portal.png" alt="Personel portalı ekranı" onload="this.closest('.shotframe').classList.add('has-img')">
         <div class="ui">
           <div class="ui-main">
             <div class="ui-top"><div><h5>Cihazlarım</h5><p>Zimmetinizdeki 10 cihaz</p></div></div>
@@ -1511,17 +1656,17 @@ p{max-width:64ch}
                 <div class="ui-dev" style="grid-template-columns:repeat(2,1fr)">
                   <div class="ui-devc"><s>NOTEBOOK</s><b>Marka E · E16 Gen 3</b><em>S1-00009</em>
                     <div class="ui-alert y" style="margin:7px 0 0;padding:5px 7px;font-size:7.6px"><div><b>Açık talep SRV-2026-00145 — Serviste</b></div></div></div>
-                  <div class="ui-devc"><s>MONİTÖR</s><b>Marka A · 27"</b><em>S1-00025</em><u>Sorun bildir</u></div>
-                  <div class="ui-devc"><s>KLAVYE</s><b>Marka F · MX Keys</b><em>S1-00281</em><u>Sorun bildir</u></div>
-                  <div class="ui-devc"><s>SIM KART</s><b>Operatör · 4.5G Hat</b><em>S1-00450</em><u>Sorun bildir</u></div>
+                  <div class="ui-devc"><s>MONİTÖR</s><b>Marka A · 27"</b><em>S1-00025</em><u>Sorun Bildir</u></div>
+                  <div class="ui-devc"><s>KLAVYE</s><b>Marka F · MX Keys</b><em>S1-00281</em><u>Sorun Bildir</u></div>
+                  <div class="ui-devc"><s>SIM KART</s><b>Operatör · 4.5G Hat</b><em>S1-00450</em><u>Sorun Bildir</u></div>
                 </div>
                 <div>
                   <div class="ui-panel" style="margin-bottom:9px"><h6>Listede olmayan bir konu</h6>
                     <p style="font-size:8.2px;color:var(--m-mu2);max-width:none">Cihaz dışında bir sorununuz mu var? Talebiniz kayıt altına alınır ve BT ekibi tarafından takip edilir.</p>
-                    <span class="ui-btn g" style="display:inline-block;margin-top:8px">Destek talebi aç</span></div>
+                    <span class="ui-btn g" style="display:inline-block;margin-top:8px">Destek Talebi Aç</span></div>
                   <div class="ui-panel"><h6>ERP desteği</h6>
                     <p style="font-size:8.2px;color:var(--m-mu2);max-width:none">ERP ile ilgili bir sorununuz mu var? Talebiniz doğrudan ERP sorumlularına iletilir.</p>
-                    <span class="ui-btn g" style="display:inline-block;margin-top:8px">ERP talebi aç</span></div>
+                    <span class="ui-btn g" style="display:inline-block;margin-top:8px">ERP Talebi Aç</span></div>
                 </div>
               </div>
             </div>
@@ -1536,7 +1681,7 @@ p{max-width:64ch}
 <section class="sec sec-dark">
   <div class="wrap split">
     <div class="rv">
-      <span class="eyebrow">Çok şubeli yapı</span>
+      <span class="eyebrow">Çok Şubeli Yapı</span>
       <h2 style="color:#fff">Beş tesis, beş ayrı liste değil.</h2>
       <p class="lead" style="margin-top:20px">Her şube kendi cihazını ve talebini yönetir, genel müdürlük hepsini birden görür. Kimin neyi görüp değiştirebileceği rol ve şube bazında tanımlanır — sistemde kayıtsız işlem kalmaz.</p>
       <div class="branch"><b>ŞUBE 1</b><b>ŞUBE 2</b><b>ŞUBE 3</b><b>ŞUBE 4</b><b>ŞUBE 5</b><b>+ yeni şube</b></div>
@@ -1553,6 +1698,83 @@ p{max-width:64ch}
   </div>
 </section>
 
+<!-- ================= EK MODÜLLER ================= -->
+<section class="sec sec-dark" id="ek-moduller">
+  <div class="wrap">
+    <div class="rv center" style="max-width:800px">
+      <span class="eyebrow">Ek Modüller</span>
+      <h2 style="color:#fff">Sistem sizinle birlikte büyür.</h2>
+      <p class="lead" style="margin-top:20px">Her fabrikanın kendine has bir takip ihtiyacı vardır ve bu ihtiyaç hazır yazılım paketlerine sığmaz. BT Envanter modüler kuruldu: mevcut yapıyı bozmadan yeni modül eklenir, aynı yetki ve şube mantığıyla çalışır.</p>
+    </div>
+
+    <div class="new-mod rv">
+      <div>
+        <span class="new-badge">Yeni · v3.2.0</span>
+        <h3>Toplantı ve Salon Planlama</h3>
+        <p>Bir müşterinin talebiyle başladı, iki haftada yayına girdi. Toplantı odaları da artık envanterin bir parçası: kapasitesi, ekipmanı ve doluluk takvimiyle.</p>
+        <ul>
+          <li>Salon envanteri — kapasite, projeksiyon, ekran, telekonferans donanımı</li>
+          <li>Tüm şirketin gördüğü ortak günlük takvim</li>
+          <li>Çakışma kontrollü rezervasyon: dolu saat ikinci kez verilmez</li>
+          <li>Odadaki ekipman arızalanınca doğrudan destek talebine bağlanır</li>
+        </ul>
+        <p class="soon">Sırada: katılımcılara anketle uygun saat sorma, ardından e-posta ve takvim daveti gönderimi.</p>
+      </div>
+      <div class="cal">
+        <div class="cal-top"><b>Salon Takvimi</b><s>Çarşamba · ŞUBE 1</s></div>
+        <div class="cal-grid">
+          <div class="cal-h"></div><div class="cal-h">Toplantı A</div><div class="cal-h">Toplantı B</div><div class="cal-h">Eğitim</div>
+          <div class="cal-t">09:00</div>
+          <div class="cal-c"><div class="cal-ev b">Üretim Planlama<s>12 kişi</s></div></div>
+          <div class="cal-c"></div>
+          <div class="cal-c"><div class="cal-ev g">Oryantasyon<s>08:30 — 12:00</s></div></div>
+          <div class="cal-t">11:00</div>
+          <div class="cal-c"></div>
+          <div class="cal-c"><div class="cal-ev r">Tedarikçi Görüşmesi<s>6 kişi</s></div></div>
+          <div class="cal-c"></div>
+          <div class="cal-t">14:00</div>
+          <div class="cal-c"><div class="cal-ev g">Kalite Değerlendirme<s>9 kişi</s></div></div>
+          <div class="cal-c"></div>
+          <div class="cal-c"></div>
+          <div class="cal-t">16:00</div>
+          <div class="cal-c"></div>
+          <div class="cal-c"><div class="cal-ev b">Vardiya Devri<s>Tekrarlı</s></div></div>
+          <div class="cal-c"></div>
+        </div>
+        <div class="cal-note">Dolu saate ikinci rezervasyon açılamaz — sistem çakışmayı anında bildirir.</div>
+      </div>
+    </div>
+
+    <div class="rv center" style="margin-top:76px;max-width:700px">
+      <h3 style="color:#fff">Sizin için ne geliştirebiliriz?</h3>
+      <p class="lead" style="margin-top:16px">Aşağıdakiler bugüne kadar konuşulmuş fikirlerden birkaçı. Listede olmayan bir ihtiyacınız varsa da konuşalım — envanter, zimmet ve talep altyapısı zaten hazır.</p>
+    </div>
+
+    <div class="idea-grid">
+      <div class="idea rv" style="--d:.03s"><b>Bakım Planlama</b><span>Periyodik bakım takvimi, yaklaşan bakımlar için otomatik iş kaydı.</span></div>
+      <div class="idea rv" style="--d:.06s"><b>Kalibrasyon Takibi</b><span>Ölçüm cihazlarının kalibrasyon tarihleri, sertifika arşivi, süre uyarısı.</span></div>
+      <div class="idea rv" style="--d:.09s"><b>Araç ve Filo Takibi</b><span>Şirket araçları, muayene ve sigorta tarihleri, zimmetli sürücü.</span></div>
+      <div class="idea rv" style="--d:.12s"><b>Ziyaretçi Kaydı</b><span>Girişte karekodla kayıt, ziyaret edilen birim, çıkış saati.</span></div>
+      <div class="idea rv" style="--d:.03s"><b>İSG Ekipman Zimmeti</b><span>Baret, gözlük, eldiven — kişiye zimmet, yenileme periyodu takibi.</span></div>
+      <div class="idea rv" style="--d:.06s"><b>Sarf Malzeme Stoğu</b><span>Toner, kablo, adaptör; kritik seviye uyarısı ve tüketim raporu.</span></div>
+      <div class="idea rv" style="--d:.09s"><b>Sözleşme ve Tedarikçi</b><span>Bakım sözleşmeleri, bitiş tarihleri, tedarikçi bazında maliyet.</span></div>
+      <div class="idea rv" style="--d:.12s"><b>Vardiya ve Nöbet</b><span>BT nöbet çizelgesi, kimin sırası olduğunun talep ekranına yansıması.</span></div>
+    </div>
+
+    <div class="steps rv" style="margin-top:64px">
+      <div class="step" style="border-color:rgba(255,255,255,.3)">
+        <h4 style="color:#fff">İhtiyaç Görüşmesi</h4>
+        <p style="color:#A1A1A6">Süreci sahada nasıl yürüttüğünüzü dinliyoruz. Yazılıma değil, işin kendisine bakıyoruz.</p></div>
+      <div class="step" style="border-color:rgba(255,255,255,.3)">
+        <h4 style="color:#fff">Prototip</h4>
+        <p style="color:#A1A1A6">Çalışan ilk sürümü kısa sürede görürsünüz. Yönü baştan düzeltmek sonradan düzeltmekten ucuzdur.</p></div>
+      <div class="step" style="border-color:rgba(255,255,255,.3)">
+        <h4 style="color:#fff">Yayın ve Gelişim</h4>
+        <p style="color:#A1A1A6">Modül sisteme eklenir, kullandıkça gelen geri bildirimle olgunlaşır.</p></div>
+    </div>
+  </div>
+</section>
+
 <!-- ================= KURULUM ================= -->
 <section class="sec" id="kurulum">
   <div class="wrap">
@@ -1562,31 +1784,77 @@ p{max-width:64ch}
       <p class="lead" style="margin-top:20px">Bulut aboneliği zorunlu değil. Sistem şirketinizin kendi sunucusuna kurulur; personel bilgileri, zimmet belgeleri ve envanter verisi hiçbir zaman dışarı çıkmaz. İnternet kesilse bile fabrika içinden çalışmaya devam eder.</p>
     </div>
     <div class="steps">
-      <div class="step rv" style="--d:.05s"><h4>Kurulum ve veri aktarımı</h4>
+      <div class="step rv" style="--d:.05s"><h4>Kurulum ve Veri Aktarımı</h4>
         <p>Mevcut Excel listeleriniz sisteme aktarılır. Şubeler, bölümler, kategoriler ve kullanıcılar tanımlanır; etiketler basılır.</p></div>
-      <div class="step rv" style="--d:.12s"><h4>Ekip eğitimi</h4>
+      <div class="step rv" style="--d:.12s"><h4>Ekip Eğitimi</h4>
         <p>BT ekibi için uygulamalı eğitim. Personel tarafı karekodu okutup talep açmaktan ibaret; eğitim gerektirmez.</p></div>
-      <div class="step rv" style="--d:.19s"><h4>Destek ve güncelleme</h4>
+      <div class="step rv" style="--d:.19s"><h4>Destek ve Güncelleme</h4>
         <p>Kullanımda karşılaştığınız her durumda destek. Yeni sürümler ve size özel geliştirmeler sisteme eklenir.</p></div>
     </div>
   </div>
 </section>
 
-<!-- ================= CTA ================= -->
+<!-- ================= İLETİŞİM ================= -->
 <section class="cta" id="iletisim">
   <div class="wrap cta-in">
-    <div class="rv">
-      <span class="eyebrow">Demo</span>
-      <h2>Bir sonraki sayım gelmeden görün.</h2>
-      <p class="lead">30 dakikalık canlı demoda sistemi kendi cihaz listenizle gösteriyoruz. Sunum değil — gerçek ekran, gerçek veri.</p>
-      <div class="cta-btns">
-        <a href="mailto:fatihsuna5663@gmail.com?subject=BT%20Envanter%20demo%20talebi" class="btn btn-primary">Demo talep et →</a>
-        <a href="tel:+905442501642" class="btn btn-ghost">Telefonla görüşelim</a>
+    <div class="contact-grid rv">
+      <div class="contact-info">
+        <span class="eyebrow">Demo ve Teklif</span>
+        <h2>Bir sonraki sayım gelmeden görün.</h2>
+        <p class="lead" style="margin-top:18px">30 dakikalık canlı demoda sistemi kendi cihaz listenizle gösteriyoruz. Sunum değil — gerçek ekran, gerçek veri. Formu doldurun, aynı gün dönelim.</p>
+
+        <div class="contact-list">
+          <a class="contact-item" href="mailto:fatihsuna5663@gmail.com?subject=BT%20Envanter%20demo%20talebi">
+            <i>✉</i><div><s>E-posta</s><b>fatihsuna5663@gmail.com</b></div></a>
+          <a class="contact-item" href="tel:+905442501642">
+            <i>☎</i><div><s>Telefon</s><b>+90 544 250 16 42</b></div></a>
+          <div class="contact-item">
+            <i>⚑</i><div><s>Konum</s><b>Türkiye — yerinde kurulum</b></div></div>
+        </div>
+
+        <div class="trust">
+          <span>Ücretsiz demo</span><span>Taahhüt yok</span><span>Kendi sunucunuzda kurulum</span>
+        </div>
       </div>
-      <div class="contact">
-        <a href="mailto:fatihsuna5663@gmail.com">fatihsuna5663@gmail.com</a>
-        <a href="tel:+905442501642">+90 544 250 16 42</a>
-        <span>Türkiye</span>
+
+      <div class="form-card" id="formCard">
+        <div class="form-body">
+          <form id="demoForm" action="https://formspree.io/f/FORM_ID_BURAYA" method="POST" novalidate>
+            <div class="form-row">
+              <div class="field"><label for="ad">Ad Soyad *</label>
+                <input id="ad" name="Ad Soyad" type="text" required placeholder="Adınız ve soyadınız"></div>
+              <div class="field"><label for="sirket">Şirket *</label>
+                <input id="sirket" name="Şirket" type="text" required placeholder="Firma adı"></div>
+            </div>
+            <div class="form-row">
+              <div class="field"><label for="eposta">E-posta *</label>
+                <input id="eposta" name="E-posta" type="email" required placeholder="ad@sirket.com"></div>
+              <div class="field"><label for="tel">Telefon</label>
+                <input id="tel" name="Telefon" type="tel" placeholder="+90"></div>
+            </div>
+            <div class="form-row">
+              <div class="field"><label for="cihaz">Yaklaşık Cihaz Sayısı</label>
+                <select id="cihaz" name="Cihaz Sayısı">
+                  <option>Bilmiyorum</option><option>50 altı</option><option>50 — 250</option>
+                  <option>250 — 750</option><option>750 üzeri</option>
+                </select></div>
+              <div class="field"><label for="sube">Şube Sayısı</label>
+                <select id="sube" name="Şube Sayısı">
+                  <option>Tek tesis</option><option>2 — 5 şube</option><option>5 üzeri</option>
+                </select></div>
+            </div>
+            <div class="field"><label for="mesaj">Neyi çözmek istiyorsunuz?</label>
+              <textarea id="mesaj" name="Mesaj" placeholder="Örneğin: zimmet takibi kâğıt üstünde kalıyor, sayım günlerce sürüyor…"></textarea></div>
+            <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <button type="submit" class="btn btn-primary" id="sendBtn">Demo Talebi Gönder →</button>
+            <p class="form-note">Bilgileriniz yalnızca size dönüş yapmak için kullanılır, üçüncü taraflarla paylaşılmaz.</p>
+          </form>
+        </div>
+        <div class="form-msg" id="formOk">
+          <div class="ok">✓</div>
+          <h4>Talebiniz Bize Ulaştı</h4>
+          <p>En kısa sürede dönüş yapacağız. Acil bir durumsa doğrudan arayabilirsiniz: +90 544 250 16 42</p>
+        </div>
       </div>
     </div>
   </div>
@@ -1601,12 +1869,11 @@ p{max-width:64ch}
 
 <script>
 /* ---------- karekod çizimi ---------- */
-function buildQR(el, seed, N){
+function qrPath(seed, N){
   N = N || 25;
   let s = seed;
   const rnd = () => { s = (s * 1103515245 + 12345) & 0x7fffffff; return s / 0x7fffffff; };
   const grid = Array.from({length:N}, () => Array(N).fill(null));
-  // konum bulma desenleri
   const finder = (r,c) => {
     for(let i=-1;i<8;i++) for(let j=-1;j<8;j++){
       const y=r+i, x=c+j;
@@ -1617,25 +1884,36 @@ function buildQR(el, seed, N){
     }
   };
   finder(0,0); finder(0,N-7); finder(N-7,0);
-  // hizalama deseni
   for(let i=0;i<5;i++) for(let j=0;j<5;j++){
     const y=N-9+i, x=N-9+j;
     grid[y][x] = (i===0||i===4||j===0||j===4||(i===2&&j===2)) ? 1 : 0;
   }
-  // ortada logo boşluğu
-  const h0 = Math.floor(N*0.33), h1 = Math.ceil(N*0.67);
-  for(let y=h0;y<h1;y++) for(let x=h0;x<h1;x++) grid[y][x] = 0;
-  // kalan modüller
-  let d = '';
+  let d='';
   for(let y=0;y<N;y++) for(let x=0;x<N;x++){
     const v = grid[y][x] === null ? (rnd() > .52 ? 1 : 0) : grid[y][x];
     if(v) d += 'M'+x+' '+y+'h1v1h-1z';
   }
-  const svg = '<svg viewBox="0 0 '+N+' '+N+'" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">'
-    + '<path d="'+d+'" fill="#1D1D1F"/></svg>';
-  el.insertAdjacentHTML('afterbegin', svg);
+  return d;
+}
+function buildQR(el, seed, N){
+  N = N || 25;
+  // ortada logo boşluğu bırakan sürüm
+  let d = qrPath(seed, N), keep='';
+  const h0=Math.floor(N*0.33), h1=Math.ceil(N*0.67);
+  d.split('z').filter(Boolean).forEach(seg=>{
+    const m=/M(\d+) (\d+)/.exec(seg); if(!m) return;
+    const x=+m[1], y=+m[2];
+    if(x>=h0&&x<h1&&y>=h0&&y<h1) return;
+    keep += seg+'z';
+  });
+  el.insertAdjacentHTML('afterbegin',
+    '<svg viewBox="0 0 '+N+' '+N+'" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">'
+    +'<path d="'+keep+'" fill="#1D1D1F"/></svg>');
 }
 document.querySelectorAll('[data-qr]').forEach((el,i)=> buildQR(el, 90210 + i*7717, 25));
+// etiket sembolündeki düz karekod
+const qp=document.getElementById('qrp');
+if(qp) qp.setAttribute('d', qrPath(48123, 25));
 
 /* ---------- scroll reveal ---------- */
 const io = new IntersectionObserver((es)=>{
@@ -1698,6 +1976,46 @@ if(label && !reduced){
 document.querySelectorAll('#nl a').forEach(a=>a.addEventListener('click',()=>{
   document.getElementById('nl').classList.remove('open');
 }));
+
+/* ---------- iletişim formu ---------- */
+const form = document.getElementById('demoForm');
+if(form){
+  form.addEventListener('submit', async (e)=>{
+    e.preventDefault();
+    const btn = document.getElementById('sendBtn');
+    const card = document.getElementById('formCard');
+
+    // tarayıcı doğrulaması
+    if(!form.checkValidity()){ form.reportValidity(); return; }
+
+    // Formspree kimliği girilmemişse e-posta istemcisine düş
+    if(form.action.indexOf('FORM_ID_BURAYA') > -1){
+      const g = n => (form.elements[n] ? form.elements[n].value : '');
+      const govde = ['Ad Soyad: '+g('Ad Soyad'), 'Şirket: '+g('Şirket'),
+        'E-posta: '+g('E-posta'), 'Telefon: '+g('Telefon'),
+        'Cihaz Sayısı: '+g('Cihaz Sayısı'), 'Şube Sayısı: '+g('Şube Sayısı'),
+        '', g('Mesaj')].join('\n');
+      window.location.href = 'mailto:fatihsuna5663@gmail.com'
+        + '?subject=' + encodeURIComponent('BT Envanter demo talebi — ' + g('Şirket'))
+        + '&body=' + encodeURIComponent(govde);
+      return;
+    }
+
+    btn.textContent = 'Gönderiliyor…';
+    btn.disabled = true;
+    try{
+      const r = await fetch(form.action, {
+        method:'POST', body:new FormData(form), headers:{'Accept':'application/json'}
+      });
+      if(!r.ok) throw new Error('gonderilemedi');
+      card.classList.add('sent');
+      document.getElementById('formOk').classList.add('on');
+    }catch(err){
+      btn.textContent = 'Gönderilemedi — tekrar deneyin';
+      btn.disabled = false;
+    }
+  });
+}
 </script>
 </body>
 </html>
