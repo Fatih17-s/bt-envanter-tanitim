@@ -5,6 +5,23 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>BT Envanter — Fabrikalar için BT varlık, destek ve iş takip sistemi</title>
 <meta name="description" content="Üretim işletmeleri için BT varlık yönetimi: envanter, kişi ve bölüm zimmeti, karekodlu etiket ve sayım, destek talepleri, iş takip panosu, performans raporları, lisans takibi. Çok şubeli yapı, rol bazlı yetki, kendi sunucunuzda kurulum.">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="theme-color" content="#E11D2E">
+<link rel="canonical" href="https://fatih17-s.github.io/bt-envanter-tanitim/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:site_name" content="BT Envanter">
+<meta property="og:url" content="https://fatih17-s.github.io/bt-envanter-tanitim/">
+<meta property="og:title" content="BT Envanter — Fabrikadaki her cihazın kimde olduğunu bilin">
+<meta property="og:description" content="Envanter, zimmet, karekodlu etiket ve sayım, destek talepleri, iş takibi ve raporlar tek sistemde. Çok şubeli üretim işletmeleri için, kendi sunucunuzda.">
+<meta property="og:image" content="https://fatih17-s.github.io/bt-envanter-tanitim/gorseller/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="BT Envanter — Fabrikadaki her cihazın kimde olduğunu bilin">
+<meta name="twitter:description" content="Envanter, zimmet, karekodlu etiket ve sayım, destek talepleri, iş takibi ve raporlar tek sistemde.">
+<meta name="twitter:image" content="https://fatih17-s.github.io/bt-envanter-tanitim/gorseller/og.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
@@ -194,6 +211,61 @@ p{max-width:64ch}
 @keyframes beam{0%,38%{opacity:.35}42%,58%{opacity:1}62%,100%{opacity:.35}}
 .beam-line{animation:bline var(--cyc) linear infinite}
 @keyframes bline{0%{opacity:0}8%,38%{opacity:.9}42%,100%{opacity:0}}
+
+/* ================= EXCEL KARŞILAŞTIRMA ================= */
+.cmp{margin-top:52px;border:1px solid var(--line);border-radius:18px;overflow:hidden;background:var(--white)}
+.cmp-row{display:grid;grid-template-columns:.85fr 1fr 1fr;border-bottom:1px solid var(--line)}
+.cmp-row:last-child{border-bottom:0}
+.cmp-row>div{padding:18px 22px;font-size:.95rem;color:var(--slate);display:flex;align-items:center;gap:10px}
+.cmp-row>div:not(:last-child){border-right:1px solid var(--line)}
+.cmp-row.h>div{background:#EDEEF1;font-family:var(--mono);font-size:.68rem;letter-spacing:.13em;
+  text-transform:uppercase;font-weight:700;color:var(--slate);padding:14px 22px}
+.cmp-row.h .win{color:var(--red)}
+.cmp-row .k{font-weight:600;color:var(--ink)}
+.cmp .no::before{content:"✕";color:#C0392B;font-weight:700;flex:none;font-size:.86rem}
+.cmp .yes{background:#FCFDFC}
+.cmp .yes::before{content:"✓";color:var(--green);font-weight:700;flex:none;font-size:.9rem}
+
+/* ================= FİYATLANDIRMA ================= */
+.price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:52px;align-items:start}
+.plan{background:var(--white);border:1px solid var(--line);border-radius:18px;padding:30px 26px 32px;
+  position:relative;transition:.3s cubic-bezier(.2,.7,.2,1);display:flex;flex-direction:column;height:100%}
+.plan:hover{transform:translateY(-5px);box-shadow:0 26px 52px -30px rgba(0,0,0,.4)}
+.plan.hot{border-color:var(--red);box-shadow:0 22px 48px -28px rgba(225,29,46,.5)}
+.plan-tag{position:absolute;top:-11px;left:26px;background:var(--red);color:#fff;font-family:var(--mono);
+  font-size:.6rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;padding:5px 12px;border-radius:980px}
+.plan h4{margin-bottom:6px}
+.plan .who{font-size:.87rem;color:var(--mute);margin-bottom:20px;min-height:40px}
+.plan ul{list-style:none;display:grid;gap:10px;margin-bottom:26px;flex:1}
+.plan li{display:flex;gap:10px;font-size:.9rem;color:var(--slate);align-items:flex-start}
+.plan li::before{content:"✓";color:var(--red);font-weight:700;flex:none;font-size:.85rem;margin-top:1px}
+.plan .btn{width:100%;justify-content:center;font-size:.92rem;padding:12px 20px}
+.plan-btn{border:1px solid var(--line);color:var(--ink);background:none}
+.plan-btn:hover{border-color:var(--ink)}
+.price-how{margin-top:44px;background:var(--white);border:1px solid var(--line);border-radius:18px;
+  padding:32px;display:grid;grid-template-columns:.8fr 1fr;gap:36px;align-items:start}
+.price-how h4{margin-bottom:10px}
+.price-how p{font-size:.94rem;color:var(--slate)}
+.price-items{display:grid;gap:12px}
+.price-item{display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:start}
+.price-item b{font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;color:var(--red);
+  background:var(--red-soft);padding:5px 10px;border-radius:7px;white-space:nowrap}
+.price-item span{font-size:.92rem;color:var(--slate)}
+
+/* ================= SSS ================= */
+.faq{max-width:820px;margin:48px auto 0}
+.faq details{border:1px solid rgba(255,255,255,.12);border-radius:14px;margin-bottom:10px;
+  background:rgba(255,255,255,.04);transition:.25s}
+.faq details[open]{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.2)}
+.faq summary{cursor:pointer;list-style:none;padding:19px 56px 19px 22px;font-size:1.02rem;
+  font-weight:500;color:#fff;letter-spacing:-.02em;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";position:absolute;right:22px;top:50%;width:11px;height:11px;
+  margin-top:-6px;border-right:2px solid var(--red);border-bottom:2px solid var(--red);
+  transform:rotate(45deg);transition:.25s}
+.faq details[open] summary::after{transform:rotate(-135deg);margin-top:-2px}
+.faq summary:hover{color:#FF7A88}
+.faq p{padding:0 22px 22px;font-size:.95rem;color:#A1A1A6;max-width:none;line-height:1.65}
 
 /* ================= EK MODÜLLER ================= */
 .new-mod{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center;margin-top:52px;
@@ -625,6 +697,12 @@ p{max-width:64ch}
   .show.flip-l .show-txt{order:0}
   .steps,.qr-grid,.photos{grid-template-columns:1fr}
   .idea-grid{grid-template-columns:repeat(2,1fr)}
+  .price-grid{grid-template-columns:1fr}
+  .price-how{grid-template-columns:1fr;gap:24px;padding:26px}
+  .cmp-row{grid-template-columns:1fr}
+  .cmp-row>div:not(:last-child){border-right:0;border-bottom:1px solid var(--line)}
+  .cmp-row.h{display:none}
+  .cmp-row .k{background:#EDEEF1}
   .new-mod,.contact-grid{grid-template-columns:1fr;gap:32px}
   .new-mod{padding:26px}
   .form-card{padding:24px}
@@ -705,9 +783,9 @@ p{max-width:64ch}
       <a href="#moduller">Modüller</a>
       <a href="#ekranlar">Ekranlar</a>
       <a href="#karekod">Karekod</a>
-      <a href="#performans">Performans</a>
       <a href="#ek-moduller">Ek Modüller</a>
-      <a href="#kurulum">Kurulum</a>
+      <a href="#fiyat">Fiyatlandırma</a>
+      <a href="#sss">SSS</a>
     </div>
     <a href="#iletisim" class="btn btn-primary">Demo iste</a>
   </div>
@@ -922,9 +1000,49 @@ p{max-width:64ch}
       <li><b>05</b><span><strong>Ekibin yükü ölçülemiyor.</strong> Kimin üzerinde kaç iş var, hangi iş neden gecikti belli değil.</span></li>
     </ul>
   </div>
+  <div class="wrap">
+    <div class="cmp rv" style="--d:.1s">
+      <div class="cmp-row h">
+        <div>Konu</div><div>Excel ile</div><div class="win">BT Envanter ile</div>
+      </div>
+      <div class="cmp-row">
+        <div class="k">Yıllık sayım</div>
+        <div class="no">Liste yazdırılır, sahada elle işaretlenir, günler sürer</div>
+        <div class="yes">Karekod okutulur, eksikler anında listelenir</div>
+      </div>
+      <div class="cmp-row">
+        <div class="k">Personel ayrılınca</div>
+        <div class="no">Üzerindeki cihazlar hatırlanmaya çalışılır</div>
+        <div class="yes">Zimmet listesi tek ekranda, toplu geri teslim</div>
+      </div>
+      <div class="cmp-row">
+        <div class="k">Cihaz geçmişi</div>
+        <div class="no">Kim kullanmış, kaç kez arızalanmış — kayıt yok</div>
+        <div class="yes">Zimmet, servis ve durum geçmişi tarih sırasıyla</div>
+      </div>
+      <div class="cmp-row">
+        <div class="k">Arıza talebi</div>
+        <div class="no">Telefon ve mesaj gruplarında dağılır</div>
+        <div class="yes">Numaralı kayıt, sorumlu ataması, çözüm süresi</div>
+      </div>
+      <div class="cmp-row">
+        <div class="k">Çok şubeli yapı</div>
+        <div class="no">Her şube kendi dosyasını tutar, birleşmez</div>
+        <div class="yes">Tek veri tabanı, şube bazlı yetki, konsolide rapor</div>
+      </div>
+      <div class="cmp-row">
+        <div class="k">Garanti ve lisans</div>
+        <div class="no">Tarih takibi kimsede değil, süre kaçar</div>
+        <div class="yes">Yaklaşan bitişler otomatik uyarıya düşer</div>
+      </div>
+      <div class="cmp-row">
+        <div class="k">Aynı anda çalışma</div>
+        <div class="no">Dosya kilitlenir, kopyalar birbirini tutmaz</div>
+        <div class="yes">Herkes aynı veriyi görür, değişiklik anında yansır</div>
+      </div>
+    </div>
+  </div>
 </section>
-
-<!-- ================= MODÜLLER ================= -->
 <section class="sec sec-dark" id="moduller">
   <div class="wrap">
     <div class="rv center" style="max-width:820px">
@@ -1868,6 +1986,124 @@ p{max-width:64ch}
         <p>BT ekibi için uygulamalı eğitim. Personel tarafı karekodu okutup talep açmaktan ibaret; eğitim gerektirmez.</p></div>
       <div class="step rv" style="--d:.19s"><h4>Destek ve Güncelleme</h4>
         <p>Kullanımda karşılaştığınız her durumda destek. Yeni sürümler ve size özel geliştirmeler sisteme eklenir.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FİYATLANDIRMA ================= -->
+<section class="sec" id="fiyat">
+  <div class="wrap">
+    <div class="rv center" style="max-width:760px">
+      <span class="eyebrow">Paketler</span>
+      <h2>Tesisinizin büyüklüğüne göre.</h2>
+      <p class="lead" style="margin-top:20px">Kullanıcı başına aylık abonelik yok. Sistem bir kez kurulur, sizin olur; sonrasında yalnızca bakım ve destek için yıllık bir bedel ödersiniz.</p>
+    </div>
+
+    <div class="price-grid">
+      <div class="plan rv" style="--d:.04s">
+        <h4>Tek Tesis</h4>
+        <p class="who">Tek fabrika veya ofiste çalışan, envanterini toparlamak isteyen işletmeler.</p>
+        <ul>
+          <li>Tüm çekirdek modüller: envanter, zimmet, destek, iş takibi</li>
+          <li>Sınırsız kullanıcı — kişi başı ücret yok</li>
+          <li>Karekodlu etiket tasarımı ve ilk baskı desteği</li>
+          <li>Mevcut Excel listelerinizin sisteme aktarımı</li>
+          <li>Yerinde kurulum ve ekip eğitimi</li>
+          <li>E-posta ve telefon desteği</li>
+        </ul>
+        <a href="#iletisim" class="btn plan-btn">Teklif Al</a>
+      </div>
+
+      <div class="plan hot rv" style="--d:.08s">
+        <span class="plan-tag">En yaygın</span>
+        <h4>Çok Şubeli</h4>
+        <p class="who">Birden fazla tesisi olan, konsolide rapor ve şube bazlı yetki arayan gruplar.</p>
+        <ul>
+          <li>Tek Tesis paketindeki her şey</li>
+          <li>Sınırsız şube ve bölüm tanımı</li>
+          <li>Şube ve rol bazlı yetkilendirme</li>
+          <li>Konsolide raporlar: garanti, lokasyon, servis maliyeti</li>
+          <li>Lisans ve abonelik takibi</li>
+          <li>Öncelikli destek, yılda belirli saat geliştirme hakkı</li>
+        </ul>
+        <a href="#iletisim" class="btn btn-primary">Teklif Al →</a>
+      </div>
+
+      <div class="plan rv" style="--d:.12s">
+        <h4>Kurumsal</h4>
+        <p class="who">Veriyi kendi altyapısında tutmak ve kendi süreçlerine göre modül istemek isteyenler.</p>
+        <ul>
+          <li>Çok Şubeli paketteki her şey</li>
+          <li>Kendi sunucunuza kurulum — veri hiç dışarı çıkmaz</li>
+          <li>Size özel modül geliştirme</li>
+          <li>Mevcut ERP ve sistemlerinizle entegrasyon</li>
+          <li>Tanımlı müdahale süreleri</li>
+          <li>Talep hâlinde kaynak kod devri görüşülebilir</li>
+        </ul>
+        <a href="#iletisim" class="btn plan-btn">Görüşelim</a>
+      </div>
+    </div>
+
+    <div class="price-how rv">
+      <div>
+        <h4>Fiyat Nasıl Belirleniyor?</h4>
+        <p>Her tesisin cihaz sayısı, şube yapısı ve istediği modüller farklı olduğu için tek bir liste fiyatı vermiyoruz. Kısa bir görüşmeyle ihtiyacınızı netleştirip yazılı teklif gönderiyoruz.</p>
+      </div>
+      <div class="price-items">
+        <div class="price-item"><b>Tek Seferlik</b><span>Kurulum, veri aktarımı, şube ve kullanıcı tanımları, ekip eğitimi. Cihaz ve şube sayısına göre değişir.</span></div>
+        <div class="price-item"><b>Yıllık</b><span>Bakım, destek ve yeni sürümler. Kurulum bedelinin belirli bir yüzdesi olarak hesaplanır.</span></div>
+        <div class="price-item"><b>İsteğe Bağlı</b><span>Size özel modül geliştirme ve entegrasyonlar ayrıca fiyatlanır; istemezseniz bu kalem oluşmaz.</span></div>
+        <div class="price-item"><b>Dahil</b><span>Kullanıcı sayısı, cihaz kaydı sayısı ve depolama. Büyüdükçe ek ücret çıkmaz.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SSS ================= -->
+<section class="sec sec-dark" id="sss">
+  <div class="wrap">
+    <div class="rv center" style="max-width:720px">
+      <span class="eyebrow">Sık Sorulan Sorular</span>
+      <h2 style="color:#fff">Aklınıza takılanlar.</h2>
+    </div>
+
+    <div class="faq rv">
+      <details open>
+        <summary>Verilerimiz nerede tutuluyor?</summary>
+        <p>Seçim sizin. Sistem kendi sunucunuza kurulabilir; bu durumda personel bilgileri, zimmet belgeleri ve envanter verisi şirketinizin dışına hiç çıkmaz. Kendi sunucusunu işletmek istemeyenler için barındırma da sağlıyoruz; o senaryoda her müşterinin verisi ayrı bir veri tabanında tutulur, veriler birbirine karışmaz.</p>
+      </details>
+      <details>
+        <summary>Mevcut Excel listemiz sisteme aktarılır mı?</summary>
+        <p>Evet, kurulumun standart bir parçası. Elinizdeki listeleri olduğu gibi gönderiyorsunuz; kategori, marka, seri no ve zimmet bilgilerini eşleştirip sisteme aktarıyoruz. Listeniz dağınıksa da sorun değil, düzenleme işi bize ait. Sistem içinde de Excel yükleme özelliği var, sonradan toplu giriş yapabilirsiniz.</p>
+      </details>
+      <details>
+        <summary>İnternet kesilirse çalışmaya devam eder mi?</summary>
+        <p>Kendi sunucunuza kurulduysa evet. Sistem fabrika içi ağınız üzerinden çalışır, dış internet bağlantısı kesilse bile envanter, zimmet ve talep işlemleri kesintiye uğramaz.</p>
+      </details>
+      <details>
+        <summary>Kaç kullanıcı ekleyebiliriz? Kişi başı ücret var mı?</summary>
+        <p>Kullanıcı sayısında sınır yok ve kişi başı ücret almıyoruz. Fabrikadaki herkesin kendi portalından talep açabilmesi sistemin doğru çalışması için gerekli; bunu ücretle sınırlamak mantıksız olurdu.</p>
+      </details>
+      <details>
+        <summary>Kurulum ne kadar sürer?</summary>
+        <p>Veri aktarımı ve tanımlamalar genellikle bir gün içinde tamamlanıyor. BT ekibi için uygulamalı eğitim birkaç saat sürüyor. Son kullanıcı tarafı zaten karekod okutup talep açmaktan ibaret, ayrı bir eğitim gerektirmiyor. Etiket baskısı ve cihazlara yapıştırma süreci tesisin büyüklüğüne göre birkaç güne yayılabilir.</p>
+      </details>
+      <details>
+        <summary>Karekod etiketlerini kim basıyor?</summary>
+        <p>Etiket tasarımını biz hazırlıyoruz; isterseniz karekodu kurumsal logonuzun içine gömüyoruz. Baskıyı kendi etiket yazıcınızdan yapabilirsiniz — sistem doğrudan yazıcıya gönderiyor. Etiket yazıcınız yoksa uygun modeller konusunda yönlendirme yapıyoruz.</p>
+      </details>
+      <details>
+        <summary>Mevcut ERP sistemimizle konuşur mu?</summary>
+        <p>Kurumsal pakette entegrasyon mümkün. Sistem hâlihazırda bir ERP ile birlikte, ayrı destek hatları mantığıyla kullanılıyor. Sizin tarafınızdaki yapıyı görüp neyin veri alışverişi yapabileceğini birlikte belirliyoruz.</p>
+      </details>
+      <details>
+        <summary>KVKK açısından durum nedir?</summary>
+        <p>Sistem personel adı, departman ve zimmet bilgisi gibi kişisel veri işliyor. Kendi sunucunuzda kurulum, veriyi tamamen kendi sorumluluğunuzda tutmanızı sağladığı için bu açıdan en rahat seçenek. Rol bazlı yetkilendirme sayesinde her kullanıcı yalnızca görmesi gereken kaydı görür ve sistemde yapılan işlemler kim tarafından yapıldığı bilgisiyle kayıt altına alınır.</p>
+      </details>
+      <details>
+        <summary>Sistemi beğenmezsek ne oluyor?</summary>
+        <p>Önce ücretsiz demo yapıyoruz ve mümkünse kendi cihaz listenizle gösteriyoruz, böylece karar vermeden önce gerçek ekranı görüyorsunuz. Kurulum sonrasında da veriniz sizin: dilediğiniz zaman Excel olarak tam dışa aktarım alabilirsiniz, veriniz sistemde kilitli kalmaz.</p>
+      </details>
     </div>
   </div>
 </section>
