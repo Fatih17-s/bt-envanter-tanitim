@@ -279,104 +279,113 @@ p{max-width:64ch}
 .form-msg p{color:#A1A1A6;font-size:.95rem;max-width:none}
 .form-card.sent .form-body{display:none}
 
-/* ================= OKUTMA SAHNESİ ================= */
+/* ================= OKUTMA SAHNESİ (sinematik) ================= */
 .scan-wrap{margin-top:56px}
 .scan{position:relative;border-radius:20px;overflow:hidden;border:1px solid rgba(255,255,255,.13);
-  background:#0B0B0D;aspect-ratio:16/9;max-width:940px;margin:0 auto;
+  background:#08090B;aspect-ratio:16/9;max-width:960px;margin:0 auto;
   box-shadow:0 44px 88px -34px rgba(0,0,0,.9)}
-.scan::before{content:"";position:absolute;inset:0;z-index:1;
-  background:radial-gradient(ellipse 60% 70% at 68% 50%,rgba(0,0,0,.55),rgba(0,0,0,.82))}
 
-/* telefon */
-.scan-phone{position:absolute;z-index:3;right:9%;top:50%;transform:translateY(-50%);
-  width:min(30%,208px);aspect-ratio:9/19;border-radius:26px;background:#0A0A0C;padding:6px;
-  border:1px solid rgba(255,255,255,.22);box-shadow:0 30px 60px -14px rgba(0,0,0,.9)}
-.scan-scr{position:relative;width:100%;height:100%;border-radius:21px;overflow:hidden;background:#15161A}
+/* kamera hareketi: tüm sahneyi etiketin üstüne dalıyor */
+.cam-move{position:absolute;inset:0;transform-origin:50% 55%;
+  animation:camera var(--cyc) cubic-bezier(.55,0,.25,1) infinite}
+@keyframes camera{
+  0%   {transform:scale(1)    translate(0,0);   filter:blur(0)}
+  13%  {transform:scale(1.06) translate(0,0);   filter:blur(0)}
+  34%  {transform:scale(3.05) translate(0,0);   filter:blur(0)}
+  53%  {transform:scale(3.05) translate(0,0);   filter:blur(0)}
+  60%  {transform:scale(3.2)  translate(0,0);   filter:blur(4px)}
+  87%  {transform:scale(3.2)  translate(0,0);   filter:blur(4px)}
+  93%  {transform:scale(3.05) translate(0,0);   filter:blur(0)}
+  100% {transform:scale(1)    translate(0,0);   filter:blur(0)}
+}
+.scan-art{position:absolute;inset:0;width:100%;height:100%;display:block}
+.dim{position:absolute;inset:0;background:#07080A;opacity:0;pointer-events:none;
+  animation:dim var(--cyc) linear infinite}
+@keyframes dim{0%,55%{opacity:0}62%,86%{opacity:.55}93%,100%{opacity:0}}
 
-/* kamera görüntüsü */
-.cam{position:absolute;inset:0;background:#101216;overflow:hidden}
-.cam svg{width:100%;height:100%;display:block}
-.cam::after{content:"";position:absolute;inset:0;background:rgba(0,0,0,.28)}
-.reticle{position:absolute;left:16%;top:26%;width:68%;aspect-ratio:1;z-index:2}
-.reticle i{position:absolute;width:26%;height:26%;border:2.5px solid #fff;border-radius:4px;
-  animation:brk var(--cyc) linear infinite}
-.reticle i:nth-child(1){left:0;top:0;border-right:0;border-bottom:0}
-.reticle i:nth-child(2){right:0;top:0;border-left:0;border-bottom:0}
-.reticle i:nth-child(3){right:0;bottom:0;border-left:0;border-top:0}
-.reticle i:nth-child(4){left:0;bottom:0;border-right:0;border-top:0}
-@keyframes brk{0%,39%{border-color:rgba(255,255,255,.9)}42%,100%{border-color:var(--red)}}
-.scan-line{position:absolute;left:16%;right:16%;height:2px;z-index:2;border-radius:2px;
+/* nişangâh — etiketin ekrandaki sabit noktasında */
+.ret{position:absolute;left:50%;top:55%;width:33%;height:52%;
+  transform:translate(-50%,-50%);pointer-events:none;
+  animation:ret var(--cyc) cubic-bezier(.2,.8,.2,1) infinite}
+@keyframes ret{
+  0%,28%{opacity:0;transform:translate(-50%,-50%) scale(1.35)}
+  35%,52%{opacity:1;transform:translate(-50%,-50%) scale(1)}
+  58%,100%{opacity:0;transform:translate(-50%,-50%) scale(1)}}
+.ret i{position:absolute;width:15%;height:12%;border:3px solid #fff;border-radius:5px;
+  animation:retc var(--cyc) linear infinite}
+.ret i:nth-child(1){left:0;top:0;border-right:0;border-bottom:0}
+.ret i:nth-child(2){right:0;top:0;border-left:0;border-bottom:0}
+.ret i:nth-child(3){right:0;bottom:0;border-left:0;border-top:0}
+.ret i:nth-child(4){left:0;bottom:0;border-right:0;border-top:0}
+@keyframes retc{0%,46%{border-color:rgba(255,255,255,.92)}49%,100%{border-color:var(--red)}}
+.sline{position:absolute;left:2%;right:2%;height:2px;border-radius:2px;
   background:linear-gradient(90deg,transparent,var(--red),transparent);
-  box-shadow:0 0 14px 2px rgba(225,29,46,.75);animation:sline var(--cyc) linear infinite}
-@keyframes sline{
-  0%{top:26%;opacity:0} 6%{opacity:1} 39%{top:88%;opacity:1} 42%{opacity:0} 100%{opacity:0}}
-.tick{position:absolute;left:50%;top:52%;z-index:3;width:34px;height:34px;margin:-17px 0 0 -17px;
-  border-radius:50%;background:var(--red);display:grid;place-items:center;color:#fff;
-  font-size:16px;font-weight:700;opacity:0;transform:scale(.5);animation:tick var(--cyc) linear infinite}
-@keyframes tick{0%,39%{opacity:0;transform:scale(.5)}44%{opacity:1;transform:scale(1)}
-  55%{opacity:1;transform:scale(1)}60%,100%{opacity:0;transform:scale(1)}}
-.cam-hint{position:absolute;left:8%;right:8%;bottom:6%;z-index:2;text-align:center;
-  font-family:var(--mono);font-size:.52rem;letter-spacing:.08em;color:#E8E8EA;
-  background:rgba(0,0,0,.55);border-radius:980px;padding:5px 8px;backdrop-filter:blur(4px)}
-.cam-hint span{display:block;animation:hint1 var(--cyc) linear infinite}
-.cam-hint span+span{position:absolute;left:8px;right:8px;top:5px;color:#FF7A88;animation-name:hint2}
-@keyframes hint1{0%,38%{opacity:1}40%,100%{opacity:0}}
-@keyframes hint2{0%,39%{opacity:0}42%,54%{opacity:1}58%,100%{opacity:0}}
+  box-shadow:0 0 18px 3px rgba(225,29,46,.7);
+  animation:sline var(--cyc) cubic-bezier(.4,0,.6,1) infinite}
+@keyframes sline{0%,33%{top:0;opacity:0}36%{opacity:1}46%{top:98%;opacity:1}
+  49%,100%{opacity:0}}
+.tick2{position:absolute;left:50%;top:50%;width:52px;height:52px;margin:-26px 0 0 -26px;
+  border-radius:50%;background:var(--red);color:#fff;display:grid;place-items:center;
+  font-size:25px;font-weight:700;opacity:0;
+  animation:tick2 var(--cyc) cubic-bezier(.2,1.4,.4,1) infinite}
+@keyframes tick2{0%,46%{opacity:0;transform:scale(.4)}51%{opacity:1;transform:scale(1)}
+  56%{opacity:1;transform:scale(1)}60%,100%{opacity:0;transform:scale(1)}}
+
+/* durum yazısı */
+.chip2{position:absolute;left:50%;bottom:8%;transform:translateX(-50%);z-index:4;
+  font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;
+  background:rgba(0,0,0,.6);border:1px solid rgba(255,255,255,.14);border-radius:980px;
+  padding:9px 18px;backdrop-filter:blur(6px);white-space:nowrap}
+.chip2 span{display:block;color:#E8E8EA;animation:ch1 var(--cyc) linear infinite}
+.chip2 span+span{position:absolute;left:18px;right:18px;top:9px;color:#FF7A88;animation-name:ch2}
+@keyframes ch1{0%,10%{opacity:0}14%,45%{opacity:1}48%,100%{opacity:0}}
+@keyframes ch2{0%,46%{opacity:0}49%,57%{opacity:1}60%,100%{opacity:0}}
 
 /* açılan cihaz kartı */
-.scan-card{position:absolute;inset:0;z-index:4;background:#F8FAFC;color:#1E293B;
-  display:flex;flex-direction:column;transform:translateY(104%);
-  animation:card var(--cyc) cubic-bezier(.2,.8,.25,1) infinite}
-@keyframes card{0%,50%{transform:translateY(104%)}62%,92%{transform:translateY(0)}100%{transform:translateY(104%)}}
-.sc-top{background:var(--red);color:#fff;padding:16px 11px 11px}
-.sc-top b{display:block;font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:-.02em}
-.sc-top s{text-decoration:none;font-size:7.5px;opacity:.85}
-.sc-body{padding:9px;flex:1}
-.sc-row{display:flex;justify-content:space-between;font-size:7.6px;padding:4px 0;border-bottom:1px solid #E9EDF1}
-.sc-row s{text-decoration:none;color:#94A3B8}
-.sc-row b{font-weight:600}
-.sc-pill{display:inline-block;background:#EFF6FF;color:#2563EB;font-size:6.6px;font-weight:700;
-  padding:2px 7px;border-radius:980px;letter-spacing:.06em}
-.sc-btn{display:block;text-align:center;background:var(--red);color:#fff;border-radius:8px;
-  padding:7px;font-size:7.6px;font-weight:600;margin-top:9px}
-.sc-btn.g{background:#fff;color:#475569;border:1px solid #E2E8F0;margin-top:6px}
+.result{position:absolute;left:50%;top:50%;z-index:5;width:min(400px,74%);
+  transform:translate(-50%,-50%);background:#fff;color:var(--m-tx);border-radius:18px;
+  overflow:hidden;box-shadow:0 40px 80px -20px rgba(0,0,0,.85);opacity:0;
+  animation:res var(--cyc) cubic-bezier(.2,.9,.25,1) infinite}
+@keyframes res{
+  0%,55%{opacity:0;transform:translate(-50%,-42%) scale(.94)}
+  63%,86%{opacity:1;transform:translate(-50%,-50%) scale(1)}
+  92%,100%{opacity:0;transform:translate(-50%,-54%) scale(.97)}}
+.res-top{background:var(--red);color:#fff;padding:16px 18px;display:flex;
+  justify-content:space-between;align-items:center;gap:12px}
+.res-top b{font-family:var(--mono);font-size:1.02rem;font-weight:700;letter-spacing:-.02em}
+.res-top s{text-decoration:none;display:block;font-size:.72rem;opacity:.86;font-family:var(--sans)}
+.res-top em{font-style:normal;font-size:.6rem;font-family:var(--mono);letter-spacing:.1em;
+  background:rgba(255,255,255,.22);padding:4px 9px;border-radius:980px;white-space:nowrap}
+.res-body{padding:6px 18px 16px}
+.res-row{display:flex;justify-content:space-between;align-items:center;gap:12px;
+  padding:9px 0;border-bottom:1px solid #EEF1F4;font-size:.83rem}
+.res-row:last-of-type{border-bottom:0}
+.res-row s{text-decoration:none;color:#94A3B8}
+.res-row b{font-weight:600;text-align:right}
+.res-pill{background:#EFF6FF;color:var(--blue);font-size:.66rem;font-weight:700;
+  padding:4px 10px;border-radius:980px;letter-spacing:.05em}
+.res-btns{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px}
+.res-btns span{text-align:center;border-radius:10px;padding:10px;font-size:.8rem;font-weight:600}
+.res-btns span:first-child{background:var(--red);color:#fff}
+.res-btns span:last-child{background:#fff;color:#475569;border:1px solid #E2E8F0}
 
 /* adım göstergesi */
 .scan-steps{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:26px}
 .scan-step{display:flex;align-items:center;gap:9px;font-size:.86rem;color:#8A8A8F;
   border:1px solid rgba(255,255,255,.13);border-radius:980px;padding:9px 18px;
-  animation:stp var(--cyc) linear infinite;letter-spacing:-.01em}
+  letter-spacing:-.01em}
 .scan-step em{font-style:normal;font-family:var(--mono);font-size:.66rem;opacity:.8}
-.scan-step:nth-child(1){animation-name:stp1}
-.scan-step:nth-child(2){animation-name:stp2}
-.scan-step:nth-child(3){animation-name:stp3}
-@keyframes stp1{0%,37%{border-color:var(--red);color:#fff;background:rgba(225,29,46,.14)}
-  40%,100%{border-color:rgba(255,255,255,.13);color:#8A8A8F;background:none}}
-@keyframes stp2{0%,38%{border-color:rgba(255,255,255,.13);color:#8A8A8F;background:none}
-  41%,57%{border-color:var(--red);color:#fff;background:rgba(225,29,46,.14)}
-  60%,100%{border-color:rgba(255,255,255,.13);color:#8A8A8F;background:none}}
-@keyframes stp3{0%,58%{border-color:rgba(255,255,255,.13);color:#8A8A8F;background:none}
-  62%,92%{border-color:var(--red);color:#fff;background:rgba(225,29,46,.14)}
-  96%,100%{border-color:rgba(255,255,255,.13);color:#8A8A8F;background:none}}
-
-/* ================= GERÇEK FOTOĞRAF ALANLARI ================= */
-.photos{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:48px}
-.photo{position:relative;border-radius:16px;overflow:hidden;background:#101012;
-  border:1px solid rgba(255,255,255,.12);aspect-ratio:4/3}
-.photo img{display:none;width:100%;height:100%;object-fit:cover}
-.photo.has img{display:block}
-.photo.has .photo-ph{display:none}
-.photo-ph{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;
-  justify-content:center;gap:14px;text-align:center;padding:26px;
-  background:repeating-linear-gradient(135deg,rgba(255,255,255,.025) 0 2px,transparent 2px 12px)}
-.photo-ph .qr-demo{width:88px;height:88px;margin:0;opacity:.9}
-.photo-ph .qr-demo svg path{fill:#fff}
-.photo-ph b{font-size:.98rem;font-weight:600;color:#fff;letter-spacing:-.02em}
-.photo-ph s{text-decoration:none;font-family:var(--mono);font-size:.66rem;letter-spacing:.08em;
-  color:#6E6E73;text-transform:uppercase}
-.photo figcaption{position:absolute;left:0;right:0;bottom:0;padding:26px 20px 16px;
-  background:linear-gradient(to top,rgba(0,0,0,.85),transparent);
-  font-size:.88rem;color:#E8E8EA;font-weight:500;letter-spacing:-.015em}
+.scan-step:nth-child(1){animation:stp1 var(--cyc) linear infinite}
+.scan-step:nth-child(2){animation:stp2 var(--cyc) linear infinite}
+.scan-step:nth-child(3){animation:stp3 var(--cyc) linear infinite}
+@keyframes stp1{0%,32%{border-color:var(--red);color:#fff;background:rgba(225,29,46,.14)}
+  36%,100%{border-color:rgba(255,255,255,.13);color:#8A8A8F;background:none}}
+@keyframes stp2{0%,33%{border-color:rgba(255,255,255,.13);color:#8A8A8F;background:none}
+  37%,54%{border-color:var(--red);color:#fff;background:rgba(225,29,46,.14)}
+  58%,100%{border-color:rgba(255,255,255,.13);color:#8A8A8F;background:none}}
+@keyframes stp3{0%,56%{border-color:rgba(255,255,255,.13);color:#8A8A8F;background:none}
+  60%,88%{border-color:var(--red);color:#fff;background:rgba(225,29,46,.14)}
+  93%,100%{border-color:rgba(255,255,255,.13);color:#8A8A8F;background:none}}
 
 /* ================= EKRAN ÇERÇEVESİ ================= */
 .shotframe{border-radius:var(--r);overflow:hidden;background:var(--m-bg);
@@ -649,8 +658,7 @@ p{max-width:64ch}
   .photo{aspect-ratio:3/2}
   .foot-in{justify-content:center;text-align:center}
   .scan{aspect-ratio:4/3}
-  .scan-phone{width:38%;right:7%}
-  .scan-steps{flex-direction:column;align-items:stretch}
+    .scan-steps{flex-direction:column;align-items:stretch}
   .scan-step{justify-content:flex-start;font-size:.8rem;padding:8px 15px}
   .idea-grid{grid-template-columns:1fr}
   .form-row{grid-template-columns:1fr;gap:0}
@@ -658,9 +666,11 @@ p{max-width:64ch}
   .contact-item i{width:30px;height:30px}
 }
 @media(prefers-reduced-motion:reduce){
-  .scan-line,.tick,.cam-hint{display:none}
-  .scan-card{transform:none!important}
-  .reticle i{border-color:var(--red)!important}
+  .sline,.tick2,.chip2{display:none}
+  .cam-move{transform:scale(1)!important;filter:none!important}
+  .ret{opacity:0!important}
+  .dim{opacity:.55!important}
+  .result{opacity:1!important;transform:translate(-50%,-50%)!important}
   .scan-step:nth-child(3){border-color:var(--red);color:#fff;background:rgba(225,29,46,.14)}
 }
 @media(prefers-reduced-motion:reduce){
@@ -1099,99 +1109,167 @@ p{max-width:64ch}
     </div>
 
     <div class="scan-wrap rv">
-      <div class="scan" style="--cyc:8s">
-        <svg class="scan-art" viewBox="0 0 1200 675" preserveAspectRatio="xMidYMid slice" aria-label="Karekodlu demirbaş etiketi yapıştırılmış dizüstü bilgisayar">
-          <defs>
-            <linearGradient id="lidG" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0" stop-color="#2A2E36"/><stop offset=".5" stop-color="#1B1E24"/>
-              <stop offset="1" stop-color="#111318"/>
-            </linearGradient>
-            <linearGradient id="sheen" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0" stop-color="#fff" stop-opacity=".1"/>
-              <stop offset=".45" stop-color="#fff" stop-opacity="0"/>
-            </linearGradient>
-            <linearGradient id="plate" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0" stop-color="#D8DCE2"/><stop offset=".5" stop-color="#8E949E"/>
-              <stop offset="1" stop-color="#C3C8CF"/>
-            </linearGradient>
-            <radialGradient id="amb" cx=".5" cy=".5">
-              <stop offset="0" stop-color="#E11D2E" stop-opacity=".24"/>
-              <stop offset="1" stop-color="#E11D2E" stop-opacity="0"/>
-            </radialGradient>
-            <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
-              <feGaussianBlur stdDeviation="26"/></filter>
-          </defs>
+      <div class="scan" style="--cyc:11s">
+        <div class="cam-move">
+          <svg class="scan-art" viewBox="0 0 1200 675" preserveAspectRatio="xMidYMid slice"
+               aria-label="Ekranında BT Envanter açık dizüstü bilgisayar ve üzerindeki karekodlu demirbaş etiketi">
+            <defs>
+              <linearGradient id="deskG" x1=".2" y1="0" x2=".8" y2="1">
+                <stop offset="0" stop-color="#171A1F"/><stop offset=".55" stop-color="#0D0F13"/>
+                <stop offset="1" stop-color="#08090B"/>
+              </linearGradient>
+              <linearGradient id="deckG" x1=".1" y1="0" x2=".9" y2="1">
+                <stop offset="0" stop-color="#3A3F49"/><stop offset=".45" stop-color="#272B33"/>
+                <stop offset="1" stop-color="#1A1D23"/>
+              </linearGradient>
+              <linearGradient id="bezelG" x1="0" y1="0" x2=".6" y2="1">
+                <stop offset="0" stop-color="#31353E"/><stop offset="1" stop-color="#191C22"/>
+              </linearGradient>
+              <linearGradient id="backG" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#2E323A"/><stop offset="1" stop-color="#0E1014"/>
+              </linearGradient>
+              <linearGradient id="plate" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#E2E6EB"/><stop offset=".45" stop-color="#8E949E"/>
+                <stop offset="1" stop-color="#CDD2D9"/>
+              </linearGradient>
+              <radialGradient id="pool" cx=".5" cy=".5">
+                <stop offset="0" stop-color="#fff" stop-opacity=".08"/>
+                <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+              </radialGradient>
+              <radialGradient id="amb" cx=".5" cy=".5">
+                <stop offset="0" stop-color="#E11D2E" stop-opacity=".24"/>
+                <stop offset="1" stop-color="#E11D2E" stop-opacity="0"/>
+              </radialGradient>
+              <filter id="soft" x="-40%" y="-40%" width="180%" height="180%">
+                <feGaussianBlur stdDeviation="28"/></filter>
+              <filter id="soft2" x="-50%" y="-50%" width="200%" height="200%">
+                <feGaussianBlur stdDeviation="7"/></filter>
+              <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+                <feGaussianBlur stdDeviation="22"/></filter>
+              <!-- klavye tuşları -->
+              <pattern id="keys" width="7.08" height="7" patternUnits="userSpaceOnUse">
+                <rect x=".45" y=".5" width="6.2" height="5.5" rx="1.1" fill="#31363F"/>
+                <rect x=".45" y=".5" width="6.2" height="4.2" rx="1.1" fill="#3A404A"/>
+              </pattern>
+            </defs>
 
-          <ellipse cx="470" cy="330" rx="430" ry="300" fill="url(#amb)"/>
-          <ellipse cx="470" cy="580" rx="330" ry="60" fill="#000" opacity=".7" filter="url(#soft)"/>
+            <!-- masa -->
+            <rect width="1200" height="675" fill="url(#deskG)"/>
+            <ellipse cx="500" cy="300" rx="540" ry="360" fill="url(#pool)"/>
+            <ellipse cx="560" cy="330" rx="420" ry="290" fill="url(#amb)"/>
+            <ellipse cx="470" cy="452" rx="330" ry="46" fill="#000" opacity=".85" filter="url(#soft)"/>
 
-          <!-- gövde kalınlığı -->
-          <path d="M150 240 L620 186 L740 516 L270 570 Z" fill="#08090B"/>
-          <path d="M150 232 L620 178 L740 508 L270 562 Z" fill="#15171C"/>
-
-          <!-- kapak yüzeyi -->
-          <g transform="matrix(4.7,-0.54,1.2,3.3,150,220)">
-            <rect x="1" y="1" width="98" height="98" rx="3.4" fill="url(#lidG)"/>
-            <rect x="1" y="1" width="98" height="98" rx="3.4" fill="url(#sheen)"/>
-            <rect x="1" y="1" width="98" height="98" rx="3.4" fill="none"
-                  stroke="rgba(255,255,255,.16)" stroke-width=".4"/>
-            <!-- marka plakası -->
-            <rect x="71" y="46" width="6.5" height="22" rx="1" fill="url(#plate)" opacity=".92"/>
-            <!-- etiket -->
-            <use href="#lbl" x="39" y="41" width="27" height="31.9"/>
-            <!-- tarama çerçevesi -->
-            <g class="beam" fill="none" stroke="#E11D2E" stroke-width=".8" stroke-linecap="round">
-              <path d="M36 38 h6 M36 38 v6"/>
-              <path d="M69 38 h-6 M69 38 v6"/>
-              <path d="M36 76 h6 M36 76 v-6"/>
-              <path d="M69 76 h-6 M69 76 v-6"/>
+            <!-- ===== EKRAN ===== -->
+            <g transform="matrix(5.2,0.26,-0.44,1.95,275,1)">
+              <rect x="-1" y="-1" width="102" height="102" rx="2.6" fill="url(#bezelG)"/>
+              <rect x="-1" y="-1" width="102" height="102" rx="2.6" fill="none"
+                    stroke="rgba(255,255,255,.18)" stroke-width=".5"/>
+              <circle cx="50" cy="2.6" r=".9" fill="#0C0E11"/>
+              <!-- panel -->
+              <rect x="4" y="6" width="92" height="84" rx="1" fill="#F4F6F8"/>
+              <!-- uygulama arayüzü -->
+              <rect x="4" y="6" width="92" height="9" fill="#fff"/>
+              <rect x="7" y="9.4" width="15" height="2.4" rx="1.2" fill="#E11D2E"/>
+              <rect x="78" y="8.8" width="15" height="3.6" rx="1.4" fill="#E11D2E"/>
+              <rect x="4" y="15" width="18" height="75" fill="#FBFCFD"/>
+              <rect x="6.5" y="19" width="13" height="3" rx="1.5" fill="#FBE9EB"/>
+              <rect x="6.5" y="24" width="11" height="2.2" rx="1.1" fill="#E4E9EE"/>
+              <rect x="6.5" y="28.5" width="12.5" height="2.2" rx="1.1" fill="#E4E9EE"/>
+              <rect x="6.5" y="33" width="9.5" height="2.2" rx="1.1" fill="#E4E9EE"/>
+              <rect x="6.5" y="37.5" width="12" height="2.2" rx="1.1" fill="#E4E9EE"/>
+              <rect x="6.5" y="42" width="10.5" height="2.2" rx="1.1" fill="#E4E9EE"/>
+              <rect x="6.5" y="46.5" width="11.5" height="2.2" rx="1.1" fill="#E4E9EE"/>
+              <g fill="#fff" stroke="#E6EAEF" stroke-width=".35">
+                <rect x="25" y="19" width="16" height="13" rx="1.6"/>
+                <rect x="43" y="19" width="16" height="13" rx="1.6"/>
+                <rect x="61" y="19" width="16" height="13" rx="1.6"/>
+                <rect x="79" y="19" width="14" height="13" rx="1.6"/>
+              </g>
+              <g fill="#2563EB"><rect x="27" y="23" width="9" height="4" rx="1"/></g>
+              <g fill="#16A34A"><rect x="45" y="23" width="8" height="4" rx="1"/></g>
+              <g fill="#7C3AED"><rect x="63" y="23" width="7.5" height="4" rx="1"/></g>
+              <g fill="#E11D2E"><rect x="81" y="23" width="5" height="4" rx="1"/></g>
+              <rect x="25" y="35" width="68" height="52" rx="1.6" fill="#fff" stroke="#E6EAEF" stroke-width=".35"/>
+              <rect x="25" y="35" width="68" height="6" fill="#F6F8FA"/>
+              <g fill="#DDE3E9">
+                <rect x="28" y="44" width="12" height="2.2" rx="1.1"/><rect x="44" y="44" width="20" height="2.2" rx="1.1"/>
+                <rect x="70" y="44" width="9" height="2.2" rx="1.1"/><rect x="83" y="44" width="7" height="2.2" rx="1.1" fill="#FBE9EB"/>
+                <rect x="28" y="51" width="12" height="2.2" rx="1.1"/><rect x="44" y="51" width="17" height="2.2" rx="1.1"/>
+                <rect x="70" y="51" width="9" height="2.2" rx="1.1"/><rect x="83" y="51" width="7" height="2.2" rx="1.1" fill="#E7F0FE"/>
+                <rect x="28" y="58" width="12" height="2.2" rx="1.1"/><rect x="44" y="58" width="22" height="2.2" rx="1.1"/>
+                <rect x="70" y="58" width="9" height="2.2" rx="1.1"/><rect x="83" y="58" width="7" height="2.2" rx="1.1" fill="#E7F0FE"/>
+                <rect x="28" y="65" width="12" height="2.2" rx="1.1"/><rect x="44" y="65" width="15" height="2.2" rx="1.1"/>
+                <rect x="70" y="65" width="9" height="2.2" rx="1.1"/><rect x="83" y="65" width="7" height="2.2" rx="1.1" fill="#FEF0E2"/>
+                <rect x="28" y="72" width="12" height="2.2" rx="1.1"/><rect x="44" y="72" width="19" height="2.2" rx="1.1"/>
+                <rect x="70" y="72" width="9" height="2.2" rx="1.1"/><rect x="83" y="72" width="7" height="2.2" rx="1.1" fill="#E7F0FE"/>
+                <rect x="28" y="79" width="12" height="2.2" rx="1.1"/><rect x="44" y="79" width="21" height="2.2" rx="1.1"/>
+                <rect x="70" y="79" width="9" height="2.2" rx="1.1"/><rect x="83" y="79" width="7" height="2.2" rx="1.1" fill="#E7F0FE"/>
+              </g>
+              <!-- ekran yansıması -->
+              <path d="M4 6 L58 6 L18 90 L4 90 Z" fill="#fff" opacity=".22"/>
+              <!-- alt çerçeve markası -->
+              <rect x="45" y="93.5" width="10" height="2.2" rx="1.1" fill="#6B7280" opacity=".85"/>
             </g>
-          </g>
 
-          <!-- telefondan etikete uzanan ışın -->
-          <path class="beam-line" d="M840 330 L545 376" stroke="#E11D2E" stroke-width="2"
-                stroke-dasharray="5 7" opacity=".9"/>
-        </svg>
+            <!-- ekran ışığının masaya vurması -->
+            <path d="M231 196 L751 222 L691 442 L171 416 Z" fill="#BFD4E8" opacity=".05" filter="url(#glow)"/>
 
-        <div class="scan-phone">
-          <div class="scan-scr">
-            <div class="cam">
-              <svg viewBox="0 0 180 380" preserveAspectRatio="xMidYMid slice">
-                <defs>
-                  <linearGradient id="camS" x1="0" y1="0" x2=".4" y2="1">
-                    <stop offset="0" stop-color="#2B2F37"/><stop offset=".55" stop-color="#1A1D23"/>
-                    <stop offset="1" stop-color="#0E1014"/>
-                  </linearGradient>
-                </defs>
-                <rect width="180" height="380" fill="#0A0B0D"/>
-                <path d="M-30 60 L215 26 L245 330 L-5 366 Z" fill="url(#camS)"/>
-                <path d="M-30 60 L215 26" stroke="rgba(255,255,255,.14)" stroke-width="1.4"/>
-                <rect x="146" y="132" width="17" height="62" rx="3" fill="#8E949E" opacity=".55"/>
-                <use href="#lbl" x="42" y="101" width="96" height="113"/>
-              </svg>
-            </div>
-            <div class="reticle"><i></i><i></i><i></i><i></i></div>
-            <div class="scan-line"></div>
-            <div class="tick">✓</div>
-            <div class="cam-hint"><span>Karekod aranıyor…</span><span>S1-00004 bulundu</span></div>
-            <div class="scan-card">
-              <div class="sc-top"><b>S1-00004</b><s>Dizüstü Bilgisayar · ŞUBE 1</s></div>
-              <div class="sc-body">
-                <div class="sc-row"><s>Durum</s><span class="sc-pill">Kullanımda</span></div>
-                <div class="sc-row"><s>Zimmetli</s><b>Ceren Aksoy</b></div>
-                <div class="sc-row"><s>Departman</s><b>Muhasebe</b></div>
-                <div class="sc-row"><s>Seri No</s><b>PF5R0ELB</b></div>
-                <div class="sc-row"><s>Garanti</s><b>14.02.2027</b></div>
-                <span class="sc-btn">Sorun Bildir</span>
-                <span class="sc-btn g">Cihaz Geçmişi</span>
-              </div>
-            </div>
+            <!-- ===== MENTEŞE ===== -->
+            <path d="M231 196 L751 222 L748 236 L228 210 Z" fill="#12151A"/>
+
+            <!-- ===== KLAVYE GÖVDESİ ===== -->
+            <path d="M171 416 L691 442 L689 466 L169 440 Z" fill="#15181D"/>
+            <path d="M231 196 L751 222 L691 442 L171 416 Z" fill="url(#deckG)"/>
+            <path d="M231 196 L751 222 L691 442 L171 416 Z" fill="none"
+                  stroke="rgba(255,255,255,.14)" stroke-width="1.2"/>
+
+            <g transform="matrix(5.2,0.26,-0.6,2.2,231,196)">
+              <!-- hoparlör şeridi -->
+              <rect x="7" y="3" width="86" height="1.6" rx=".8" fill="#171A1F" opacity=".8"/>
+              <!-- klavye -->
+              <rect x="6" y="6.5" width="88" height="35" fill="url(#keys)"/>
+              <rect x="30" y="42" width="40" height="5.5" rx="1.1" fill="#3A404A"/>
+              <rect x="6" y="42" width="22" height="5.5" rx="1.1" fill="#31363F"/>
+              <rect x="72" y="42" width="22" height="5.5" rx="1.1" fill="#31363F"/>
+              <!-- touchpad -->
+              <rect x="36" y="53" width="28" height="34" rx="1.8" fill="#2C313A"
+                    stroke="rgba(255,255,255,.13)" stroke-width=".5"/>
+              <!-- marka plakası -->
+              <rect x="12" y="60" width="14" height="4.5" rx="1" fill="url(#plate)" opacity=".75"/>
+              <!-- etiket -->
+              <rect x="70.6" y="47" width="18" height="48.5" rx="1.6" fill="#000"
+                    opacity=".55" filter="url(#soft2)"/>
+              <use href="#lbl" x="70" y="46" width="18" height="48.5"/>
+            </g>
+          </svg>
+        </div>
+
+        <div class="dim"></div>
+
+        <div class="ret"><i></i><i></i><i></i><i></i>
+          <span class="sline"></span><span class="tick2">✓</span></div>
+
+        <div class="chip2"><span>Karekod okunuyor…</span><span>S1-00004 bulundu</span></div>
+
+        <div class="result">
+          <div class="res-top">
+            <div><b>S1-00004</b><s>Dizüstü Bilgisayar · 16 GB / 512 GB</s></div>
+            <em>ŞUBE 1</em>
+          </div>
+          <div class="res-body">
+            <div class="res-row"><s>Durum</s><span class="res-pill">Kullanımda</span></div>
+            <div class="res-row"><s>Zimmetli</s><b>Ceren Aksoy</b></div>
+            <div class="res-row"><s>Departman</s><b>Muhasebe</b></div>
+            <div class="res-row"><s>Seri No</s><b>PF5R0ELB</b></div>
+            <div class="res-row"><s>Garanti Bitiş</s><b>14.02.2027</b></div>
+            <div class="res-btns"><span>Sorun Bildir</span><span>Cihaz Geçmişi</span></div>
           </div>
         </div>
       </div>
+
       <div class="scan-steps">
-        <div class="scan-step"><em>01</em> Telefonu Etikete Tut</div>
-        <div class="scan-step"><em>02</em> Karekod Tanınır</div>
+        <div class="scan-step"><em>01</em> Cihazı Bul</div>
+        <div class="scan-step"><em>02</em> Karekodu Okut</div>
         <div class="scan-step"><em>03</em> Cihaz Kartı Açılır</div>
       </div>
       <p class="small center" style="margin-top:20px;color:#77777C;max-width:560px">
